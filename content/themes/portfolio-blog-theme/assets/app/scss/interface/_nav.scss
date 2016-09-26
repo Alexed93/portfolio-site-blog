@@ -1,0 +1,149 @@
+/**
+ * Title:
+ *    Navigation
+ * Description:
+ *    The .nav module and its extensions
+ * Sections:
+ *    $. Variables
+ *    $. Container
+ *    $. Component
+ *    $. Primary
+ *    $. Secondary
+ *    $. Tertiary
+ */
+
+
+
+/* $. Variables
+\*----------------------------------------------------------------*/
+
+// $color-nav: $color-link;
+
+
+
+/* $. Container
+\*----------------------------------------------------------------*/
+
+// .nav-container {
+// }
+
+
+
+/* $. Component
+\*----------------------------------------------------------------*/
+
+.nav {
+    @extend %cf;
+    @extend %list--unset;
+    // background: url("../img/headerBackground.svg") #8b1558;
+    width: 100%;
+    padding: 1em 0 1em 0;
+    clear: both;
+    height: calc(100vh - 74px);
+    position: relative;
+    display: block;
+        
+    @include respond-min($bp1) { 
+        height: calc(100vh - 110px);
+    }
+
+    // @include respond-min($bp2) { 
+    //     height: calc(100vh - 115px);
+    // }
+
+    @include respond-min($bp2) { 
+        height: calc(100vh - 100vh);
+        padding: 0;
+    }
+}
+
+.nav_list {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    text-align: center;
+
+    @include respond-min($bp2) { 
+        text-align: right;
+        transform: none;
+        right: 75px;
+        top: -65px;
+        left: 30%;
+        padding: 0.5em 0 0 0;
+    }
+
+    @include respond-min($bp4) {  
+        top: -60px;
+    }
+}
+
+.nav_item {
+    font-size: 2rem;
+    padding: 1em 0 0 0;
+
+    @include respond-min($bp1) { 
+        font-size: 3rem;
+        padding: 1.5em 0 0 0;
+    }
+
+    //  @include respond-min($bp2) { 
+    //     font-size: 2rem;
+    // }
+
+    @include respond-min($bp2) { 
+        display: inline;
+        font-size: 1.5rem;
+        margin-right: 0.5em;
+        position: relative;
+
+        :after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: transparent;
+            transition: width .7s ease;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+        }
+
+        :hover:after {
+            background: $green-brand;
+            width: 100%;
+        }
+    }
+
+    @include respond-min($bp3) { 
+        font-size: 1.3rem;
+    }
+}
+
+.nav_link {
+    padding: $base/2 0.25em;
+    font-weight: 600;
+    color: $white;
+    position: relative;
+}
+
+/* $. Primary
+\*----------------------------------------------------------------*/
+
+// .nav--primary {
+// }
+
+
+
+/* $. Secondary
+\*----------------------------------------------------------------*/
+
+// .nav--secondary {
+// }
+
+
+
+/* $. Tertiary
+\*----------------------------------------------------------------*/
+
+// .nav--tertiary {
+// }

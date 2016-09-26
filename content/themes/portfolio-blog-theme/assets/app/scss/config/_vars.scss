@@ -1,0 +1,120 @@
+/**
+ * Title:
+ *    Variables
+ * Description:
+ *    Project variables go here
+ * Sections:
+ *    $. Breakpoints
+ *    $. Colours
+ *    $. Typography
+ *    $. Layout
+ *    $. Icons
+ *    $. Z axis
+ */
+
+
+
+/* $. Breakpoints
+\*----------------------------------------------------------------*/
+
+$bp1: 30em;
+$bp2: 48em;
+$bp3: 62em;
+$bp4: 78em;
+$bp5: 87em;
+$bp6: 125em;
+
+
+
+/* $. Colours
+\*----------------------------------------------------------------*/
+
+/**
+ * Base colours
+ */
+
+/* Random colour variable (with a colour inside for dev purposes) */
+$color-brand:         #331749;
+$green-brand:         #11cba6;
+.highlight {
+    color: $green-brand;
+}
+
+/* defaults */
+$white:               #FFFFFF;
+$black:               #000000;
+
+/* shades */
+$grey:                #888888;
+$grey-dark:           #252525;
+$grey-light:          #CCCCCC;
+$grey-lighter:        #F1F1F1;
+
+/* primary */
+$blue:                #005994;
+$red:                 #D62323;
+$green:               #34AB00;
+$yellow:              #1B49BE;
+
+/* secondary */
+$blue-light:          #28AAE1;
+
+/**
+ * UI colours
+ */
+
+/* shades */
+$color-text:          $grey-dark;
+$color-background:    $white;
+$color-link:          $white;
+
+/* palette */
+$color-brand-blue:    $blue;
+$color-brand-red:     $red;
+$color-brand-green:   $green;
+$color-brand-yellow:  $yellow;
+
+/* states */
+$color-success:       #2ECC71;
+$color-error:         #E74C3C;
+
+
+
+/* $. Typography
+\*----------------------------------------------------------------*/
+
+$font: "Gill Sans", sans-serif;
+
+$weight-normal:  300;
+$weight-medium:  500;
+$weight-bold:    700;
+
+
+
+/* $. Layout
+\*----------------------------------------------------------------*/
+
+$base: 1em;
+
+
+
+/* $. Icons
+\*----------------------------------------------------------------*/
+
+$icon: 33px;
+$icon-small: 35px;
+$icon-medium: 30px;
+$icon-large: 40px;
+$icon-xlarge: 50px;
+$icon-xxlarge: 150px;
+
+
+/* $. Z axis
+\*----------------------------------------------------------------*/
+
+$z-index-0: -1;
+$z-index-1: 1;
+$z-index-2: 5;
+$z-index-3: 10;
+$z-index-4: 15;
+$z-index-5: 20;

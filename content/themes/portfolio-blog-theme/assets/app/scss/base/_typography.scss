@@ -1,0 +1,151 @@
+/**
+ * Title: Typography
+ * Description: Base typography styles dealing with Vertical Rhythm and Hierarchy
+ * Sections:
+ *    $. Vertical Rhythm
+ *    $. Headings and Common Styles
+ */
+
+
+
+/* $. Vertical Rhythm
+\*----------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0em;
+    font-weight: $weight-medium;
+}
+
+blockquote, pre, p, ul, ol, dl, hr {
+    margin-top: 0;
+}
+
+p, ul, ol, dl, hr, form, table, blockquote, pre {
+    margin-bottom: 0em;
+}
+
+ul > :last-child,
+ol > :last-child,
+dl > :last-child,
+blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* $. Headings and Common Styles
+\*----------------------------------------------------------------*/
+
+h1, .alpha {
+    font-size: 1.6rem;
+}
+
+h2, .beta {
+    font-size: 1.4rem;
+}
+
+h3, .gamma, p {
+    font-size: 1.2rem;
+}
+
+h4, .delta {
+    font-size: 1.1rem;
+}
+
+h5, .epsilon {
+    font-size: 1rem;
+}
+
+.frankie {
+    font-size: 2.5rem;
+}
+
+// h6, .zeta {
+//     font-size: 0.875rem;
+// }
+
+.intro {
+    font-size: 1.25em;
+}
+
+@include respond-min($bp1) {
+    h1, .alpha {
+        font-size: 1.6rem;
+    }
+
+    h2, .beta {
+        font-size: 1.4rem;
+    }
+
+    h3, .gamma, p {
+        font-size: 1.2rem;
+    }
+}
+
+@include respond-min($bp2) {
+    h3, .gamma, p, .delta {
+        font-size: 1.2rem;
+    }
+
+}
+
+@include respond-min($bp3) {
+    h3, .gamma {
+        font-size: 1.1rem;
+    }
+
+    p, .delta {
+        font-size: 1rem;
+    }
+}
+
+@include respond-min($bp4) {
+    h3, .gamma {
+        font-size: 1.2rem;
+    }
+
+    p, .delta {
+        font-size: 1.1rem;
+    }
+}
+
+@include respond-min($bp5) {
+    h2, .beta {
+        font-size: 1.6rem;
+    }
+
+    h3, .gamma {
+        font-size: 1.4rem;
+    }
+    
+    p, .delta {
+        font-size: 1.3rem;
+    }
+}
+
+@include respond-min($bp6) {
+    h1, .alpha {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3, .gamma {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .beta {
+        font-size: 2.2rem;
+    }
+
+    .delta {
+        font-size: 1.6rem;
+    }
+}

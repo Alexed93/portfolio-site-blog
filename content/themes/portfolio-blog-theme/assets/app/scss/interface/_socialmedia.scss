@@ -1,0 +1,104 @@
+// .instagramfeed {
+//     display: none;
+
+//     @include respond-min($bp2) {
+//         display: block;
+
+//         img {
+//             width: 25%;
+//             max-height: 10em;
+//         }
+//     }
+
+//     @include respond-min($bp3) {
+//         img {
+//             max-height: 11em;
+//         }
+//     }
+// }
+
+.socialmedia_list {
+    list-style: none;
+    margin: 0;
+}
+
+.icon_socialmedia {
+    display: inline-block;
+    background: $color-brand;
+    border-radius: 50%;
+    text-align: center;
+    transition: background 300ms ease-in-out;
+
+    // This bit changes per BP
+    margin-right: 1em;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+
+    @include respond-min($bp4) {
+        margin-right: 2em;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
+}
+
+.icon_socialmedia:hover {
+    animation: socialmedia_bounce .8s ease-in-out;
+    background: $green-brand;
+}
+
+@keyframes socialmedia_bounce {
+    25% { transform: translateY(-10px) }
+    50% { transform: translateY(0px) }
+    75% { transform: translateY(-5px) }
+    100% { transform: translateY(0px) }
+}
+
+.icon_socialmedia_font {
+    font-size: 1rem;
+    color: $white;
+
+    @include respond-min($bp4) {
+        font-size: 1.25rem;
+    }
+}
+
+.green_background {
+    background: $green-brand;
+}
+
+.white_background {
+    background: $white;
+}
+
+.green_text {
+    color: $green-brand;
+}
+
+.purple_text {
+    color: $color-brand;
+}
+
+.purple_background {
+    color: $color-brand;
+}
+
+// .green_border {
+//     border: solid 2px $green-brand;
+// }
+
+// .white_text {
+//     color: $white;
+// }
+
+// .icon__socialmedia a {
+//     height: 100%;
+//     width: 100%;
+//     display: inline-block;
+//     cursor: pointer;
+// }
+
+// .icon__socialmedia:hover {
+//     transform: translateY(-10px);
+// }
