@@ -20,8 +20,11 @@
 .header {
     width: 100%;
     padding: 1em 0.5em 0em 0.5em;
-    position: static;
+    position: fixed;
+    background: $white;
+    display: block;
     color: $color-brand;
+    top: 0;
 }
 
 .header_fill {

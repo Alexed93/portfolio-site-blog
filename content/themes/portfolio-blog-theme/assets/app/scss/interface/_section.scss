@@ -34,14 +34,11 @@
 
 .section {
     @extend %cf;
-    position: relative;
-    padding: $base 0;
-
-    @include respond-min($bp2) {
-        padding: ($base*2) 0;
-    }
 }
 
+.section__main {
+    margin-top: 7em;
+}
 
 /* $. Elements
 \*----------------------------------------------------------------*/
@@ -53,17 +50,18 @@
 
 
 
+
 /* $. Sizing
 \*----------------------------------------------------------------*/
 
-.section--small {
-    padding: $base 0;
-}
+// .section--small {
+//     padding: $base 0;
+// }
 
-.section--large {
-    padding: ($base*2) 0 ($base*2) 0;
+// .section--large {
+//     padding: ($base*2) 0 ($base*2) 0;
 
-    @include respond-min($bp2) {
-        padding: ($base*4) 0 ($base*4) 0;
-    }
-}
+//     @include respond-min($bp2) {
+//         padding: ($base*4) 0 ($base*4) 0;
+//     }
+// }
