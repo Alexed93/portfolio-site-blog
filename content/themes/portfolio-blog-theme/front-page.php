@@ -21,26 +21,30 @@ get_header();
 
 
 <main class="section | section__main">
-    <div class="container">
+    <div class="container | cf">
     <?php get_sidebar(); ?>
-
-        <div class="grid | grid--compact | grid--posts" onclick="">
-            <?php if ( have_posts() ): ?>
-                <?php while ( have_posts() ): ?>
-                    <?php the_post(); ?>
-                    <div class="grid__item | grid__item--3-12-bp4">
-                        <?php the_title(); ?>
-
-                        <?php if ( $post->post_excerpt ): ?>
-                            <?php echo get_the_excerpt(); ?>
-                        <?php endif; ?>
-
-                        <?php the_content(); ?>
-                    </div>
-                <?php endwhile; ?>
-            <?php else: ?>
-                <?php get_template_part('views/errors/404-posts'); ?>
-            <?php endif; ?>
+        <div class="section__content">
+            <div class="grid | grid--compact | grid--posts" onclick="">
+                <?php if ( have_posts() ): ?>
+                    <?php while ( have_posts() ): ?>
+                        <?php the_post(); ?>
+                        
+                            <div class="grid__item | grid__item--4-12-bp4 | grid__item--3-12-bp6">
+                                <div class="work_item | u-align-center">
+                                    <div class="work_image"><?php the_post_thumbnail(); ?></div>
+                                    <div class="work_overlay"></div>     
+                                    <a class="work_link" href="#">
+                                        <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
+                                        <?php if ( $post->post_excerpt ): ?><div class="delta"><?php the_excerpt(); ?></div><?php endif; ?>
+                                    </a>  
+                                </div>
+                            </div>
+                        
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <?php get_template_part('views/errors/404-posts'); ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div> <!-- .container -->
 </main>

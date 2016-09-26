@@ -20,6 +20,7 @@ get_header();
 <main class="section">
     <div class="container">
         <?php if ( have_posts() ): ?>
+
             <?php while ( have_posts() ): ?>
                 <?php the_post(); ?>
 
@@ -34,6 +35,7 @@ get_header();
                 </article>
                 
             <?php endwhile; ?>
+            
         <?php else: ?>
             <?php get_template_part( 'views/errors/404-posts' ); ?>
         <?php endif; ?>

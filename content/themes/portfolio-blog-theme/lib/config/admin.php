@@ -164,6 +164,7 @@ function wpst_update_post_type_features() {
     remove_post_type_support( 'page', 'custom-fields' );
 
     add_post_type_support( 'page', 'excerpt' );
+    add_theme_support( 'post-thumbnails' );
 }
 
 add_action( 'init', 'wpst_update_post_type_features' );
