@@ -47,5 +47,9 @@
 .icon--transparent { opacity: .3; filter: alpha(opacity=30); }
 
 /* Logos */
-.icon--logo {
+.logo {
+    margin: 0 auto;
+    display: block;
+    width: 60%;
+    margin-top: .5em;
 }

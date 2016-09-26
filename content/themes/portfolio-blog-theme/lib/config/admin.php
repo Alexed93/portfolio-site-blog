@@ -156,12 +156,10 @@ add_action( 'init', 'wpst_remove_emoji' );
 
 function wpst_update_post_type_features() {
     remove_post_type_support( 'post', 'comments' );
-    remove_post_type_support( 'post', 'thumbnail' );
     remove_post_type_support( 'post', 'trackbacks' );
     remove_post_type_support( 'post', 'custom-fields' );
 
     remove_post_type_support( 'page', 'comments' );
-    remove_post_type_support( 'page', 'thumbnail' );
     remove_post_type_support( 'page', 'trackbacks' );
     remove_post_type_support( 'page', 'custom-fields' );
 
