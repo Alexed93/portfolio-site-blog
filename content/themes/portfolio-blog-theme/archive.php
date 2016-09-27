@@ -14,7 +14,7 @@
 
 
 // Get the header
-get_header();
+/*get_header();
 
 // Define fields from static 'blog' page in WordPress based on page ID
 $home_title   = get_the_title( 1 );
@@ -22,7 +22,7 @@ $home_excerpt = wpst_get_excerpt_by_id( 1 );
 
 ?>
 
-<?php
+<?php */
 
 /**
  ***************************************************************************

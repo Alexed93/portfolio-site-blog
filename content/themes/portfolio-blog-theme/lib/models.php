@@ -29,4 +29,4 @@
  * $. Taxonomies
  ******************************************************************************/
 
-//require_once( 'models/taxonomies/example.php' );
+require_once( 'models/taxonomies/example.php' );
