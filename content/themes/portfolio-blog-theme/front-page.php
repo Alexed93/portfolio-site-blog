@@ -30,13 +30,14 @@ get_header();
                         <?php the_post(); ?>
                         
                             <div class="grid__item | grid__item--4-12-bp4 | grid__item--3-12-bp6">
-                                <div class="work_item | u-align-center">
-                                    <div class="work_image"><?php the_post_thumbnail(); ?></div>
-                                    <div class="work_overlay"></div>     
-                                    <a class="work_link" href="#">
-                                        <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
-                                        <?php if ( $post->post_excerpt ): ?><div class="delta"><?php the_excerpt(); ?></div><?php endif; ?>
-                                    </a>  
+                                <div class="work_item">
+                                    <div class="work_image" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>');"></div>
+                                    <div class="work_overlay">
+                                        <div class="work_overlay--text">     
+                                            <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
+                                            <?php if ( $post->post_excerpt ): ?><div class="delta"><?php the_excerpt(); ?></div><?php endif; ?>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         

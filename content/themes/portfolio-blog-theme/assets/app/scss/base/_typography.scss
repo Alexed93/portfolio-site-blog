@@ -101,12 +101,12 @@ h5, .epsilon {
 }
 
 @include respond-min($bp4) {
-    h3, .gamma {
+    .beta {
         font-size: 1.2rem;
     }
 
-    p, .delta {
-        font-size: 1.1rem;
+    h3, .gamma {
+        font-size: 1.2rem;
     }
 }
 
