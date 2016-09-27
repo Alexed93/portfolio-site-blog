@@ -14,12 +14,40 @@
 \*----------------------------------------------------------------*/
 
 .sidebar {
-    width: 25%;
-    padding-right: 2em;
-    float: left;
-    border-right: 1px solid $green-brand;
-    position: fixed;
+    border-bottom: 1px solid $green-brand;
+    padding: 0 0 2em 0;
+    margin: 0 0 2em 0;
+    h1, h2 {
+        text-align: center;
+    }
 
+    @include respond-min($bp2) {
+        h1, h2 {
+            text-align: left;
+        }
+        text-align: left;
+    }
+
+    @include respond-min($bp3) {
+        position: fixed;
+        float: left;
+        width: 25%;
+        padding: 0 2em 0 0;
+        border-right: 1px solid $green-brand;
+        border-bottom: none;
+    }
+}
+
+.sidebar--text {
+    @include respond-min($bp2) {
+        float: left;
+        width: 70%;
+    }
+
+    @include respond-min($bp3) {
+        float: none;
+        width: 100%;
+    }
 }
 
 

@@ -28,14 +28,15 @@ get_header();
                 <?php if ( have_posts() ): ?>
                     <?php while ( have_posts() ): ?>
                         <?php the_post(); ?>
-                        
-                            <div class="grid__item | grid__item--4-12-bp4 | grid__item--3-12-bp6">
+
+                            <div class="grid__item grid__item--6-12 | grid__item--4-12-bp3 | grid__item--3-12-bp6">
                                 <div class="work_item">
-                                    <div class="work_image" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>');"></div>
-                                    <div class="work_overlay">
-                                        <div class="work_overlay--text">     
-                                            <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
-                                            <?php if ( $post->post_excerpt ): ?><div class="delta"><?php the_excerpt(); ?></div><?php endif; ?>
+                                    <div class="work_image" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>');">
+                                        <div class="work_overlay">
+                                            <div class="work_overlay--text">     
+                                                <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
+                                                <?php if ( $post->post_excerpt ): ?><div class="delta"><?php the_excerpt(); ?></div><?php endif; ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

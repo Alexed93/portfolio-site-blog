@@ -11,20 +11,28 @@
 
 .work_image {
   width: 100%;
-  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: (1/1) * 100%; // h / w
+  }
+
+  @include respond-min($bp2) {
+    position: realtive;
+  }
+}
+
+.work_overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-.work_overlay {
-    padding: 1em;
-    opacity: 0;
-    text-align: center;
+  opacity: 0;
+  text-align: center;
 }
 
 .work_item:hover .work_overlay {
@@ -34,5 +42,12 @@
 }
 
 .work_overlay--text {
-    position: relative;
+    padding: 1em;
+
+    @include respond-min($bp2) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
 }

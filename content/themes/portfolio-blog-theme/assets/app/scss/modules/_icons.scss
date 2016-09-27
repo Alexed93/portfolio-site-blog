@@ -50,6 +50,18 @@
 .logo {
     margin: 0 auto;
     display: block;
-    width: 50%;
+    width: 25%;
     margin-top: 2em;
+
+    @include respond-min($bp2) {
+        display: inline-block;
+        float: right;
+    }
+    
+    @include respond-min($bp3) {
+        float: none;
+        display: block;
+        width: 50%;
+        margin-top: 2em;
+    }
 }
