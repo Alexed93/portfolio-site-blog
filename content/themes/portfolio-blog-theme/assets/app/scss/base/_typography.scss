@@ -41,15 +41,15 @@ h1, .alpha {
     font-size: 1.6rem;
 }
 
-h2, .beta {
+h2 {
     font-size: 1.4rem;
 }
 
-h3, .gamma, p {
+h3, .gamma {
     font-size: 1.2rem;
 }
 
-h4, .delta {
+h4 {
     font-size: 1.1rem;
 }
 
@@ -61,9 +61,9 @@ h5, .epsilon {
     font-size: 2.5rem;
 }
 
-// h6, .zeta {
-//     font-size: 0.875rem;
-// }
+.beta, p {
+    font-size: 0.9rem;
+}
 
 .intro {
     font-size: 1.25em;
@@ -74,53 +74,62 @@ h5, .epsilon {
         font-size: 1.6rem;
     }
 
-    h2, .beta {
+    h2 {
         font-size: 1.4rem;
     }
 
-    h3, .gamma, p {
+    h3, .gamma {
         font-size: 1.2rem;
+    }
+
+    .beta, p {
+        font-size: 1rem;
     }
 }
 
 @include respond-min($bp2) {
-    h3, .gamma, p, .delta {
+    h3, .gamma {
         font-size: 1.2rem;
     }
-
+    p {
+        font-size: 1.5rem;
+    }
+    .beta {
+        font-size: 1.7rem;
+    }
 }
 
 @include respond-min($bp3) {
     h3, .gamma {
         font-size: 1.1rem;
     }
-
-    p, .delta {
+    p {
+        font-size: 0.9rem;
+    }
+    .beta {
         font-size: 1rem;
     }
 }
 
 @include respond-min($bp4) {
-    .beta {
+    h3, .gamma {
         font-size: 1.2rem;
     }
-
-    h3, .gamma {
+    p {
+        font-size: 1.1rem;
+    }
+    .beta {
         font-size: 1.2rem;
     }
 }
 
 @include respond-min($bp5) {
-    h2, .beta {
+    h2, {
         font-size: 1.6rem;
     }
 
     h3, .gamma {
         font-size: 1.4rem;
-    }
-    
-    p, .delta {
-        font-size: 1.3rem;
     }
 }
 
@@ -137,15 +146,11 @@ h5, .epsilon {
         font-size: 1.6rem;
     }
 
-    p {
-        font-size: 1.3rem;
-    }
+    // p {
+    //     font-size: 1.3rem;
+    // }
 
-    .beta {
-        font-size: 2.2rem;
-    }
-
-    .delta {
-        font-size: 1.6rem;
-    }
+    // .beta {
+    //     font-size: 2.2rem;
+    // }
 }

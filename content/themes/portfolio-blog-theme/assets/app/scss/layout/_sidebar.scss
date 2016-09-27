@@ -36,6 +36,10 @@
         border-right: 1px solid $green-brand;
         border-bottom: none;
     }
+
+    @include respond-min($bp5) {
+        width: 23%;
+    }
 }
 
 .sidebar--text {

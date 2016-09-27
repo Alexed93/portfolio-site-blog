@@ -38,13 +38,10 @@
 
 .section__main {
     margin-top: 5em;
-
-    @include respond-min($bp3) {
-        margin-top: 5em;
-    }
+    margin: 5em 0 2em 0;
 
     @include respond-min($bp4) {
-        margin-top: 7em;
+        margin: 7em 0 2em 0;
     }
 }
 
@@ -52,10 +49,12 @@
 \*----------------------------------------------------------------*/
 
 .section__content {
-
     @include respond-min($bp3) {
         float: right;
         width: 67%;
+    }
+    @include respond-min($bp5) {
+        width: 62%;
     }
 }
 

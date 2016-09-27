@@ -68,13 +68,9 @@
         text-align: right;
         transform: none;
         right: 75px;
-        top: -65px;
+        top: -60px;
         left: 30%;
         padding: 0.5em 0 0 0;
-    }
-
-    @include respond-min($bp4) {  
-        top: -60px;
     }
 }
 
@@ -93,8 +89,8 @@
 
     @include respond-min($bp2) { 
         display: inline;
-        font-size: 1.5rem;
-        margin-right: 0.5em;
+        font-size: 1.3rem;
+        margin-left: 0.5em;
         position: relative;
 
         :after {
@@ -114,9 +110,6 @@
         }
     }
 
-    @include respond-min($bp3) { 
-        font-size: 1.3rem;
-    }
 }
 
 .nav_link {
