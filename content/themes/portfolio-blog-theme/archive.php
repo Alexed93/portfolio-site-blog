@@ -2,6 +2,30 @@
 
 /**
  ***************************************************************************
+ * Home Template
+ ***************************************************************************
+ *
+ * This template is used to show the posts landing, assuming its not already
+ * the Front Page of the site, in which case `front-page.php` would take
+ * priority.
+ *
+ */
+
+
+
+// Get the header
+get_header();
+
+// Define fields from static 'blog' page in WordPress based on page ID
+$home_title   = get_the_title( 1 );
+$home_excerpt = wpst_get_excerpt_by_id( 1 );
+
+?>
+
+<?php
+
+/**
+ ***************************************************************************
  * Front Page Template
  ***************************************************************************
  *
@@ -52,5 +76,8 @@ get_header();
         </div>
     </div> <!-- .container -->
 </main>
+
+<?php get_footer(); ?>
+
 
 <?php get_footer(); ?>
