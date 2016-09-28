@@ -18,7 +18,7 @@
 <aside class="sidebar | cf" role="complementary">
     <article class="sidebar__section">
         <div class="sidebar--text">
-            <h1>Blogs.</h1>
+            <h1><?php single_cat_title(); ?>.</h1>
             <h2 class="highlight">My mumblings.</h2>
             <h3 class="u-push-top/2">Want to know what i'm currently up to? My blog posts can be found here, where I talk about my latest project, scribble or really anything related to the Creative Industries.</h3>
         </div>

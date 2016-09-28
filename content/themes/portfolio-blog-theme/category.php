@@ -58,7 +58,6 @@ get_header();
                 <?php if ( have_posts() ): ?>
                     <?php while ( have_posts() ): ?>
                         <?php the_post(); ?> 
-
                             <div class="grid__item grid__item--6-12 | grid__item--4-12-bp3 | grid__item--3-12-bp6">
                                 <div class="work_item">
                                     <a href="<?php the_permalink(); ?>">
