@@ -44,7 +44,15 @@ get_header();
 
 <main class="section">
     <div class="container | cf">
-    <?php get_sidebar('front'); ?> 
+
+    <?php if (is_category('web')) : ?>
+    <?php get_sidebar('web'); ?>
+    <?php elseif (is_category('graphics')) : ?>
+    <?php get_sidebar('graphics'); ?>
+    <?php elseif (is_category('blog')) : ?>
+    <?php get_sidebar('blogs'); ?>
+    <?php endif; ?>
+
         <div class="section__content">
             <div class="grid | grid--compact | grid--posts" onclick="">
                 <?php if ( have_posts() ): ?>
@@ -72,6 +80,7 @@ get_header();
                 <?php endif; ?>
             </div>
         </div>
+
     </div> <!-- .container -->
 </main>
 
