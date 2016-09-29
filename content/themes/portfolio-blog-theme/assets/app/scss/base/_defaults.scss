@@ -38,6 +38,12 @@ body {
     height: 100%;
     line-height: 1.4;
     background: $white;
+
+    padding: 5rem 0 2rem 0;
+
+    @include respond-min($bp4) {
+        padding: 7rem 0 2rem 0;
+    }
 }
 
 

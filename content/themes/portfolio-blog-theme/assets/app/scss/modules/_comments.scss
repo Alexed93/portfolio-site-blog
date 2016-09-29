@@ -1,0 +1,102 @@
+// Share area
+
+.post__commentform {
+    float: left;
+}
+
+.post__sharing {
+    float: right;
+}
+
+/* Comment form
+--------------------------------------
+*/
+
+.comment-form {
+    margin: $base 0 $base*2 0;
+}
+
+.comment-form-comment {
+    margin: $base 0;
+}
+
+.comment-form input, .comment-form textarea {
+    border: 1px solid $grey;
+}
+
+.comment-form input:active, .comment-form input:focus, .comment-form textarea:active, .comment-form textarea:focus  {
+    border: 1px solid $green-brand;
+}
+
+.comment-form textarea {
+    padding: .5rem;
+}
+
+.comment-form-comment label {
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.comment-form-author, .comment-form-email {
+    margin-bottom: $base;
+
+    label {
+        margin-right: 1rem;
+    }
+}
+
+.form-submit .submit {
+    background: $white;
+    border: 1px solid $green-brand;
+}
+
+.submit:hover {
+    background: $green-brand;
+    color: $white;
+    transition: all .7s ease;
+}
+
+/* Comments 
+--------------------------------------
+*/
+
+.post__comments {
+    clear: both;
+}
+
+.comment-metadata, .comment-content, .reply {
+    margin-top: $base;
+}
+
+.avatar {
+    margin: 0 $base;
+}
+
+.fn {
+    font-weight: 600;
+}
+
+.comment-metadata {
+    color: $green-brand;
+
+    .edit-link {
+        padding-left: .5rem;
+    }
+}
+
+.comment-content {
+    margin-left: 1rem;
+}
+
+.comment-reply-link {
+    color: #CB4A4F;
+}
+
+.comment {
+    padding: 1rem;
+    list-style-position: inside;
+}
+
+.comment-list .comment:nth-child(even) {
+    background: #f6f6f6;
+}

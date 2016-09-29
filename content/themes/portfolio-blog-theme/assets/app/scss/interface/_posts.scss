@@ -1,0 +1,22 @@
+// Styles for post pages
+
+.post__introduction {
+    @include respond-min($bp3) {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.post__title {
+    font-size: 2rem;
+}
+
+.post__date, .post__excerpt p{
+    font-size: 1.4rem;
+}
+
+.post__images {
+    border-top: 1px solid $green-brand;
+    border-bottom: 1px solid $green-brand;
+    padding: $base*2 0;
+}

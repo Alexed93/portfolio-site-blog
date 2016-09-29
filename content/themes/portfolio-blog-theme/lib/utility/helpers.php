@@ -43,3 +43,12 @@ function wpst_get_excerpt_by_id ( $id ) {
     return $excerpt;
 }
 
+/**
+ * $. Remove web field for comment box
+ ******************************************************************************/
+
+function crunchify_disable_comment_url($fields) { 
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','crunchify_disable_comment_url');
