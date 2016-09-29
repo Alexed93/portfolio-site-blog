@@ -92,9 +92,9 @@ $project_url = get_field('project_url');
             </div>
             <div class="post__sharing">
                 <ul class="post__sharing--list">
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Mail</li>
+                    <li class="post__social | post__socialicon--facebook">Share on Facebook</li>
+                    <li class="post__social | post__socialicon--twitter">Share on Twitter</li>
+                    <li class="post__social | post__socialicon--email">Email to a friend</li>
                 </ul>
             </div>
             <div class="post__comments | u-push-top@2 ">
