@@ -35,6 +35,11 @@ $bp6: 125em;
 /* Random colour variable (with a colour inside for dev purposes) */
 $color-brand:         #331749;
 $green-brand:         #11cba6;
+$brand-red:           #CB4A4F;
+
+.highlight-red {
+    color: $brand-red;
+}
 .highlight {
     color: $green-brand;
 }

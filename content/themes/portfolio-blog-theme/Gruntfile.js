@@ -15,6 +15,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-svgmin' );
     grunt.loadNpmTasks( 'grunt-grunticon' );
     grunt.loadNpmTasks( 'grunt-sass' );
+    grunt.loadNpmTasks( 'grunt-browser-sync' );
 
     // Keep directories in variable for easy changes and CMS integration
     var dirs = {
@@ -156,29 +157,34 @@ module.exports = function( grunt ) {
             }
         },
 
+        // Browsersync
+        browserSync: {
+            bsFiles: {
+                src : [
+                    '<%= dirs.assets_output %>/css/*.css',
+                    '<%= dirs.assets_output %>/js/*.js',
+                    '**/*.php'
+                ]
+            },
+            options: {
+                watchTask: true,
+                proxy: 'portfolio-blog.dev'
+            }
+        },
+
         // Watch Task
         watch: {
             scripts: {
                 files: [ '<%= dirs.assets_input %>/js/*.js' ],
                 tasks: [ 'uglify', 'notify:uglify' ],
-                options: {
-                    livereload: true,
-                    spawn: false
-                }
             },
             css: {
                 files: '<%= dirs.assets_input %>/scss/**/*.scss',
                 tasks: [ 'sass:dist', 'pixrem', 'postcss:dist', 'notify:sass' ],
-                options: {
-                    livereload: true
-                }
             },
             svg: {
                 files: '<%= dirs.assets_input %>/icons/*.svg',
-                tasks: [ 'svgmin', 'grunticon', 'sass:dist' ],
-                options: {
-                    livereload: true
-                }
+                tasks: [ 'svgmin', 'grunticon', 'sass:dist' ], 
             }
         },
 
@@ -207,6 +213,14 @@ module.exports = function( grunt ) {
             'pixrem',
             'postcss',
             'uglify'
+        ]
+    );
+
+    grunt.registerTask(
+        'bs',
+        [
+            'browserSync',
+            'watch'
         ]
     );
 

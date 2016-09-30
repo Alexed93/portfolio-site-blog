@@ -32,3 +32,13 @@ a.post__url {
 .post__content p {
     font-size: 1.2rem;
 }
+
+@include respond-min($bp3) {
+    .post__excerpt p{
+        font-size: 1.2rem;
+    }
+
+    .post__content p {
+        font-size: 1rem;
+    }
+}

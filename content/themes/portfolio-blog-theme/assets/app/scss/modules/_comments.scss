@@ -4,29 +4,38 @@
 --------------------------------------
 */
 
+.post__commentform {
+    position: relative;
+    border-bottom: 1px solid $green-brand;
+    padding-bottom: $base*2;
+}
+
 .comment-form {
     margin: $base 0 $base*2 0;
 }
 
 .comment-form-comment {
     margin: $base 0;
+
+    @include respond-min($bp3) {
+        margin: $base 0 0 0;
+        float: right;
+        width: 45%;
+    }
 }
 
 .comment-form input, .comment-form textarea {
     border: 1px solid $grey;
+    padding: .5rem;
 }
 
 .comment-form input:active, .comment-form input:focus, .comment-form textarea:active, .comment-form textarea:focus  {
     border: 1px solid $green-brand;
+    color: $brand-red;
 }
 
 .comment-form textarea {
-    padding: .5rem;
     width: 100%;
-
-    @include respond-min($bp3) {
-        width: 25%;
-    }
 }
 
 .comment-form-comment label {
@@ -38,13 +47,22 @@
     margin-bottom: $base;
 
     label {
-        margin-right: 1rem;
+        display: block;
+        margin-bottom: .5em;
+    }
+}
+
+.comment-form-author {
+    @include respond-min($bp3) {
+        margin-top: 1.1em;
     }
 }
 
 .form-submit .submit {
     background: $white;
     border: 1px solid $green-brand;
+    position: absolute;
+    bottom: $base*2;
 }
 
 .submit:hover {
@@ -86,10 +104,13 @@
 }
 
 .comment {
-    padding: 1rem;
     list-style-position: inside;
 }
 
-.comment-list .comment:nth-child(even) {
-    background: #f6f6f6;
+.comment-list {
+    margin: 0;
 }
+
+// .comment-list .comment:nth-child(even) {
+//     background: #f6f6f6;
+// }

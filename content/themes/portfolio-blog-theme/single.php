@@ -59,7 +59,7 @@ $project_url = get_field('project_url');
         <article class="post">
             <div class="post__introduction | u-align-center">
                 <h1 class="post__title"><?php the_title(); ?></h1>
-                <a class="post__url" href="<?php echo $project_url; ?>" target=_blank><?php echo $project_url; ?></a>
+                <a class="post__url | highlight-red" href="<?php echo $project_url; ?>" target=_blank><?php echo $project_url; ?></a>
                 <h2 class="post__date | highlight "><?php the_date('d-m-Y'); ?></h2>
                 <?php if ( $post->post_excerpt ): ?><div class="post__excerpt | u-push-top@2"><?php the_excerpt(); ?></div><?php endif; ?>
             </div>
@@ -88,7 +88,7 @@ $project_url = get_field('project_url');
         </article>
 
         <div class="post__user | u-push-top@2 | u-push-bottom@2">
-            <div class="post__commentform">
+            <div class="post__commentform cf">
                 <?php comment_form(); ?>
             </div>
 

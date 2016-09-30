@@ -2,7 +2,7 @@
 
 .socialmedia-sharing {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: center;
 }
 
@@ -20,5 +20,5 @@
 }
 
 .fa-twitter--red, .fa-facebook--red, .fa-envelope--red {
-    color: #CB4A4F;
+    color: $brand-red;
 }
