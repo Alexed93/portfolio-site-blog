@@ -61,7 +61,7 @@ $project_url = get_field('project_url');
                 <h1 class="post__title"><?php the_title(); ?></h1>
                 <a class="post__url" href="<?php echo $project_url; ?>" target=_blank><?php echo $project_url; ?></a>
                 <h2 class="post__date | highlight "><?php the_date('d-m-Y'); ?></h2>
-                <?php if ( $post->post_excerpt ): ?><div class="post__excerpt | u-push-top"><?php the_excerpt(); ?></div><?php endif; ?>
+                <?php if ( $post->post_excerpt ): ?><div class="post__excerpt | u-push-top@2"><?php the_excerpt(); ?></div><?php endif; ?>
             </div>
 
             <div class="post__content | u-push-top@2">
@@ -75,7 +75,7 @@ $project_url = get_field('project_url');
                 
                         <?php foreach ($attachments as $attachment) : ?>
                             <?php $attachment_id = $attachment->ID; ?>
-                            <div class="grid__item grid__item--6-12 | grid__item--4-12-bp3 | grid__item--3-12-bp6">
+                            <div class="grid__item |  | grid__item--4-12-bp3 | grid__item--3-12-bp6">
                                 <div class="">
                                     <?php echo wp_get_attachment_image( $attachment_id, $size ); ?>
                                 </div>

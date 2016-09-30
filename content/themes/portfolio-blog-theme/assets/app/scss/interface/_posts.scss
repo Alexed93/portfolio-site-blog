@@ -8,10 +8,18 @@
 }
 
 .post__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
-.post__date, .post__excerpt p{
+a.post__url {
+    font-size: 1rem;
+}
+
+.post__date {
+    font-size: 1rem;
+}
+
+.post__excerpt p{
     font-size: 1.4rem;
 }
 
@@ -19,4 +27,8 @@
     border-top: 1px solid $green-brand;
     border-bottom: 1px solid $green-brand;
     padding: $base*2 0;
+}
+
+.post__content p {
+    font-size: 1.2rem;
 }

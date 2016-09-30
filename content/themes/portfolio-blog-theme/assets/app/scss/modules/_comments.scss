@@ -22,6 +22,11 @@
 
 .comment-form textarea {
     padding: .5rem;
+    width: 100%;
+
+    @include respond-min($bp3) {
+        width: 25%;
+    }
 }
 
 .comment-form-comment label {

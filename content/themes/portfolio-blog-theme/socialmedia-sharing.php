@@ -13,9 +13,8 @@
     );
 ?>
 
-
 <div class="socialmedia-sharing | cf | u-push-top">
-    <ul class="socialmedia-sharing__list | u-float-right | u-display-inline">
+    <ul class="socialmedia-sharing__list | u-display-inline">
         <a href="<?php echo $links['facebook']; ?>" target="_blank">
             <li class=" fa | fa-facebook | fa-facebook--red | socialmedia-sharing__icon"></li>
         </a>

@@ -3,10 +3,15 @@
 .socialmedia-sharing {
     width: 100%;
     font-size: 1.5rem;
+    text-align: center;
 }
 
-.socialmedia-sharing__icon {
-    margin: 0 0 0 1em;
+.socialmedia-sharing__list {
+    margin-left: 0;
+}
+
+.socialmedia-sharing__list a:nth-child(2) li {
+    margin: 0 1em;
 }
 
 .socialmedia-sharing__icon:hover {
