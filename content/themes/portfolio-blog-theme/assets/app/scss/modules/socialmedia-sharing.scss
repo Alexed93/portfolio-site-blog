@@ -1,0 +1,19 @@
+// CSS For social media sharing icons, using FA 
+
+.socialmedia-sharing {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.socialmedia-sharing__icon {
+    margin: 0 0 0 1em;
+}
+
+.socialmedia-sharing__icon:hover {
+    color: $green-brand;
+    transition: all .3s ease;
+}
+
+.fa-twitter--red, .fa-facebook--red, .fa-envelope--red {
+    color: #CB4A4F;
+}

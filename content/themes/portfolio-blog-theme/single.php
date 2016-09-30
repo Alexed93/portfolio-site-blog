@@ -65,7 +65,8 @@ $project_url = get_field('project_url');
             </div>
 
             <div class="post__content | u-push-top@2">
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>
+                <?php include 'socialmedia-sharing.php'; ?>
             </div>
 
             <?php if ( $attachments ) : ?>
@@ -86,17 +87,11 @@ $project_url = get_field('project_url');
             <?php endif; ?>
         </article>
 
-        <div class="post__user | u-push-top@2 | u-push-bottom@2 | cf">
+        <div class="post__user | u-push-top@2 | u-push-bottom@2">
             <div class="post__commentform">
                 <?php comment_form(); ?>
             </div>
-            <div class="post__sharing">
-                <ul class="post__sharing--list">
-                    <li class="post__social | post__socialicon--facebook">Share on Facebook</li>
-                    <li class="post__social | post__socialicon--twitter">Share on Twitter</li>
-                    <li class="post__social | post__socialicon--email">Email to a friend</li>
-                </ul>
-            </div>
+
             <div class="post__comments | u-push-top@2 ">
                 <?php if (comments_open() || get_comments_number() ):
                     comments_template(); 
