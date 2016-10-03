@@ -56,6 +56,29 @@ $project_url = get_field('project_url');
 
 <main class="section">
     <div class="container | container--small">
+    
+    <div class="pagination-controls">
+        <?php 
+            $prev_post = get_previous_post( true );
+            if ( $prev_post ) : 
+        ?>
+            <div class="pagination-controls__link pagination-controls__link--prev">
+                <i class="a-bounce-left"><</i>
+                <?php previous_post_link( '%link', 'Previous Post', true, [], 'category' ); ?>
+            </div>
+        <?php endif; ?>
+
+        <?php 
+            $next_post = get_next_post( true );
+            if ( $next_post ) :
+        ?>
+            <div class="pagination-controls__link pagination-controls__link--next">
+                <?php next_post_link( '%link', 'Next Post', true, [], 'category' ); ?>
+                <i class="a-bounce-right">></i>
+            </div>
+        <?php endif; ?>
+    </div>
+
         <article class="post">
             <div class="post__introduction | u-align-center">
                 <h1 class="post__title"><?php the_title(); ?></h1>

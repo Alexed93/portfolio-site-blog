@@ -1,27 +1,93 @@
-.pagination {
-    margin-top: $base*2;
-    padding: ($base/2) 0;
-    font-size: 1.2rem;
-    border-top: 1px solid $grey-lighter;
-    border-bottom: 1px solid $grey-lighter;
+// .pagination {
+//     margin-top: $base*2;
+//     padding: ($base/2) 0;
+//     font-size: 1.2rem;
+//     border-top: 1px solid $grey-lighter;
+//     border-bottom: 1px solid $grey-lighter;
 
-    a, span {
-        display: inline-block;
-    }
+//     a, span {
+//         display: inline-block;
+//     }
 
-    a {
-        margin: 0 $base/4;
-        line-height: 1;
-        border-bottom: 1px solid $color-link;
-    }
+//     a {
+//         margin: 0 $base/4;
+//         line-height: 1;
+//         border-bottom: 1px solid $color-link;
+//     }
 
-    .pages {
-        margin-right: $base*2;
-        font-size: .85rem;
-    }
+//     .pages {
+//         margin-right: $base*2;
+//         font-size: .85rem;
+//     }
 
-    .first,
-    .last {
-        border-bottom: 0;
+//     .first,
+//     .last {
+//         border-bottom: 0;
+//     }
+// }
+
+.pagination_controls {
+    clear: both;
+}
+
+.pagination-controls__link {
+    color: #808080;
+
+    i {
+        animation-play-state: paused;
     }
 }
+
+.pagination-controls__link:hover {
+    color: $brand-red;
+
+    i {
+        animation-play-state: running;
+    }
+}
+
+.pagination-controls__link--prev {
+    float: left;
+}
+.pagination-controls__link--next {
+    float: right;
+}
+
+
+/** 
+ * Animations
+ */
+
+@keyframes bounceright {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(10px) }
+}
+
+@keyframes bounceleft {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(-10px) }
+}
+
+.a-bounce-right,
+.a-bounce-left {
+    animation-duration: 0.4s; 
+    // animation-timing-function: ease-out; 
+    // animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    // animation-fill-mode: none;
+    // animation-play-state: running; 
+    display: inline-block;
+}
+
+.a-bounce-right {
+    margin-left: 5px;
+    animation-name: bounceright;
+}
+
+.a-bounce-left {
+    margin-right: 5px;
+    animation-name: bounceleft;
+}
+
+
