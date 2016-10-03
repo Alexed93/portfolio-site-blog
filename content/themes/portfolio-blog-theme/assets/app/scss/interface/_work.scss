@@ -44,7 +44,7 @@
 .work_overlay--text {
     padding: 1em;
 
-    @include respond-min($bp2) {
+    @include respond-min($bp1) {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

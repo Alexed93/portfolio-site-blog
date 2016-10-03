@@ -5,13 +5,24 @@
 */
 
 .post__commentform {
-    position: relative;
     border-bottom: 1px solid $green-brand;
-    padding-bottom: $base*2;
+    padding-bottom: .5em;
+
+    @include respond-min($bp2) {
+        padding-bottom: $base*1.5;
+    }
 }
 
 .comment-form {
     margin: $base 0 $base*2 0;
+
+    @include respond-min($bp2) {
+        margin: 2em 0 2em 0;
+    }
+
+    @include respond-min($bp3) {
+        margin: $base 0 $base 0;
+    }
 }
 
 .comment-form-comment {
@@ -27,6 +38,10 @@
 .comment-form input, .comment-form textarea {
     border: 1px solid $grey;
     padding: .5rem;
+
+    @include respond-min($bp3) {
+        width: 40%;
+    }
 }
 
 .comment-form input:active, .comment-form input:focus, .comment-form textarea:active, .comment-form textarea:focus  {
@@ -59,10 +74,13 @@
 }
 
 .form-submit .submit {
-    background: $white;
-    border: 1px solid $green-brand;
-    position: absolute;
-    bottom: $base*2;
+    background: #fff;
+    border: 1px solid #11cba6;
+    margin-top: 1em;
+
+    @include respond-min($bp4) {
+        margin-top: 1.3em;
+    }
 }
 
 .submit:hover {
@@ -87,7 +105,11 @@
 }
 
 .avatar {
-    margin: 0 $base;
+    margin-right: $base;
+
+    @include respond-min($bp2) {
+        margin: 0 $base;
+    }
 }
 
 .fn {
@@ -97,12 +119,18 @@
 .comment-metadata {
     color: grey;
     font-size: .7rem;
-    margin-left: 4.75rem;
+    margin-left: 4.25rem;
     margin-top: -.5em;
+
+    @include respond-min($bp2) {
+        margin-left: 4.75rem;
+    }
 }
 
 .comment-content, .reply, .edit-link {
-    margin-left: 1rem;
+    @include respond-min($bp2) {
+        margin-left: 1rem;
+    }
 }
 
 .comment {

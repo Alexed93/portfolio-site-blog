@@ -13,15 +13,14 @@
 
 a.post__url {
     font-size: 1rem;
-    transition: font-size .3s ease;
-}
-
-a.post__url:hover {
-    font-size: 1.1rem;
+    padding-bottom: .25em;
+    position: relative;
+    border-bottom: 1px solid $brand-red;
 }
 
 .post__date {
     font-size: 1rem;
+    margin-top: $base/2;
 }
 
 .post__excerpt p{

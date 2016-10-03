@@ -66,7 +66,7 @@ $project_url = get_field('project_url');
 
             <div class="post__content | u-push-top@2">
                 <?php the_content(); ?>
-                <?php include 'socialmedia-sharing.php'; ?>
+                <?php get_template_part('socialmedia-sharing'); ?>
             </div>
 
             <?php if ( $attachments ) : ?>
@@ -94,7 +94,7 @@ $project_url = get_field('project_url');
         </article>
 
         <div class="post__user | u-push-top@2 | u-push-bottom@2">
-            <div class="post__commentform cf">
+            <div class="post__commentform | cf">
                 <?php comment_form(); ?>
             </div>
 

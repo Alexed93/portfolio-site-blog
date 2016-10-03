@@ -16,7 +16,7 @@
 \*----------------------------------------------------------------*/
 
 %cf,
-.cf {
+.cf, form#commentform.comment-form {
     &:after {
         content: "";
         display: table;
