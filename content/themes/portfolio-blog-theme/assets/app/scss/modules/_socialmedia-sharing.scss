@@ -16,6 +16,10 @@
 
 .socialmedia-sharing__icon:hover {
     color: $green-brand;
+    transform: scale(1.3);
+}
+
+.socialmedia-sharing__icon {
     transition: all .3s ease;
 }
 

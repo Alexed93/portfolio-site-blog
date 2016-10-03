@@ -13,6 +13,11 @@
 
 a.post__url {
     font-size: 1rem;
+    transition: font-size .3s ease;
+}
+
+a.post__url:hover {
+    font-size: 1.1rem;
 }
 
 .post__date {
@@ -40,5 +45,17 @@ a.post__url {
 
     .post__content p {
         font-size: 1rem;
+    }
+}
+
+.attatchment {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: (1/1) * 100%; // h / w
     }
 }

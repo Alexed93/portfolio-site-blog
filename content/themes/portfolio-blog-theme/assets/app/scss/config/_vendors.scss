@@ -31,7 +31,7 @@ $gr-grid-compact: "grid--compact";          // Remove all gutters
 // $gr-item-centered: "grid__item--centered";  // Center an individual item, rather than all items.
 
 // Sizing
-// $gr-gutter: 1em;                            // The size between each grid item. Can use any CSS unit of measurement.
+$gr-gutter: .25em;                            // The size between each grid item. Can use any CSS unit of measurement.
 
 // Grid Alignment
 // $gr-grid-direction: inherit;                // Initial direction of the $gr-grid

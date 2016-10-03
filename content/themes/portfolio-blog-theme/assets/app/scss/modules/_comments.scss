@@ -68,15 +68,22 @@
 .submit:hover {
     background: $green-brand;
     color: $white;
-    transition: all .7s ease;
+}
+
+.submit, .reply {
+    transition: all .3s ease;
 }
 
 /* Comments 
 --------------------------------------
 */
 
-.comment-metadata, .comment-content, .reply {
+.comment-content {
     margin-top: $base;
+
+    p {
+        font-size: 1rem;
+    }  
 }
 
 .avatar {
@@ -88,29 +95,41 @@
 }
 
 .comment-metadata {
-    color: $green-brand;
-
-    .edit-link {
-        padding-left: .5rem;
-    }
+    color: grey;
+    font-size: .7rem;
+    margin-left: 4.75rem;
+    margin-top: -.5em;
 }
 
-.comment-content {
+.comment-content, .reply, .edit-link {
     margin-left: 1rem;
 }
 
-.comment-reply-link {
-    color: #CB4A4F;
-}
-
 .comment {
-    list-style-position: inside;
+    list-style: none;
+    padding: $base;
 }
 
 .comment-list {
     margin: 0;
 }
 
-// .comment-list .comment:nth-child(even) {
-//     background: #f6f6f6;
-// }
+.reply {
+    border: solid 1px $green-brand;
+    width: 4em;
+    text-align: center;
+    padding: .25em;
+    font-size: .8rem;
+    margin-top: 2em;
+}
+
+.reply:hover {
+    background: $red;
+    color: $white;
+    border: 1px solid $red;
+}
+
+.comment-list .comment:nth-child(even) {
+    background: #f8f8f8;
+    margin-top: $base;
+}
