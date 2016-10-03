@@ -36,18 +36,23 @@
 }
 
 .work_item:hover .work_overlay {
-    background-color: $green-brand;
-    opacity: 0.96;
-    color: $white;
+  background-color: $green-brand;
+  opacity: 0.96;
+  color: $white;
 }
 
 .work_overlay--text {
-    padding: 1em;
+  padding: 1em;
 
-    @include respond-min($bp1) {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+  p {
+    margin-top: $base/2;
+    font-size: 1rem;
+  }
+    
+  @include respond-min($bp1) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-    }
+  }
 }

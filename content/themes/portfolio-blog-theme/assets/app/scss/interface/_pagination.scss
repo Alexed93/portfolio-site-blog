@@ -26,8 +26,12 @@
 //     }
 // }
 
-.pagination_controls {
-    clear: both;
+.pagination-controls {
+    margin-bottom: $base;
+
+    @include respond-min($bp2) {
+        margin: 0;
+    }
 }
 
 .pagination-controls__link {

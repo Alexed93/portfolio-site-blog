@@ -65,7 +65,7 @@ get_header();
                                             <div class="work_overlay">
                                                 <div class="work_overlay--text">     
                                                     <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
-                                                    <?php if ( $post->post_excerpt ): ?><div class="delta"><?php the_excerpt(); ?></div><?php endif; ?>
+                                                    <?php if ( $post->post_excerpt ): ?><?php the_excerpt(); ?><?php endif; ?>
                                                 </div>
                                             </div>
                                         </div>
