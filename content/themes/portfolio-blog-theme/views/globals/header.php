@@ -39,11 +39,11 @@
                          <i class="icon_socialmedia_font | fa | fa-linkedin"></i>
                     </a>
                 </li>
-                <li class="icon_socialmedia">
+                <!-- <li class="icon_socialmedia">
                      <a href="https://www.behance.net/alexed" target=_blank>
                          <i class="icon_socialmedia_font | fa | fa-behance"></i>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
 
