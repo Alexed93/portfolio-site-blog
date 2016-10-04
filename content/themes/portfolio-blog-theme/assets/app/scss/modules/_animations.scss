@@ -1,0 +1,35 @@
+/** 
+ * Animations
+ */
+
+@keyframes bounceright {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(10px) }
+}
+
+@keyframes bounceleft {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(-10px) }
+}
+
+.a-bounce-right,
+.a-bounce-left {
+    animation-duration: 0.4s; 
+    // animation-timing-function: ease-out; 
+    // animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    // animation-fill-mode: none;
+    // animation-play-state: running; 
+    display: inline-block;
+}
+
+.a-bounce-right {
+    margin-left: 5px;
+    animation-name: bounceright;
+}
+
+.a-bounce-left {
+    margin-right: 5px;
+    animation-name: bounceleft;
+}

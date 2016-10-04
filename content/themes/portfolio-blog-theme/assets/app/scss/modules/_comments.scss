@@ -38,6 +38,9 @@
 .comment-form input, .comment-form textarea {
     border: 1px solid $grey;
     padding: .5rem;
+    -webkit-appearance: none;
+    border-radius: 0;
+    box-shadow: none;
 
     @include respond-min($bp3) {
         width: 40%;
@@ -119,7 +122,7 @@
 .comment-metadata {
     color: grey;
     font-size: .7rem;
-    margin-left: 4.25rem;
+    margin-left: 4.15rem;
     margin-top: -.5em;
 
     @include respond-min($bp2) {
