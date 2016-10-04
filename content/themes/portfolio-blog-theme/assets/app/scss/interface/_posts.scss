@@ -44,14 +44,15 @@ a.post__url {
     }
 }
 
-.attatchment {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+// .attatchment {
+//     width: 100%;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center center;
 
-    &:before {
-        content: "";
-        display: block;
-        padding-top: (1/1) * 100%; // h / w
-    }
-}
+//     &:before {
+//         content: "";
+//         display: block;
+//         padding-top: (1/1) * 100%; // h / w
+//     }
+// }

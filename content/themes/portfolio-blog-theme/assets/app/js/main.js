@@ -110,6 +110,43 @@ function header_active() {
   
 })();
 
+/* $. Slick-slider 
+\*----------------------------------------------------------------*/
+
+$('.slick_carousel').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  autoplay: true,
+  
+
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        settings: 'unslick'
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
 /* $. Grunticon Load
 \*----------------------------------------------------------------*/
 

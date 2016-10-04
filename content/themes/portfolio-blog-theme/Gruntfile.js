@@ -49,6 +49,7 @@ module.exports = function( grunt ) {
                     '<%= dirs.assets_output %>/js/main.min.js': [
                         '<%= dirs.assets_output %>/grunticon/grunticon.loader.js',
                         '<%= dirs.assets_input %>/js/partials/custom-select.js',
+                        '<%= dirs.modules %>/slick-carousel/slick/slick.js',
                         '<%= dirs.assets_input %>/js/main.js'
                     ],
                     '<%= dirs.assets_output %>/js/head.min.js': [

@@ -44,11 +44,12 @@ get_header();
 // Display media uploaded
 $args =  array( 
     'post_type' => 'attachment',
-    'post_parent' => get_the_ID()
+    'post_parent' => get_the_ID(),
+    'exclude' => get_post_thumbnail_id()
 );
 
 $attachments = get_posts( $args );
-$size = 'medium';
+$size = 'projectimage';
 
 // Project base url
 $project_url = get_field('project_url');
@@ -94,24 +95,25 @@ $project_url = get_field('project_url');
 
             <?php if ( $attachments ) : ?>
                 <div class="post__images | u-push-top">
-                    <div class="grid ">
+            
 
                     <?php if ( have_posts() ): ?>
                         <?php while ( have_posts() ): ?>
                             <?php the_post(); ?>
                 
-                        <?php foreach ($attachments as $attachment) : ?>
-                            <?php $attachment_id = $attachment->ID; ?>
-                            <div class="grid__item |  | grid__item--4-12-bp3 | grid__item--3-12-bp6">
-                                <div class="attatchment" style="background-image:url('<?php echo wp_get_attachment_image_src( $attachment_id, 'small' )[0]; ?>')"></div>
-                            </div>
-                        <?php endforeach; ?>
+                        <div class="slick_carousel">
+                            <?php foreach ($attachments as $attachment) : ?>
+                                <?php $attachment_id = $attachment->ID; ?>
+                                    <div class="attatchment"><?php echo wp_get_attachment_image( $attachment_id, 'projectimage' ); ?></div>
+                            <?php endforeach; ?>
+                        </div>
+
                             <?php endwhile; ?>
                         <?php else: ?>
                             <?php get_template_part('views/errors/404-posts'); ?>
                         <?php endif; ?>
                             
-                    </div>
+          
                 </div>
             <?php endif; ?>
         </article>
