@@ -12,12 +12,20 @@
 }
 
 a.post__url {
-    font-size: 1rem;
+    font-size: 1.1rem;
     position: relative;
+
+    @include respond-min($bp5) {
+        font-size: 1.2rem;
+    }
 }
 
 .post__date {
-    font-size: .9rem;
+    font-size: 1rem;
+
+    // @include respond-min($bp5) {
+    //     font-size: 1rem;
+    // }
 }
 
 .post__excerpt p{

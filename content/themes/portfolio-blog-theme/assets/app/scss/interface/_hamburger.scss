@@ -31,24 +31,24 @@
 
 // Sizing and styling
 
-.c-hamburger span {
+.c-hamburger span, .c-hamburger span::after, .c-hamburger span::before {
   display: block;
   position: absolute;
+  background-color: $color-brand;
+}
+
+.c-hamburger span {
   top: 26px;
   left: 15px;
   right: 7px;
   height: 5px;
-  background: $color-brand;
 }
 
 .c-hamburger span::before,
 .c-hamburger span::after {
-  position: absolute;
-  display: block;
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: $color-brand;
   content: "";
 }
 
@@ -58,6 +58,10 @@
 
 .c-hamburger span::after {
   bottom: -12px;
+}
+
+.c-hamburger span:hover, .c-hamburger span:hover::before, .c-hamburger span:hover::after {
+  background: $green-brand;
 }
 
 // Animate to point left
