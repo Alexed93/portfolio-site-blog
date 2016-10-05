@@ -100,13 +100,21 @@ $project_url = get_field('project_url');
                     <?php if ( have_posts() ): ?>
                         <?php while ( have_posts() ): ?>
                             <?php the_post(); ?>
-                
-                        <div class="slick_carousel">
-                            <?php foreach ($attachments as $attachment) : ?>
-                                <?php $attachment_id = $attachment->ID; ?>
-                                    <div class="attatchment"><?php echo wp_get_attachment_image( $attachment_id, 'projectimage' ); ?></div>
-                            <?php endforeach; ?>
+                        
+                        <div class="slick-carousel-wrap">
+                            <div class="slick_carousel">
+                                <?php foreach ($attachments as $attachment) : ?>
+                                    <?php $attachment_id = $attachment->ID; ?>
+                                        <div class="attatchment"><?php echo wp_get_attachment_image( $attachment_id, 'projectimage' ); ?></div>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="carousel-arrows | cf">
+                                <div class="carousel_arrow | carousel_arrow--left" id="carouselPrevArrow"><</div>
+                                <div class="slick-dots-container"></div>
+                                <div class="carousel_arrow | carousel_arrow--right" id="carouselNextArrow">></div>
+                            </div>
                         </div>
+                        
 
                             <?php endwhile; ?>
                         <?php else: ?>

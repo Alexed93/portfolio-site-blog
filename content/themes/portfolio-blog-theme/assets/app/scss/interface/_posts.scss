@@ -15,9 +15,9 @@ a.post__url {
     font-size: 1.1rem;
     position: relative;
 
-    @include respond-min($bp5) {
-        font-size: 1.2rem;
-    }
+    // @include respond-min($bp5) {
+    //     font-size: 1.2rem;
+    // }
 }
 
 .post__date {

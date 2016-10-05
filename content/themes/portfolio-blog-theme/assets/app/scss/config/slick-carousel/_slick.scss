@@ -1,0 +1,60 @@
+.slick-track {
+  margin: 0 auto;
+}
+
+.carousel-arrows {
+    width: 100%;
+}
+
+.carousel_arrow {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+
+    @include respond-min($bp2) {
+        position: relative;
+        bottom: 16rem;
+    }
+}
+
+.carousel_arrow--left {
+    float: left;
+}
+
+.carousel_arrow--right {
+    float: right;
+}
+
+.slick_carousel {
+    padding-bottom: 2rem; 
+}
+
+.slick-dots { 
+    text-align: center; 
+    margin: $base 0 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+.slick-dots li { 
+    display: inline-block; 
+    margin: 0;
+    padding: 0 10px;
+}
+
+.slick-dots li button { 
+    width: 8px;
+    height: 8px;
+    text-indent: -9999px;
+    background: $color-brand;
+    display: block;
+    padding: 0;
+    border-radius: 100%;
+}
+
+.slick-dots li.slick-active button { 
+    background: $green-brand;
+}

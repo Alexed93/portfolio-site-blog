@@ -26,6 +26,8 @@
         });
     }
 
+
+
 })(jQuery);
 
 /* $. Burger menu and nav
@@ -113,6 +115,15 @@ function header_active() {
 /* $. Slick-slider 
 \*----------------------------------------------------------------*/
 
+var nextArrow = jQuery("#carouselNextArrow");
+var prevArrow = jQuery("#carouselPrevArrow"); // $(".carousel--prev-arrow");
+
+// When the slick slider initialises take the element with the class
+// .slick-dots and move it to our specific container
+jQuery(".slick_carousel").on('init', function(event, slick){
+  jQuery(this).find(".slick-dots").appendTo(".slick-dots-container");
+});
+
 $('.slick_carousel').slick({
   dots: true,
   infinite: true,
@@ -121,8 +132,10 @@ $('.slick_carousel').slick({
   slidesToScroll: 1,
   mobileFirst: true,
   autoplay: true,
+  prevArrow: prevArrow,
+  nextArrow: nextArrow,
+  dots: true,
   
-
   responsive: [
     {
       breakpoint: 768,
@@ -130,7 +143,6 @@ $('.slick_carousel').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: true,
-        dots: true
       }
     },
     {
