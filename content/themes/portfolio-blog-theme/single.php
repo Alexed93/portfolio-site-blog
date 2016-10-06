@@ -105,7 +105,11 @@ $project_url = get_field('project_url');
                             <div class="slick_carousel">
                                 <?php foreach ($attachments as $attachment) : ?>
                                     <?php $attachment_id = $attachment->ID; ?>
-                                        <div class="attatchment"><?php echo wp_get_attachment_image( $attachment_id, 'projectimage' ); ?></div>
+                                        <div class="attatchment">
+                                        <a href="<?php echo wp_get_attachment_image_url( $attachment_id, 'large' ); ?>" data-lity>
+                                            <?php echo wp_get_attachment_image( $attachment_id, 'projectimage' ); ?>
+                                        </a>
+                                        </div>
                                 <?php endforeach; ?>
                             </div>
                             <div class="carousel-arrows | cf">

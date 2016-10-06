@@ -33,9 +33,13 @@ a.post__url {
 }
 
 .post__images {
-    border-top: 1px solid $green-brand;
     border-bottom: 1px solid $green-brand;
-    padding: $base*2 0;
+    padding: $base 0 0 0;
+}
+
+.post__content {
+    padding-bottom: $base*2;
+    border-bottom: 1px solid $green-brand;
 }
 
 .post__content p {
