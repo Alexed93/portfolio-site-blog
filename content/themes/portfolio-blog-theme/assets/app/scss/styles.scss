@@ -47,6 +47,7 @@
 @import "modules/panel";
 @import "modules/comments";
 @import "modules/socialmedia-sharing";
+@import "modules/404";
 
 
 /* $. Interface - Project specific objects i.e. .work, .product, etc
@@ -61,8 +62,6 @@
 @import "interface/work";
 @import "interface/posts";
 @import "interface/lity";
-
-
 
 /* $. Layout - Page based layouts i.e. .header, .page-86, etc
 \*----------------------------------------------------------------*/
@@ -84,10 +83,6 @@
 @import "fontawesome/larger";
 @import "fontawesome/fixed-width";
 @import "fontawesome/list";
-@import "fontawesome/bordered-pulled";
-@import "fontawesome/animated";
-@import "fontawesome/rotated-flipped";
-@import "fontawesome/stacked";
 @import "fontawesome/icons";
 @import "fontawesome/screen-reader";
 
@@ -97,12 +92,3 @@
 @import "helpers/extras";
 @import "helpers/utility";
 @import "helpers/debug";
-
-/* $. Fontawesome
-\*----------------------------------------------------------------*/
-
-@import "fontawesome/core";
-@import "fontawesome/screen-reader";
-@import "fontawesome/variables";
-@import "fontawesome/icons";
-@import "fontawesome/path";

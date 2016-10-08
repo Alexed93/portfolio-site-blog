@@ -132,25 +132,3 @@ h5, .epsilon {
         font-size: 1.4rem;
     }
 }
-
-@include respond-min($bp6) {
-    h1, .alpha {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3, .gamma {
-        font-size: 1.6rem;
-    }
-
-    // p {
-    //     font-size: 1.3rem;
-    // }
-
-    // .beta {
-    //     font-size: 2.2rem;
-    // }
-}

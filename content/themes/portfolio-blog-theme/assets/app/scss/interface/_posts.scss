@@ -28,8 +28,12 @@ a.post__url {
     // }
 }
 
-.post__excerpt p{
+.post__excerpt p {
     font-size: 1.4rem;
+}
+
+.post__excerpt a, .post__content a  {
+    color: $brand-red;
 }
 
 .post__images {

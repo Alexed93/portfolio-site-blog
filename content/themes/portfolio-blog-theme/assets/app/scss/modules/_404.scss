@@ -1,0 +1,81 @@
+// Styling for the 404 page
+
+.error-text {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+
+    @include respond-min($bp1) {
+        h1 {
+            font-size: 2.2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include respond-min($bp2) {
+        h1 {
+            font-size: 2.4rem;
+        }
+        h2 {
+            font-size: 1.7rem;
+        }
+        p {
+            font-size: 1.7rem;
+        }
+    }
+
+    @include respond-min($bp3) {
+        h1 {
+            font-size: 2.2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    @include respond-min($bp5) {
+        h1 {
+            font-size: 2.4rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.error-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.shrek img {
+    width: 100%;
+
+    @include respond-min($bp3) {
+        width: 60%;
+    }
+
+    @include respond-min($bp5) {
+        width: 45%;
+    }
+}

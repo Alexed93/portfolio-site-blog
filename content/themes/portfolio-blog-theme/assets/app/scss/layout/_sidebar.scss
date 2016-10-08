@@ -38,7 +38,11 @@
     }
 
     @include respond-min($bp5) {
-        width: 23%;
+        width: 22%;
+    }
+
+    @include respond-min($bp6) {
+        width: 19%;
     }
 }
 

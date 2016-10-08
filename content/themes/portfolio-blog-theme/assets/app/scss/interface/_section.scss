@@ -47,6 +47,9 @@
     @include respond-min($bp5) {
         width: 62%;
     }
+    @include respond-min($bp6) {
+        width: 58%;
+    }
 }
 
 /* $. Themes
