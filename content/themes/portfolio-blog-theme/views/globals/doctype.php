@@ -47,7 +47,7 @@
     <noscript><link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
 
     <!-- wp_head -->
-    <?php wp_head(); ?>
+    <?php wp_head(); ?> 
 </head>
 
 <body class="debug">

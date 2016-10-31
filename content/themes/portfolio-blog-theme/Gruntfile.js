@@ -51,11 +51,15 @@ module.exports = function( grunt ) {
                         '<%= dirs.assets_input %>/js/partials/custom-select.js',
                         '<%= dirs.modules %>/slick-carousel/slick/slick.js',
                         '<%= dirs.modules %>/lity/dist/lity.js',
+                        '<%= dirs.assets_output %>/js/jquery.appear.js',
+                        '<%= dirs.assets_output %>/js/slimbox2.js',
+                        '<%= dirs.assets_output %>/js/unslider-min.js',
+                        '<%= dirs.assets_output %>/js/circle-progress.js',
                         '<%= dirs.assets_input %>/js/main.js'
                     ],
                     '<%= dirs.assets_output %>/js/head.min.js': [
                         '<%= dirs.modules %>/jquery/dist/jquery.js',
-                        '<%= dirs.assets_input %>/js/vendors/modernizr.js',
+                        '<%= dirs.assets_input %>/js/vendor/modernizr.js',
                         '<%= dirs.assets_input %>/js/head.js'
                     ]
                 }

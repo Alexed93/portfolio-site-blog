@@ -24,7 +24,138 @@
     }
 }
 
+.container_hero {
 
+    @include respond-min($bp3) {
+        height: calc(100vh - 2.4em);
+        // padding-top: 10%;
+        position: relative;
+        transform: translateY(9%);
+        bottom: -9%;
+
+        .container {
+            width: auto;
+        }
+    }
+
+    @include respond-min($bp5) {
+        transform: translateY(11%);
+        bottom: -11%;
+    }
+}
+
+.container_introduction {
+    padding: 1em 0;
+
+    @include respond-min($bp3) {
+        padding: 2em 0;
+    }
+}
+
+.container_logo {
+    height: 100%;
+
+    @include respond-min($bp3) {
+        height: auto;
+    }
+}
+
+.container_splashtext {
+    padding-top: 2em;
+    margin-bottom: 2em;
+
+    @include respond-min($bp2) {
+        margin: 0 0 2em 0;
+    }
+
+    @include respond-min($bp3) {
+        float: right;
+        width: 55%;
+        margin: 0 1em 0 0;
+        padding-left: 0;
+        margin-top: 3%;
+
+        h1 {
+            font-size: 1.9rem;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+    }
+
+    @include respond-min($bp4) {
+        margin-top: 4%;
+    }
+
+    @include respond-min($bp5) {
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include respond-min($bp6) {
+        margin-right: -4em;
+        width: 60%;
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.container_introduction_heading {
+    @include respond-min($bp2) {
+        float: left;
+        width: 36%;
+    }
+
+    @include respond-min($bp3) {
+        width: 30.25%;
+    }
+}
+
+.container_introduction_excerpt {
+    h3 {
+        margin-top: $base/2;
+    }
+
+    @include respond-min($bp2) {
+        float: right;
+        width: 64%;
+        border-left: solid 1px $green-brand;
+        padding-left: 2em;
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    @include respond-min($bp3) {
+        width: 69.75%;
+        padding-left: 2.5em;
+    }
+}
 
 /* $. Modifications
 \*----------------------------------------------------------------*/

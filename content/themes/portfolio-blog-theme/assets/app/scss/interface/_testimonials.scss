@@ -1,0 +1,41 @@
+.testimonial-slider {
+    text-align: left;
+    margin-top: $base*1.25;
+
+    @include respond-min($bp2) {
+        margin: 0;
+    }
+}
+
+.unslider a, .unslider-arrow {
+    display: none;
+}
+
+.unslider a {
+    color: transparent;
+}
+
+.unslider ul li {
+    padding: 0;
+}
+
+.unslider-arrow {
+    margin-top: 1em;
+}
+
+.unslider-arrow.next, .unslider-arrow.prev {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.unslider-arrow.next {
+    border-left: 10px solid $green-brand;
+    right: 40px !important;
+}
+
+.unslider-arrow.prev {
+    border-right: 10px solid $green-brand;
+    left: 40px;
+}

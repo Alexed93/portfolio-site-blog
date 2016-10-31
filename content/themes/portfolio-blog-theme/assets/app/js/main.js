@@ -26,10 +26,6 @@
         });
     }
 
-
-
-})(jQuery);
-
 /* $. Burger menu and nav
 \*----------------------------------------------------------------*/
 
@@ -159,10 +155,153 @@ $('.slick_carousel').slick({
   ]
 });
 
-/* $. Lity lightbox
+/* $. Timeline
 \*----------------------------------------------------------------*/
 
+(function() {
 
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+})();
+
+/* $. Smooth scrolling 
+\*----------------------------------------------------------------*/
+if (!$(".fixed-header").length) {
+  $('.nav_item a, .icon_logo').on('click',function (e) {
+    e.preventDefault();
+
+    var target = $(this).attr('href').replace('/', '');
+    var targetOffset = $(target).offset().top;
+
+    $('body,html').animate({scrollTop: targetOffset - 0}, 700);
+  });
+}
+
+
+/* $. Circle stats
+\*----------------------------------------------------------------*/
+
+var el = $('.statcircle'),
+    inited = false;
+
+el.appear({ force_process: true });
+
+el.on('appear', function() {
+  if (!inited) {
+    el.circleProgress({});
+    inited = true;
+  }
+});
+
+$('.statcircle-1').circleProgress({
+    value: 0.90,
+    size: 150,
+    fill: {
+       color: "#331749"
+    },
+    thickness: 5,
+});
+
+$('.statcircle-2').circleProgress({
+        value: 0.70,
+        size: 150,
+        fill: {
+           color: "#331749"
+        },
+        thickness: 5,
+    });
+
+$('.statcircle-3').circleProgress({
+        value: 0.80,
+        size: 150,
+        fill: {
+           color: "#331749"
+        },
+        thickness: 5,
+    });
+
+(function() {
+
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".statcircle");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= ((window.innerHeight || document.documentElement.clientHeight) * 0.9 ) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("scale");
+        setTimeout(function () {
+          $(".statcircle_number").addClass("fadein");
+        }, 1000);
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+})();
+
+/* $. Testimonial slider
+\*----------------------------------------------------------------*/
+
+$('.testimonial-slider').unslider({
+  autoplay: true,
+  delay: 8000,
+});
+
+/* $. Dropdown list
+\*----------------------------------------------------------------*/
+
+$(".dropdown_list").on("click",function(){
+    $(".dropdown").toggleClass("is-hidden");
+    $(".dropdown_list").toggleClass("dropdown_list--active");
+});
+
+})(jQuery);
 
 /* $. Grunticon Load
 \*----------------------------------------------------------------*/

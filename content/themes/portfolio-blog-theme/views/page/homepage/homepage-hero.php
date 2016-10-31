@@ -1,10 +1,10 @@
 <div class="container_hero | container">
     <div class="container_logo">
         <a href="/#work_link-1" class="icon_logo | work_link_click-1">
-            <img src="assets/dist/img/purpsmall-01.svg">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/purpsmall-01.svg">
         </a>
         <a href="/#work_link-2" class="icon_logo | work_link_click-2">
-            <img src="assets/dist/img/purpsmall-01.svg">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/purpsmall-01.svg">
         </a>
     </div>
     <span id="work_link-1"></span><div class="container_splashtext">

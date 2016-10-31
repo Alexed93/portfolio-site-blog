@@ -43,7 +43,6 @@ dd {
 \*----------------------------------------------------------------*/
 
 .dropdown {
-
     @include respond-min($bp3) {
         columns: 2;
         list-style-position: inside;
@@ -56,6 +55,7 @@ dd {
     color: $color-brand;
     margin: $base 0;
     border: 1px solid $color-brand;
+    padding: 1em;
 }
 
 .dropdown_list--active {

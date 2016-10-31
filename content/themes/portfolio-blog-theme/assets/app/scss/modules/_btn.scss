@@ -32,7 +32,39 @@
     }
 }
 
+.button_work button {
+    display: block;
+    width: 75%;
+    background: $white;
+    border: solid 1px $green-brand;
+    margin: 0 auto;
+    margin-top: $base;
+    margin-bottom: $base;
+    padding: .5em;
+    
+    a {
+        width: 100%;
+        padding: .5em 3em;
 
+        @include respond-min($bp2) {
+            padding: .5em 0em;
+        }
+    }
+
+    @include respond-min($bp2) {
+        margin-left: 0;
+    }
+
+    @include respond-min($bp3) {
+        padding: .5em 0;
+    }
+}
+
+.button_work button:hover  {
+    background: $green-brand;
+    transition: all .7s ease;
+    color: $white;
+}
 
 /* $. Component
 \*----------------------------------------------------------------*/

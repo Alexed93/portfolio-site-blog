@@ -59,11 +59,11 @@ get_header();
                     <?php while ( have_posts() ): ?>
                         <?php the_post(); ?> 
                             <div class="grid__item grid__item--6-12 | grid__item--4-12-bp3 | grid__item--3-12-bp6">
-                                <div class="work_item">
+                                <div class="sideproject_item">
                                     <a href="<?php the_permalink(); ?>">
-                                        <div class="work_image" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>');">
-                                            <div class="work_overlay">
-                                                <div class="work_overlay--text">     
+                                        <div class="sideproject_image" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>');">
+                                            <div class="sideproject_overlay">
+                                                <div class="sideproject_overlay--text">     
                                                     <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
                                                     <?php if ( $post->post_excerpt ): ?><?php the_excerpt(); ?><?php endif; ?>
                                                 </div>

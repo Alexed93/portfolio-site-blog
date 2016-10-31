@@ -74,26 +74,20 @@ h5, .epsilon {
         font-size: 1.6rem;
     }
 
-    h2 {
+    h2, .beta {
         font-size: 1.4rem;
     }
 
-    h3, .gamma {
+    h3, .gamma, p {
         font-size: 1.2rem;
-    }
-
-    .beta, p {
-        font-size: 1rem;
     }
 }
 
 @include respond-min($bp2) {
-    h3, .gamma {
+    .delta {
         font-size: 1.2rem;
     }
-    p {
-        font-size: 1.5rem;
-    }
+
     .beta {
         font-size: 1.7rem;
     }
@@ -103,10 +97,8 @@ h5, .epsilon {
     h3, .gamma {
         font-size: 1.1rem;
     }
+
     p {
-        font-size: 0.9rem;
-    }
-    .beta {
         font-size: 1rem;
     }
 }
@@ -115,20 +107,52 @@ h5, .epsilon {
     h3, .gamma {
         font-size: 1.2rem;
     }
-    p {
+
+    p, .delta {
         font-size: 1.1rem;
     }
+
     .beta {
         font-size: 1.2rem;
     }
 }
 
 @include respond-min($bp5) {
-    h2, {
+    h2, .beta {
         font-size: 1.6rem;
     }
 
     h3, .gamma {
         font-size: 1.4rem;
+    }
+
+    p, .delta {
+        font-size: 1.3rem;
+    }
+}
+
+@include respond-min($bp6) {
+    h1, .alpha {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3, .gamma {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .beta {
+        font-size: 2.2rem;
+    }
+
+    .delta {
+        font-size: 1.6rem;
     }
 }
