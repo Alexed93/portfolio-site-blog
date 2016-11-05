@@ -180,17 +180,14 @@ $('.slick_carousel').slick({
 
 /* $. Smooth scrolling 
 \*----------------------------------------------------------------*/
-if (!$(".fixed-header").length) {
-  $('.nav_item a, .icon_logo').on('click',function (e) {
+ /* $('.nav_link, .icon_logo').on('click',function (e) {
     e.preventDefault();
 
     var target = $(this).attr('href').replace('/', '');
     var targetOffset = $(target).offset().top;
 
-    $('body,html').animate({scrollTop: targetOffset - 0}, 700);
-  });
-}
-
+    $('body, html').animate({scrollTop: targetOffset - 0}, 700);
+  }); 
 
 /* $. Circle stats
 \*----------------------------------------------------------------*/
