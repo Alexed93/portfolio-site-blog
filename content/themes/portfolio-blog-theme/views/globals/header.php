@@ -58,7 +58,7 @@
             </ul>
         </div>
 
-        <nav class="nav | is-hidden" id="navigation" role="navigation">
+        <nav class="nav | " id="navigation" role="navigation">
             <ul class="nav_list">
                 <?php wp_nav_menu( array('theme_location' => 'primary', 'items_wrap' => '%3$s') ); ?>
             </ul>
