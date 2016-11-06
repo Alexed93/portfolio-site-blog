@@ -53,6 +53,7 @@
         height: auto;
         padding: 0;
         transform: translateY(-305%);
+        right: 5em;
     }
 }
 
@@ -60,15 +61,15 @@
     transform: translateY(0);
 
     @include respond-min($bp2) { 
-        transform: translateY(-160%);
+        transform: translateY(-170%);
     }
 
     @include respond-min($bp3) { 
-        transform: translateY(-150%);
+        transform: translateY(-160%);
     }
 
     @include respond-min($bp4) { 
-        transform: translateY(-140%);
+        transform: translateY(-150%);
     }
 }
 
