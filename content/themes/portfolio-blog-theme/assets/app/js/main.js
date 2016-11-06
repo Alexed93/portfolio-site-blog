@@ -31,6 +31,7 @@
 
 function header_active() {
   $(".header_fill").toggleClass("header_fill--active");
+  $(".nav").toggleClass("nav--active");
   $(".hamburger_styling, .icon_socialmedia").toggleClass("white_background");
   $(".icon_socialmedia_font").toggleClass("purple_text");
 

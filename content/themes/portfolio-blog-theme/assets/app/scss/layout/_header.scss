@@ -21,11 +21,15 @@
     width: 100%;
     padding-top: 1em;
     position: fixed;
-    background: $white;
     display: block;
     color: $color-brand;
     top: 0;
     z-index: 50;
+    background: $white;
+
+    .container {
+        height: 2.25em;
+    }
 }
 
 .header_fill {

@@ -42,34 +42,43 @@
     height: calc(100vh - 74px);
     position: relative;
     display: block;
+    transform: translateY(-110%);
+    transition: transform 300ms linear;
         
     @include respond-min($bp1) { 
         height: calc(100vh - 110px);
     }
 
-    // @include respond-min($bp2) { 
-    //     height: calc(100vh - 115px);
-    // }
+    @include respond-min($bp2) { 
+        height: auto;
+        padding: 0;
+        transform: translateY(-305%);
+    }
+}
+
+.nav--active {
+    transform: translateY(0);
 
     @include respond-min($bp2) { 
-        height: calc(100vh - 100vh);
-        padding: 0;
+        transform: translateY(-160%);
+    }
+
+    @include respond-min($bp3) { 
+        transform: translateY(-150%);
+    }
+
+    @include respond-min($bp4) { 
+        transform: translateY(-140%);
     }
 }
 
 .nav_list {
-    position: absolute;
-    top: 18%;
-    left: 50%;
-    transform: translate(-50%, -18%);
+    margin: 0 auto;
+    display: block;
     text-align: center;
 
     @include respond-min($bp2) { 
         text-align: right;
-        transform: none;
-        right: 75px;
-        top: -60px;
-        left: 30%;
         padding: 0.5em 0 0 0;
     }
 }

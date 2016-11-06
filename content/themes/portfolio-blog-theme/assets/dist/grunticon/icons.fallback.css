@@ -1,3 +1,9 @@
+.icon--artbrush { background-image: url('png/artbrush.png'); background-repeat: no-repeat; }
+
+.icon--coding { background-image: url('png/coding.png'); background-repeat: no-repeat; }
+
+.icon--lightbulb { background-image: url('png/lightbulb.png'); background-repeat: no-repeat; }
+
 .icon--logo-mixd { background-image: url('png/logo-mixd.png'); background-repeat: no-repeat; }
 
 .icon--menu-close { background-image: url('png/menu-close.png'); background-repeat: no-repeat; }
