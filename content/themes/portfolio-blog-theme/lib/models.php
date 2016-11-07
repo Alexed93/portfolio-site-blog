@@ -20,7 +20,7 @@
  * $. Post types
  ******************************************************************************/
 
-//require_once( 'models/post-types/public.php' );
+require_once( 'models/post-types/public.php' );
 //require_once( 'models/post-types/private.php' );
 
 
@@ -29,4 +29,4 @@
  * $. Taxonomies
  ******************************************************************************/
 
-require_once( 'models/taxonomies/example.php' );
+// require_once( 'models/taxonomies/example.php' );

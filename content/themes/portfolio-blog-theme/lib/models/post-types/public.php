@@ -47,4 +47,38 @@ function wpst_post_type_example () {
     );
 }
 
+function wpst_post_type_project () {
+    register_post_type(
+        'project',
+        array(
+            'public' => true,
+            'show_ui' => true,
+            'capability_type' => 'page',
+            'hierarchical' => false,
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-unlock',
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'projects', 'with_front' => false ),
+            'supports' => array( 'title', 'page-attributes', 'editor', 'excerpt', 'revisions' ),
+            'labels' => array(
+                'name' => __( 'projects' ),
+                'singular_name' => __( 'project' ),
+                'add_new' => __( 'Add New' ),
+                'add_new_item' => __( 'Add New project' ),
+                'edit' => __( 'Edit' ),
+                'edit_item' => __( 'Edit project' ),
+                'new_item' => __( 'New project' ),
+                'view' => __( 'View' ),
+                'view_item' => __( 'View project' ),
+                'search_items' => __( 'Search projects' ),
+                'not_found' => __( 'No projects found' ),
+                'not_found_in_trash' => __( 'No projects found in Trash' )
+            )
+        )
+    );
+}
+
 add_action('init', 'wpst_post_type_example');
+add_action('init', 'wpst_post_type_project');
