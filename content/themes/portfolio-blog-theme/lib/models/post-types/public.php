@@ -66,9 +66,9 @@ function wpst_post_type_project () {
                 'name' => __( 'projects' ),
                 'singular_name' => __( 'project' ),
                 'add_new' => __( 'Add New' ),
-                'add_new_item' => __( 'Add New project' ),
+                'add_new_item' => __( 'Add New Project' ),
                 'edit' => __( 'Edit' ),
-                'edit_item' => __( 'Edit project' ),
+                'edit_item' => __( 'Edit Project' ),
                 'new_item' => __( 'New project' ),
                 'view' => __( 'View' ),
                 'view_item' => __( 'View project' ),
@@ -80,5 +80,5 @@ function wpst_post_type_project () {
     );
 }
 
-add_action('init', 'wpst_post_type_example');
+// add_action('init', 'wpst_post_type_example');
 add_action('init', 'wpst_post_type_project');

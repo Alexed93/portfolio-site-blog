@@ -14,7 +14,7 @@
 
 
 
-function wpst_post_type_example () {
+function wpst_post_type_project () {
     register_post_type(
         'example',
         array(
@@ -47,4 +47,4 @@ function wpst_post_type_example () {
     );
 }
 
-add_action('init', 'wpst_post_type_example');
+// add_action('init', 'wpst_post_type_project');
