@@ -58,12 +58,12 @@ function wpst_post_type_project () {
             'publicly_queryable' => true,
             'exclude_from_search' => false,
             'menu_position' => 5,
-            'menu_icon' => 'dashicons-unlock',
+            'menu_icon' => 'dashicons-book',
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'projects', 'with_front' => false ),
+            'rewrite' => array( 'slug' => 'Projects', 'with_front' => false ),
             'supports' => array( 'title', 'page-attributes', 'editor', 'excerpt', 'revisions' ),
             'labels' => array(
-                'name' => __( 'projects' ),
+                'name' => __( 'Projects' ),
                 'singular_name' => __( 'project' ),
                 'add_new' => __( 'Add New' ),
                 'add_new_item' => __( 'Add New Project' ),
@@ -72,9 +72,9 @@ function wpst_post_type_project () {
                 'new_item' => __( 'New project' ),
                 'view' => __( 'View' ),
                 'view_item' => __( 'View project' ),
-                'search_items' => __( 'Search projects' ),
-                'not_found' => __( 'No projects found' ),
-                'not_found_in_trash' => __( 'No projects found in Trash' )
+                'search_items' => __( 'Search Projects' ),
+                'not_found' => __( 'No Projects found' ),
+                'not_found_in_trash' => __( 'No Projects found in Trash' )
             )
         )
     );

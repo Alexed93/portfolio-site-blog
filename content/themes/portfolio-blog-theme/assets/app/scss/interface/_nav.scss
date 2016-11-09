@@ -42,12 +42,8 @@
     height: calc(100vh - 74px);
     position: relative;
     display: block;
-    transform: translateY(-110%);
+    transform: translateY(-200%);
     transition: transform 300ms linear;
-        
-    @include respond-min($bp1) { 
-        height: calc(100vh - 110px);
-    }
 
     @include respond-min($bp2) { 
         height: auto;
@@ -91,7 +87,6 @@
     padding: 1em 0 0 0;
 
     @include respond-min($bp1) { 
-        font-size: 3rem;
         padding: 1.5em 0 0 0;
     }
 

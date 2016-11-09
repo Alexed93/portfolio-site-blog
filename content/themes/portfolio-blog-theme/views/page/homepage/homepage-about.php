@@ -2,7 +2,7 @@
     <div class="container">
         <div class="container_introduction | cf">
             <div class="container_introduction_heading">
-                <h1>About me.</h1>
+                <h1><?php the_title(); ?></h1>
                 <h2 class="highlight">I'm a geek.</h2>
             </div>
             <div class="container_introduction_excerpt">

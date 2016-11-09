@@ -42,6 +42,8 @@ $home_excerpt = wpst_get_excerpt_by_id( 1 );
 get_header();
 ?>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    
 <main>
     <?php get_template_part( 'views/page/homepage/homepage-hero' ); ?>
     <?php get_template_part( 'views/page/homepage/homepage-projects' ); ?>
@@ -50,5 +52,7 @@ get_header();
     <?php get_template_part( 'views/page/homepage/homepage-stats' ); ?>
     <?php get_template_part( 'views/page/homepage/homepage-testimonials' ); ?>
 </main>
+
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
