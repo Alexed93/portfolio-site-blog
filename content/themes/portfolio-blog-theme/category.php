@@ -1,50 +1,12 @@
 <?php
 
-/**
- ***************************************************************************
- * Home Template
- ***************************************************************************
- *
- * This template is used to show the posts landing, assuming its not already
- * the Front Page of the site, in which case `front-page.php` would take
- * priority.
- *
- */
-
-
-
-// Get the header
-/*get_header();
-
-// Define fields from static 'blog' page in WordPress based on page ID
-$home_title   = get_the_title( 1 );
-$home_excerpt = wpst_get_excerpt_by_id( 1 );
-
-?>
-
-<?php */
-
-/**
- ***************************************************************************
- * Front Page Template
- ***************************************************************************
- *
- * This template is used to show the front page of a WordPress website,
- * regardless of whether or not its a Static Page or Posts landing.
- * More info can be found here:
- * http://codex.wordpress.org/Creating_a_Static_Front_Page
- *
- */
-
-
-
 // Get the header
 get_header();
 ?>
 
 <main class="section">
     <div class="container | cf">
-
+    <?php get_sidebar('front'); ?>
     <?php if (is_category('web')) : ?>
     <?php get_sidebar('web'); ?>
     <?php elseif (is_category('graphics')) : ?>
