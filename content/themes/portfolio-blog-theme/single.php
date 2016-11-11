@@ -2,40 +2,11 @@
 
 /**
  ***************************************************************************
- * Home Template
+ * Single
  ***************************************************************************
  *
- * This template is used to show the posts landing, assuming its not already
- * the Front Page of the site, in which case `front-page.php` would take
- * priority.
- *
+ Page template used for single side-project pages
  */
-
-
-
-// Get the header
-/*get_header();
-
-// Define fields from static 'blog' page in WordPress based on page ID
-$home_title   = get_the_title( 1 );
-$home_excerpt = wpst_get_excerpt_by_id( 1 );
-
-?>
-
-<?php */
-
-/**
- ***************************************************************************
- * Front Page Template
- ***************************************************************************
- *
- * This template is used to show the front page of a WordPress website,
- * regardless of whether or not its a Static Page or Posts landing.
- * More info can be found here:
- * http://codex.wordpress.org/Creating_a_Static_Front_Page
- *
- */
-
 
 
 // Get the header
@@ -49,10 +20,10 @@ $args =  array(
 );
 
 $attachments = get_posts( $args );
-$size = 'projectimage';
+$size = 'sideprojectimage';
 
-// Project base url
-$project_url = get_field('project_url');
+// sideProject base url
+$sideproject_url = get_field('sideproject_url');
 ?>
 
 <main class="section">
@@ -83,7 +54,7 @@ $project_url = get_field('project_url');
         <article class="post">
             <div class="post__introduction | u-align-center">
                 <h1 class="post__title"><?php the_title(); ?></h1>
-                <a class="post__url | highlight-red" href="<?php echo $project_url; ?>" target=_blank><?php echo $project_url; ?></a>
+                <a class="post__url | highlight-red" href="<?php echo $sideproject_url; ?>" target=_blank><?php echo $sideproject_url; ?></a>
                 <h2 class="post__date | highlight "><?php the_date('d-m-Y'); ?></h2>
                 <?php if ( $post->post_excerpt ): ?><div class="post__excerpt | u-push-top@2"><?php the_excerpt(); ?></div><?php endif; ?>
             </div>
@@ -107,7 +78,7 @@ $project_url = get_field('project_url');
                                     <?php $attachment_id = $attachment->ID; ?>
                                         <div class="attatchment">
                                         <a href="<?php echo wp_get_attachment_image_url( $attachment_id, 'large' ); ?>" data-lity>
-                                            <?php echo wp_get_attachment_image( $attachment_id, 'projectimage' ); ?>
+                                            <?php echo wp_get_attachment_image( $attachment_id, 'sideprojectimage' ); ?>
                                         </a>
                                         </div>
                                 <?php endforeach; ?>

@@ -49,7 +49,7 @@ get_header();
     <?php get_sidebar('web'); ?>
     <?php elseif (is_category('graphics')) : ?>
     <?php get_sidebar('graphics'); ?>
-    <?php elseif (is_category('blog')) : ?>
+    <?php elseif (is_category('blogs')) : ?>
     <?php get_sidebar('blogs'); ?>
     <?php endif; ?>
 
@@ -58,6 +58,7 @@ get_header();
                 <?php if ( have_posts() ): ?>
                     <?php while ( have_posts() ): ?>
                         <?php the_post(); ?> 
+
                             <div class="grid__item grid__item--6-12 | grid__item--4-12-bp3 | grid__item--3-12-bp6">
                                 <div class="sideproject_item">
                                     <a href="<?php the_permalink(); ?>">
