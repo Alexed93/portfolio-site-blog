@@ -2,25 +2,27 @@
 
 /**
  ***************************************************************************
- * Sidebar - Default
+ * Sidebar - Side-projects
  ***************************************************************************
  *
  * The sidebar is used to define any side-information to be presented
- * for a template. Think categories from a blog listing template and
+ * for the side-projects. Think categories from a blog listing template and
  * related/children for pages.
  *
  */
-
-
 
 ?>
 
 <aside class="sidebar | cf" role="complementary">
     <article class="sidebar__section">
         <div class="sidebar--text">
-            <h1>I'm Alex Edwards.</h1>
-            <h2 class="highlight">This is my blog.</h2>
-            <h3 class="u-push-top/2"> Here, you can view some of my side projects, doodles and scribbles. I also occasionally blog about what i've been up to, on screen and off. Drop me a comment and let me know what you think.</h3>
+            <?php if (is_category('web')) : ?>
+            <?php get_template_part('views/sidebar/sidebar-web'); ?>
+            <?php elseif (is_category('graphics')) : ?>
+            <?php get_template_part('views/sidebar/sidebar-graphics'); ?>
+            <?php elseif (is_category('blogs')) : ?>
+            <?php get_template_part('views/sidebar/sidebar-blogs'); ?>
+            <?php endif; ?>
         </div>
             <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/logo.svg" class="logo"></a>
     </article> <!-- .sidebar__section -->
