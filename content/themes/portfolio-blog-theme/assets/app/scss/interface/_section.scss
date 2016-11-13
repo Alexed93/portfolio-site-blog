@@ -74,11 +74,15 @@
     }
 }
 
-.section_introduction-work {
+.single-project {
     margin: 0em 0 3em 0;
+
+    @include respond-min($bp5) {
+        margin: 5em 0 1em 0;
+    }
 }
 
-.section_about {
+.about {
     padding-top: $base;
 
     @include respond-min($bp1) {
@@ -94,16 +98,14 @@
     margin-top: $base;
 }
 
-.section_work {
+.projects {
     margin-bottom: 1em;
 
     @include respond-min($bp3) {
-        // margin: 6em 0 5em 0;
         margin: 10% 0 9% 0;
     }
 
     @include respond-min($bp5) {
-        // margin: 7.5em 0 5em 0;
         margin: 7.5% 0 6.5% 0;
     }
 

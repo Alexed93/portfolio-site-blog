@@ -1,11 +1,11 @@
 <div class="section | section_stats">
     <div class="container">
-        <div class="container_introduction | cf">
-            <div class="container_introduction_heading">
+        <div class="secondary-introduction | cf">
+            <div class="secondary_heading">
                 <h1>What I can do.</h1>
                 <h2 class="highlight">The interesting bit.</h2>
             </div>
-            <div class="container_introduction_excerpt">
+            <div class="secondary_excerpt">
                 <h3>Coding isn't my only skill. I'm also proficient with the Adobe Creative Suite, including Photoshop and Illustrator. Take a look at my top skills below.</h3>
             </div>
         </div>
@@ -15,7 +15,7 @@
             </div>
             <h4 class="gamma | statcircle_title">
                 <div class="icon--coding | statcircle_icon | statcircle_icon-1"></div>
-                Development
+                Design
             </h4>
         </div>
         <div class="statcircle | statcircle-2">
@@ -24,7 +24,7 @@
             </div>
             <h4 class="gamma | statcircle_title">
                 <div class="icon--artbrush | statcircle_icon | statcircle_icon-2"></div>
-                Illustrations
+                Development
             </h4>
         </div>
         <div class="statcircle | statcircle-3">
@@ -33,7 +33,7 @@
             </div>
             <h4 class="gamma | statcircle_title">
                 <div class="icon--lightbulb | statcircle_icon | statcircle_icon-3"></div>
-                Marketing &amp; branding
+                Branding
             </h4>
         </div>
     </div>

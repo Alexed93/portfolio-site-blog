@@ -45,15 +45,13 @@
   padding: 1em;
 
   p {
-    margin-top: $base/2;
-    font-size: 1rem;
+    margin-top: $base/4;
   }
     
   @include respond-min($bp1) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
   }
 }
 
@@ -61,53 +59,51 @@
 MAIN PROJECTS
 ------------------------------------------ */
 
-.work_item {
+.project-item {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-.work_item .work_overlay {
+.project-item .project-overlay {
   overflow: hidden;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease;
 }
 
-.work_overlay {
+.project-overlay {
     width: 100%;
     height: 100%;
     position: absolute;
     padding: 0.5em;
 }
 
-.work_item:hover .work_overlay {
+.project-item:hover .project-overlay {
     background-color: $green-brand;
     opacity: 0.96;
 }
 
-.work_item img {
+.project-item img {
   display: block;
   position: relative;
   max-height: 100%;
 }
 
-.work_item h2 {
+.project-item h2 {
   text-transform: uppercase;
   color: #fff;
   text-align: center;
   position: relative;
   padding: 10px;
-  transition: all 0.4s ease-in-out;
 }
 
-.work_item:hover h2 {
+.project-item:hover h2 {
   text-decoration: none;
 }
 
-.work_link {
+.project-link {
   display: inline-block;
   color: $white;
   // border: 1px solid $green-brand;
@@ -115,9 +111,9 @@ MAIN PROJECTS
   opacity: 0;
   filter: alpha(opacity=0);
   transform: scale(0);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease;
   margin: 1.1em 1em 1em 1em;
-  padding-top: 1.75em;
+  padding-top: .5em;
   width: 90%;
   height: 82%;
   position: absolute;
@@ -125,33 +121,27 @@ MAIN PROJECTS
   left: 0;
 
   @include respond-min($bp2) {
-    margin: .5em 1em 1em 1em;
-  }
-
-  @include respond-min($bp3) {
-    padding-top: 1em;
+    padding: 2.25em;
+    margin: 0;
+    width: 100%;
   }
 
   @include respond-min($bp4) {
-    padding: 1.5em;
+    padding: 2.75em;
   }
 
-  @include respond-min($bp5) {
-    padding: 4em;
-  }
-
-  @include respond-min($bp6) {
-    padding: 7em;
+  @include respond-min($bp4) {
+    padding: 5em;
   }
 }
 
-.work_item:hover .work_link {
+.project-item:hover .project-link {
   text-decoration: none;
   opacity: 1;
   transform: scale(1);
 }
 
-.work_bio {
+.single-project-bio {
   width: 100%;
   text-align: center;
 
@@ -186,7 +176,7 @@ MAIN PROJECTS
   }
 }
 
-.work_images {
+.single-project-images {
   width: 100%;
   margin-top: 2em;
 
@@ -209,21 +199,25 @@ MAIN PROJECTS
   }
 }
 
-.work_body {
+.single-project-body {
   padding-bottom: $base*2;
   width: 100%;
+  margin-top: $base*2;
 
   @include respond-min($bp2) {
-    width: 63%;
+    width: 65%;
     float: right;
+  }
 
-    .container {
-      margin: 0;
-    }
+  @include respond-min($bp3) {
+    margin-top: 3em;
+    padding-bottom: 2em;
   }
 
   @include respond-min($bp4) {
-    width: 66.5%;
+    width: 69%;
+    margin-top: 1.5em;
+    padding-bottom: 4.5em;
 
     p {
       margin-top: $base;
@@ -231,91 +225,21 @@ MAIN PROJECTS
   }
 
   @include respond-min($bp5) {
-    width: 55%;
-    margin-right: 8.5em;
+    width: 70%;
+    padding-bottom: 10em;
+    margin-top: 12em;
   }
 
   @include respond-min($bp6) {
-    width: 45%;
-    margin-right: 23em;
-  }
-}
-
-.work_1, .work_2, .work_3, .work_4, .work_5 {
-  @include respond-min($bp3) {
+    width: 73%;
     margin-top: 3em;
-    padding-bottom: 2em;
-  }
-
-  @include respond-min($bp4) {
-    margin-top: 1.5em;
-    padding-bottom: 4.5em;
-  }
-
-  @include respond-min($bp6) {
-    margin-top: 3em !important;
-  }
-
-  // @include respond-min($bp5) {
-  //   margin-top: 13em;
-  //   padding-bottom: 11em;
-  // }
-}
-
-.work_1 {
-    @include respond-min($bp5) {
-      padding-bottom: 12em;
-      margin-top: 10.5em;
-    }
-}
-
-.work_2 {
-    @include respond-min($bp5) {
-      padding-bottom: 10em;
-      margin-top: 10.5em;
-    }
-}
-
-.work_3 {
-    @include respond-min($bp5) {
-      padding-bottom: 13em;
-      margin-top: 11em;
-    }
-}
-
-.work_4 {
-    @include respond-min($bp5) {
-      padding-bottom: 11em;
-      margin-top: 10.5em;
-    }
-}
-
-.work_5 {
-    @include respond-min($bp5) {
-      padding-bottom: 12em;
-      margin-top: 10.5em;
-    }
-}
-
-.work_6 {
-  @include respond-min($bp3) {
-    margin-top: 3em;
-    padding-bottom: 3em;
-  }
-  @include respond-min($bp4) {
-    margin-top: 5em;
-    padding-bottom: 6em;
-  }
-  @include respond-min($bp5) {
-    margin-top: 11em;
-    padding-bottom: 16em
   }
 }
 
-.work_screen img { 
-  transition: all 0.5s ease;
+.single-project-screen img { 
+  transition: all 0.3s ease;
 }
 
-.work_screen img:hover {    
+.single-project-screen img:hover {    
   transform: scale(0.95);
 }

@@ -1,32 +1,4 @@
-// .pagination {
-//     margin-top: $base*2;
-//     padding: ($base/2) 0;
-//     font-size: 1.2rem;
-//     border-top: 1px solid $grey-lighter;
-//     border-bottom: 1px solid $grey-lighter;
-
-//     a, span {
-//         display: inline-block;
-//     }
-
-//     a {
-//         margin: 0 $base/4;
-//         line-height: 1;
-//         border-bottom: 1px solid $color-link;
-//     }
-
-//     .pages {
-//         margin-right: $base*2;
-//         font-size: .85rem;
-//     }
-
-//     .first,
-//     .last {
-//         border-bottom: 0;
-//     }
-// }
-
-.pagination-controls {
+.post-controls {
     margin-bottom: $base;
 
     @include respond-min($bp2) {
@@ -34,7 +6,7 @@
     }
 }
 
-.pagination-controls__link {
+.post-controls-link {
     color: #808080;
 
     i {
@@ -42,7 +14,7 @@
     }
 }
 
-.pagination-controls__link:hover {
+.post-controls-link:hover {
     color: $brand-red;
 
     i {
@@ -50,10 +22,10 @@
     }
 }
 
-.pagination-controls__link--prev {
+.post-controls-link--prev {
     float: left;
 }
-.pagination-controls__link--next {
+.post-controls-link--next {
     float: right;
 }
 

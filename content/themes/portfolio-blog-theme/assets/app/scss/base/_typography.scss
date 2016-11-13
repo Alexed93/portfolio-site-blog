@@ -37,122 +37,91 @@ blockquote > :last-child {
 /* $. Headings and Common Styles
 \*----------------------------------------------------------------*/
 
-h1, .alpha {
+// ---------------------------- PORTFOLIO
+
+h1 {
     font-size: 1.6rem;
 }
 
-h2 {
+h2, .excerpt p {
     font-size: 1.4rem;
 }
 
-h3, .gamma {
+h3 {
     font-size: 1.2rem;
 }
 
 h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 2.2rem; // Stat circles
+}
+
+p {
     font-size: 1.1rem;
 }
 
-h5, .epsilon {
-    font-size: 1rem;
+.gamma, .excerpt p {
+    font-size: 1.3rem; //excerpt of side-project post
 }
 
-.frankie {
-    font-size: 2.5rem;
+// ---------------------------- BLOG
+
+.beta {
+    font-size: 1.1rem; // Side-project overlay heading
 }
 
-.beta, p {
-    font-size: 1rem;
+.delta p {
+    font-size: 1rem; // Side-project overlay text
 }
 
-.intro {
-    font-size: 1.25em;
-}
-
-@include respond-min($bp1) {
-    h1, .alpha {
-        font-size: 1.6rem;
-    }
-
-    h2, .beta {
-        font-size: 1.4rem;
-    }
-
-    h3, .gamma, p {
-        font-size: 1.2rem;
-    }
-}
-
-@include respond-min($bp2) {
-    .delta {
-        font-size: 1.2rem;
-    }
-
-    .beta {
-        font-size: 1.7rem;
-    }
-}
-
-@include respond-min($bp3) {
-    h3, .gamma {
-        font-size: 1.1rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}
-
-@include respond-min($bp4) {
-    h3, .gamma {
-        font-size: 1.2rem;
-    }
-
-    p, .delta {
-        font-size: 1.1rem;
-    }
-
-    .beta {
-        font-size: 1.2rem;
-    }
-}
+// ------------------------------------------------------------------------- RESPONSIVE
 
 @include respond-min($bp5) {
-    h2, .beta {
-        font-size: 1.6rem;
-    }
 
-    h3, .gamma {
-        font-size: 1.4rem;
-    }
+    // ---------------------------- PORTFOLIO
 
-    p, .delta {
-        font-size: 1.3rem;
-    }
-}
-
-@include respond-min($bp6) {
-    h1, .alpha {
-        font-size: 2rem;
-    }
-
-    h2 {
+    h1 {
         font-size: 1.8rem;
     }
 
-    h3, .gamma {
+    h2, .excerpt p {
         font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    h5 {
+        font-size: 2.4rem; // Stat circles
     }
 
     p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
+
+    .gamma, .excerpt p {
+        font-size: 1.5rem; //excerpt of side-project post
+    }
+
+    time {
+        font-size: 1.2rem;
+    }
+
+    // ---------------------------- BLOG
 
     .beta {
-        font-size: 2.2rem;
+        font-size: 1.3rem; // Side-project overlay heading
     }
 
-    .delta {
-        font-size: 1.6rem;
+    .delta p {
+        font-size: 1.2rem; // Side-project overlay text
     }
 }

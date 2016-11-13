@@ -1,0 +1,53 @@
+/* Logos */
+.logo {
+    display: block;
+}
+
+.logo--sidebar {
+    margin: 0 auto;
+    width: 25%;
+    margin-top: 2em;
+
+    @include respond-min($bp2) {
+        display: inline-block;
+        float: right;
+    }
+    
+    @include respond-min($bp3) {
+        float: none;
+        display: block;
+        width: 50%;
+        margin-top: 2em;
+    }
+}
+
+.logo--portfolio {
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 5em);
+
+    @include respond-min($bp3) {
+        width: 30%;
+        float: left;
+        margin-left: 3em;
+        height: auto;
+    }
+
+    @include respond-min($bp6) {
+        width: 35%;
+    }
+
+    img {
+        width: 80%;
+        height: 87%;
+
+        @include respond-min($bp2) {
+            height: 90%;
+        }
+
+        @include respond-min($bp3) {
+            width: 100%;
+            height: 95%;
+        }
+    }
+}

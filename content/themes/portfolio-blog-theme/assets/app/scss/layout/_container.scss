@@ -25,17 +25,16 @@
 }
 
 .container_hero {
-
     @include respond-min($bp3) {
         height: calc(100vh - 2.4em);
         position: relative;
-        transform: translateY(9%);
-        bottom: -9%;
+        transform: translateY(10%);
+        bottom: -10%;
     }
 
     @include respond-min($bp5) {
-        transform: translateY(11%);
-        bottom: -11%;
+        transform: translateY(15%);
+        bottom: -15%;
     }
 
     @include respond-min($bp6) {
@@ -44,7 +43,7 @@
     }
 }
 
-.container_introduction {
+.secondary-introduction {
     padding: 1em 0;
 
     @include respond-min($bp3) {
@@ -52,7 +51,7 @@
     }
 }
 
-.container_logo {
+.splash_logo {
     height: 100%;
 
     @include respond-min($bp3) {
@@ -60,7 +59,7 @@
     }
 }
 
-.container_splashtext {
+.splash-text {
     padding-top: 2em;
     margin-bottom: 2em;
 
@@ -124,10 +123,10 @@
     }
 }
 
-.container_introduction_heading {
+.secondary_heading {
     @include respond-min($bp2) {
         float: left;
-        width: 36%;
+        width: 30%;
     }
 
     @include respond-min($bp3) {
@@ -135,14 +134,14 @@
     }
 }
 
-.container_introduction_excerpt {
+.secondary_excerpt {
     h3 {
         margin-top: $base/2;
     }
 
     @include respond-min($bp2) {
         float: right;
-        width: 64%;
+        width: 70%;
         border-left: solid 1px $green-brand;
         padding-left: 2em;
 

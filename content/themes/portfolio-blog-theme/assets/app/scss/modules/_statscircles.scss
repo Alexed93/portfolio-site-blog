@@ -111,31 +111,45 @@
 
 .statcircle_icon-1 {
     @include respond-min($bp2) {
-        left: -20px;
+        left: -5px;
         background-size: 25%;
     }
 
     @include respond-min($bp3) {
-        left: -35px;
+        left: -10px;
         background-size: 20%;
     }
 
     @include respond-min($bp4) {
-        left: -50px;
+        left: -35px;
     }
 
     @include respond-min($bp5) {
-      left: -70px;
+        left: -45px;
     }
 }
 
 .statcircle_icon-2 {
     @include respond-min($bp2) {
-        left: -15px;
+        left: -25px;
     }
 
     @include respond-min($bp3) {
-        left: -20px;
+        left: -30px;
+    }
+
+    @include respond-min($bp4) {
+        left: -55px;
+    }
+
+    @include respond-min($bp5) {
+        left: -70px;
+    }
+}
+
+.statcircle_icon-3 {
+    @include respond-min($bp2) {
+        left: -10px;
     }
 
     @include respond-min($bp4) {
@@ -143,24 +157,6 @@
     }
 
     @include respond-min($bp5) {
-      left: -50px;
-    }
-}
-
-.statcircle_icon-3 {
-    @include respond-min($bp2) {
-        left: -50px;
-    }
-
-    @include respond-min($bp3) {
-        left: -60px;
-    }
-
-    @include respond-min($bp4) {
-        left: -75px;
-    }
-
-    @include respond-min($bp5) {
-        left: -95px;
+        left: -40px;
     }
 }

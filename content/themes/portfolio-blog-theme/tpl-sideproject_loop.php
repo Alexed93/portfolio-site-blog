@@ -12,9 +12,7 @@
 
 <div class="section__content">
             <div class="grid | grid--compact | grid--posts" onclick="">
-                <?php if ( have_posts() ): ?>
-                    <?php while ( have_posts() ): ?>
-                        <?php the_post(); ?> 
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <div class="grid__item grid__item--6-12 | grid__item--4-12-bp3 | grid__item--3-12-bp6">
                                 <div class="sideproject_item">
                                     <a href="<?php the_permalink(); ?>">
@@ -29,7 +27,6 @@
                                     </a>
                                 </div>
                             </div>
-                        
                     <?php endwhile; ?>
                 <?php else: ?>
                     <?php get_template_part('views/errors/404-posts'); ?>

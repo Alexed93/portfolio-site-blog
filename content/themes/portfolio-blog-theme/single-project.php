@@ -7,9 +7,9 @@ get_header();
     $the_query = new WP_Query( $args ); 
 ?>
     
-<div class="section | section_introduction-work">
+<div class="section | single-project">
     <div class="container | cf">
-        <div class="work_bio">
+        <div class="single-project-bio">
             <h1>
                 <?php the_title(); ?> <br>
                 <?php $subjectarea = get_field( "subject_area" ); echo $subjectarea ?><br>
@@ -22,13 +22,12 @@ get_header();
                 <button>Back</button>
             </a>
         </div>
-        <div class="work_images">
+        <div class="single-project-images">
             <div class="grid grid--compact">
                 <?php while( have_rows('project_screenshots') ): the_row(); 
                     $projectscreenshot = get_sub_field('project_screenshot'); 
-
                 ?>
-                <div class="grid__item grid__item--6-12-bp2 | work_screen">
+                <div class="grid__item grid__item--6-12-bp2 | single-project-screen">
                     <a href="<?php echo $projectscreenshot['url']; ?>" rel="lightbox-work" title="<?php echo $projectscreenshot['alt']; ?>">
                         <img src="<?php echo $projectscreenshot['url']; ?>" alt="<?php echo $projectscreenshot['alt']; ?>"> 
                     </a>
@@ -36,18 +35,15 @@ get_header();
                 <?php endwhile; ?>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="section | work_body | work_1">
-    <div class="container">
-        <h2>Brief</h2>
-        <h3 class="highlight"><?php $projectbrieftitle = get_field( "project_brief_title" ); echo $projectbrieftitle ?></h3>
-        <p><?php $projectyear = get_field( "project_brief_content" ); echo $projectyear ?></p>
-        <br>
-        <h2>Approach</h2>
-        <h3 class="highlight">How it was tackled</h3>
-        <p><?php $projectapproachcontent = get_field( "project_approach_content" ); echo $projectapproachcontent ?></p>
+        <div class="section | single-project-body">
+            <h2>Brief</h2>
+            <h3 class="highlight"><?php $projectbrieftitle = get_field( "project_brief_title" ); echo $projectbrieftitle ?></h3>
+            <p><?php $projectyear = get_field( "project_brief_content" ); echo $projectyear ?></p>
+            <br>
+            <h2>Approach</h2>
+            <h3 class="highlight">How it was tackled</h3>
+            <p><?php $projectapproachcontent = get_field( "project_approach_content" ); echo $projectapproachcontent ?></p>
+        </div>
     </div>
 </div>
 

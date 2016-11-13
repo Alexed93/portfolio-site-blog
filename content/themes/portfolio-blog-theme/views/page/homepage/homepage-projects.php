@@ -3,16 +3,16 @@
     $the_query = new WP_Query( $args ); 
 ?>
 
-<span id="work_link-2"></span>
-    <div class="section | section_work">
+<span></span>
+    <div class="section | projects">
         <div class="grid grid--compact" onclick="">
         <?php if ( $the_query->have_posts() ) : ?>
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $featured_image = get_field('featured_image');?>
             <div class="grid__item grid__item--6-12-bp1 grid__item--4-12-bp3 ">
-                <div class="work_item | u-align-center">
-                <img class="work_image" src="<?php echo $featured_image; ?>">
-                    <div class="work_overlay"></div> 
-                    <a class="work_link" href="<?php the_permalink(); ?>">   
+                <div class="project-item | u-align-center">
+                <img class="project-image" src="<?php echo $featured_image; ?>">
+                    <div class="project-overlay"></div> 
+                    <a class="project-link" href="<?php the_permalink(); ?>">   
                         <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2> 
                         <p class="delta"><?php the_excerpt(); ?></p>
                     </a>

@@ -32,12 +32,12 @@
 function header_active() {
   $(".header_fill").toggleClass("header_fill--active");
   $(".nav").toggleClass("nav--active");
-  $(".hamburger_styling, .icon_socialmedia").toggleClass("white_background");
-  $(".icon_socialmedia_font").toggleClass("purple_text");
+  $(".hamburger_styling, .socialmedia-icon").toggleClass("white_background");
+  $(".socialmedia-icon__font").toggleClass("purple_text");
 
   // Fix  for IE
 
-  var el1 = $(".hamburger_styling, .icon_socialmedia");
+  var el1 = $(".hamburger_styling, .socialmedia-icon");
 
   el1.on("click", function() {
     el1.addClass("white_background");
@@ -46,7 +46,7 @@ function header_active() {
     });
   });
 
-  var el2 = $(".icon_socialmedia_font");
+  var el2 = $(".socialmedia-icon__font");
 
   el2.on("click", function() {
     el2.addClass("green_text");
@@ -64,7 +64,7 @@ function header_active() {
     });
   });
 
-  var el4 = $(".icon_socialmedia");
+  var el4 = $(".socialmedia-icon");
 
   el4.on("hover", function() {
     el4.addClass("green_background");
@@ -178,17 +178,6 @@ $('.slick_carousel').slick({
   window.addEventListener("scroll", callbackFunc);
 
 })();
-
-/* $. Smooth scrolling 
-\*----------------------------------------------------------------*/
- /* $('.nav_link, .icon_logo').on('click',function (e) {
-    e.preventDefault();
-
-    var target = $(this).attr('href').replace('/', '');
-    var targetOffset = $(target).offset().top;
-
-    $('body, html').animate({scrollTop: targetOffset - 0}, 700);
-  }); 
 
 /* $. Circle stats
 \*----------------------------------------------------------------*/

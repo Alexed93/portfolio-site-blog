@@ -31,7 +31,7 @@
     display: inline-block;
     background-size: contain;
     margin-right: 1em;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 
     @include respond-min($bp1) {
        @include icon-size($icon-medium);
@@ -57,56 +57,4 @@
 /* Styling */
 .icon--transparent { opacity: .3; filter: alpha(opacity=30); }
 
-/* Logos */
-.logo {
-    margin: 0 auto;
-    display: block;
-    width: 25%;
-    margin-top: 2em;
-
-    @include respond-min($bp2) {
-        display: inline-block;
-        float: right;
-    }
-    
-    @include respond-min($bp3) {
-        float: none;
-        display: block;
-        width: 50%;
-        margin-top: 2em;
-    }
-}
-
-.icon_logo {
-    display: block;
-    text-align: center;
-    width: 100%;
-    height: calc(100vh - 5em);
-
-    img {
-        width: 80%;
-        height: 87%;
-
-        @include respond-min($bp2) {
-            height: 90%;
-        }
-
-        @include respond-min($bp3) {
-            width: 100%;
-            height: 95%;
-        }
-    }
-
-    @include respond-min($bp3) {
-        width: 30%;
-        float: left;
-        margin-left: 3em;
-        margin-top: 0;
-        height: auto;
-    }
-
-    @include respond-min($bp6) {
-        width: 35%;
-    }
-}
 

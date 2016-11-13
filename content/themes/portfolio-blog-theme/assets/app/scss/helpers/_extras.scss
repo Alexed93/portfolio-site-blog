@@ -28,22 +28,6 @@
     opacity: 1;
 }
 
-.work_link_click-1 {
-    display: block;
-
-    @include respond-min($bp3) {
-        display: none;
-    }
-}
-
-.work_link_click-2 {
-    display: none;
-
-    @include respond-min($bp3) {
-        display: block;
-    }
-}
-
 /* $. Flexible
 \*----------------------------------------------------------------*/
 

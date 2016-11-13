@@ -1,11 +1,11 @@
 <div class="section | section_testimonials">
     <div class="container">
-        <div class="container_introduction | cf">
-            <div class="container_introduction_heading">
+        <div class="secondary-introduction | cf">
+            <div class="secondary_heading">
                 <h1>Testimonials.</h1>
                 <h2 class="highlight">What clients have said.</h2>
             </div>
-            <div class="container_introduction_excerpt">
+            <div class="secondary_excerpt">
                 <div class="testimonial-slider">
                     <ul>
                         <li>
