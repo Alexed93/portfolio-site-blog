@@ -75,15 +75,7 @@
 }
 
 .section_introduction-work {
-    margin: 0em 0 2em 0;
-
-    @include respond-min($bp2) {
-        margin: 1em 0 2em 0;
-    }
-
-    @include respond-min($bp5) {
-        margin: 12em 0 2em 0;
-    }
+    margin: 0em 0 3em 0;
 }
 
 .section_about {
@@ -99,15 +91,7 @@
 }
 
 .section_stats, .section_testimonials {
-    margin-top: 2em;
-
-    @include respond-min($bp4) {
-        margin-top: 3em;
-    }
-
-    @include respond-min($bp4) {
-        margin-top: 6em;
-    }
+    margin-top: $base;
 }
 
 .section_work {

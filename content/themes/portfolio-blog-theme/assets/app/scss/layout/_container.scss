@@ -28,19 +28,19 @@
 
     @include respond-min($bp3) {
         height: calc(100vh - 2.4em);
-        // padding-top: 10%;
         position: relative;
         transform: translateY(9%);
         bottom: -9%;
-
-        .container {
-            width: auto;
-        }
     }
 
     @include respond-min($bp5) {
         transform: translateY(11%);
         bottom: -11%;
+    }
+
+    @include respond-min($bp6) {
+        transform: translateY(20%);
+        bottom: -20%;
     }
 }
 
