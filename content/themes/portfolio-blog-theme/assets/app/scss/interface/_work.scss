@@ -112,26 +112,25 @@ MAIN PROJECTS
   filter: alpha(opacity=0);
   transform: scale(0);
   transition: all 0.3s ease;
-  margin: 1.1em 1em 1em 1em;
-  padding-top: .5em;
-  width: 90%;
-  height: 82%;
+  padding: 3em 2em 2em 2em;
   position: absolute;
   top: 0;
   left: 0;
 
-  @include respond-min($bp2) {
-    padding: 2.25em;
-    margin: 0;
-    width: 100%;
+  @include respond-min($bp1) {
+    padding: 1em;
   }
 
-  @include respond-min($bp4) {
+  @include respond-min($bp2) {
     padding: 2.75em;
   }
 
+  @include respond-min($bp3) {
+    padding: 1.5em;
+  }
+
   @include respond-min($bp4) {
-    padding: 5em;
+    padding: 2.5em;
   }
 }
 
