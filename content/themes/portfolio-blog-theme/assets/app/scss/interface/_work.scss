@@ -5,7 +5,6 @@
 
 .sideproject_item .sideproject_overlay {
   overflow: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -112,10 +111,12 @@ MAIN PROJECTS
   filter: alpha(opacity=0);
   transform: scale(0);
   transition: all 0.3s ease;
-  padding: 3em 2em 2em 2em;
+  padding: 1.5em 2em 2em 2em;
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
 
   @include respond-min($bp1) {
     padding: 1em;
@@ -131,6 +132,14 @@ MAIN PROJECTS
 
   @include respond-min($bp4) {
     padding: 2.5em;
+  }
+
+  @include respond-min($bp5) {
+    padding: 5em;
+  }
+
+  @include respond-min($bp6) {
+    padding: 7em;
   }
 }
 
@@ -154,24 +163,20 @@ MAIN PROJECTS
 
   @include respond-min($bp3) {
     width: 24%;
-    padding-bottom: 2.1em;
+    padding-bottom: 2em;
     padding-top: 2.25em;
   }
-  
+
   @include respond-min($bp4) {
-    padding-bottom: 5.75em;
-    padding-top: 5em;
     width: 21%;
+    padding-top: 4.5em;
+    padding-bottom: 6.5em;
   }
 
   @include respond-min($bp5) {
-    padding-bottom: 7em;
-    padding-top: 7.5em;
-    width: 15.5%;
-  }
-
-  @include respond-min($bp6) {
-    width: 11%;
+    width: 16%;
+    padding-top: 6em;
+    padding-bottom: 8em;
   }
 }
 
@@ -202,6 +207,9 @@ MAIN PROJECTS
   padding-bottom: $base*2;
   width: 100%;
   margin-top: $base*2;
+  p {
+    margin-top: $base/2;
+  }
 
   @include respond-min($bp2) {
     width: 65%;
@@ -209,24 +217,20 @@ MAIN PROJECTS
   }
 
   @include respond-min($bp3) {
-    margin-top: 3em;
-    padding-bottom: 2em;
+    margin-top: 7.5em;
+    padding-bottom: 0em;
   }
 
   @include respond-min($bp4) {
     width: 69%;
-    margin-top: 1.5em;
-    padding-bottom: 4.5em;
-
-    p {
-      margin-top: $base;
-    }
+    margin-top: 4.5em;
+    padding-bottom: 4em;
   }
 
   @include respond-min($bp5) {
     width: 70%;
     padding-bottom: 10em;
-    margin-top: 12em;
+    margin-top: 13em;
   }
 
   @include respond-min($bp6) {

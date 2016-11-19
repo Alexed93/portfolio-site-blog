@@ -125,3 +125,50 @@ p {
         font-size: 1.2rem; // Side-project overlay text
     }
 }
+
+@include respond-min($bp6) {
+
+    // ---------------------------- PORTFOLIO
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, .excerpt p {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 2.6rem; // Stat circles
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .gamma, .excerpt p {
+        font-size: 1.7rem; //excerpt of side-project post
+    }
+
+    time {
+        font-size: 1.4rem;
+    }
+
+    // ---------------------------- BLOG
+
+    .beta {
+        font-size: 1.6rem; // Side-project overlay heading
+    }
+
+    .delta p {
+        font-size: 1.5rem; // Side-project overlay text
+    }
+}

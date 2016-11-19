@@ -75,10 +75,18 @@
 }
 
 .single-project {
-    margin: 0em 0 3em 0;
+    padding: 0em;
+
+    @include respond-min($bp3) {
+        padding: 3em 0 2em 0;
+    }
+
+    @include respond-min($bp4) {
+        padding: 0em 0 2em 0;
+    }
 
     @include respond-min($bp5) {
-        margin: 5em 0 1em 0;
+        padding: 4em 0 2em 0;
     }
 }
 
