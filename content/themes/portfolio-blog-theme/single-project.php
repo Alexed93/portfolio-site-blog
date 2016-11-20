@@ -5,6 +5,8 @@ get_header();
 <?php 
     $args = array( 'post_type' => 'project' );
     $the_query = new WP_Query( $args ); 
+
+    $attachments = get_posts( $args );
 ?>
     
 <div class="section | single-project">
@@ -22,8 +24,9 @@ get_header();
                 <button>Back</button>
             </a>
         </div>
-        <div class="single-project-images">
-            <div class="grid grid--compact">
+
+        <div class="single-project-images | is-visible--bp2">
+            <div class="grid | grid--compact | project-images">
                 <?php while( have_rows('project_screenshots') ): the_row(); 
                     $projectscreenshot = get_sub_field('project_screenshot'); 
                 ?>
@@ -35,6 +38,29 @@ get_header();
                 <?php endwhile; ?>
             </div>
         </div>
+
+        <div class="images | u-push-top | is-hidden--bp2">
+            <div class="slick-carousel-wrap">
+                <div class="slick_carousel">
+                    <?php while( have_rows('project_screenshots') ): the_row(); 
+                        $projectscreenshot = get_sub_field('project_screenshot'); 
+                    ?>
+                        <div class="attatchment">
+                            <a href="<?php echo $projectscreenshot['url']; ?>" title="<?php echo $projectscreenshot['alt']; ?>" data-lity>
+                               <img src="<?php echo $projectscreenshot['url']; ?>" alt="<?php echo $projectscreenshot['alt']; ?>"> 
+                            </a>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+                <div class="carousel-arrows | cf">
+                    <div class="carousel_arrow | carousel_arrow--left" id="carouselPrevArrow"><</div>
+                    <div class="slick-dots-container"></div>
+                    <div class="carousel_arrow | carousel_arrow--right" id="carouselNextArrow">></div>
+                </div>
+            </div>    
+        </div>
+
+
         <div class="section | single-project-body">
             <h2>Brief</h2>
             <h3 class="highlight"><?php $projectbrieftitle = get_field( "project_brief_title" ); echo $projectbrieftitle ?></h3>
@@ -46,5 +72,6 @@ get_header();
         </div>
     </div>
 </div>
+
 
 <?php get_footer(); ?>
