@@ -26,21 +26,14 @@
 
 .container_hero {
     @include respond-min($bp3) {
-        height: calc(100vh - 14em);
-        margin-top: 9%;
-    }
-
-    @include respond-min($bp4) {
-        margin-top: 6%;
-    }
-
-    @include respond-min($bp5) {
-        margin-top: 9%;
+        position: relative;
+        margin-top: 8%;
+        margin-bottom: 20%;
     }
 
     @include respond-min($bp6) {
-        height: calc(100vh - 31em);
-        margin-top: 12%;
+        margin-top: 11%;
+        margin-bottom: 23%;
     }
 }
 
@@ -53,10 +46,13 @@
 }
 
 .splash_logo {
-    height: 100%;
-
+    height: calc(100vh - 6em);
+    text-align: center;
+ 
     @include respond-min($bp3) {
+        margin-left: 3em;
         height: auto;
+        text-align: left;
     }
 }
 
@@ -69,10 +65,12 @@
     }
 
     @include respond-min($bp3) {
-        float: right;
-        width: 60%;
-        padding: 0 3em 0 0;
-        margin: 3% 0 0 0;
+        margin: 3em 0 0 0;
+        padding: 0 3em 0 0 ;
+        width: 62%;
+        position: absolute;
+        right: 0;
+        top: 0;
 
         h1 {
             font-size: 1.6rem;
@@ -88,8 +86,7 @@
     }
 
     @include respond-min($bp4) {
-        margin: 4% 0 0 0;
-        width: 63%;
+        margin: 4em 0 0 0;
 
         h1 {
             font-size: 1.8rem;
@@ -116,11 +113,6 @@
         h3 {
             font-size: 1.6rem;
         }
-    }
-
-    @include respond-min($bp6) {
-        margin: 6% 0 0 0;
-        width: 59%;
     }
 }
 

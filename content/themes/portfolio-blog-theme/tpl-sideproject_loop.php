@@ -19,8 +19,12 @@
                                         <div class="sideproject_image" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>');">
                                             <div class="sideproject_overlay">
                                                 <div class="sideproject_overlay--text">     
-                                                    <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2>
-                                                    <?php if ( $post->post_excerpt ): ?><div class="delta"><?php the_excerpt(); ?></div><?php endif; ?>
+                                                    <h2 class="u-style-uppercase | beta">
+                                                        <?php the_title(); ?>
+                                                    </h2>
+                                                    <?php if ( $post->post_excerpt ): ?>
+                                                        <div class="delta"><?php the_excerpt(); ?></div>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
                                         </div>

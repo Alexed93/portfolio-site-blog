@@ -1,8 +1,4 @@
 /* Logos */
-.logo {
-    display: block;
-}
-
 .logo--sidebar {
     margin: 0 auto;
     width: 25%;
@@ -22,31 +18,14 @@
 }
 
 .logo--portfolio {
-    text-align: center;
-    width: 100%;
-    height: calc(100vh - 5em);
- 
+    max-width: 80%;
+    top: 40%;
+    position: relative;
+    transform: translateY(-40%);
+
     @include respond-min($bp3) {
-        width: 30%;
-        float: left;
-        margin-left: 3em;
-        height: auto;
-    }
-
-    @include respond-min($bp6) {
-        width: 35%;
-    }
-
-    img {
-        max-width: 80%;
-        position: relative;
-        top: 40%;
-        transform: translateY(-40%);
-
-        @include respond-min($bp3) {
-            width: 85%;
-            position: static;
-            transform: none;
-        }
+        max-width: 30%;
+        position: static;
+        transform: none;
     }
 }

@@ -2,9 +2,7 @@
     $args = array( 'post_type' => 'project', 'posts_per_page' => 6 );
     $the_query = new WP_Query( $args ); 
 ?>
-
-<span></span>
-    <div class="section | projects">
+    <div class="section | projects" id="projects">
         <div class="grid grid--compact" onclick="">
         <?php if ( $the_query->have_posts() ) : ?>
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $featured_image = get_field('featured_image');?>

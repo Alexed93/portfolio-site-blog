@@ -11,11 +11,11 @@
     @include respond-min($bp4) {
         width: 25%;
         left: 11%;
-        margin: 2em 0 3em 0;
+        margin: 3em 0 4em 0;
     }
 
     @include respond-min($bp6) {
-        margin: 4em 0 3em 0;
+        margin: 4em 0 5em 0;
         width: 30%;
         left: 6%;
     }

@@ -111,7 +111,7 @@ MAIN PROJECTS
   filter: alpha(opacity=0);
   transform: scale(0);
   transition: all 0.3s ease;
-  padding: 1.5em 2em 2em 2em;
+  padding: 3em 2em 2em 2em;
   position: absolute;
   top: 0;
   left: 0;
@@ -135,7 +135,7 @@ MAIN PROJECTS
   }
 
   @include respond-min($bp5) {
-    padding: 5em;
+    padding: 4.5em;
   }
 
   @include respond-min($bp6) {
@@ -162,7 +162,6 @@ MAIN PROJECTS
   }
 
   @include respond-min($bp3) {
-    width: 24%;
     padding-bottom: 2em;
     padding-top: 2.25em;
   }
@@ -174,8 +173,8 @@ MAIN PROJECTS
   }
 
   @include respond-min($bp5) {
-    width: 16%;
-    padding-top: 6em;
+    width: 17em;
+    padding-top: 6.25em;
     padding-bottom: 8em;
   }
 }
