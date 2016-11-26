@@ -1,9 +1,10 @@
 <div class="container_hero | container">
     <div class="splash_logo">
-        <a href="/#projects">
+        <a href="#enter">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/purpsmall-01.svg" class="logo--portfolio">
         </a>
     </div>
+    <div id="enter"></div>
     <div class="splash-text">
         <h1>I'm Alex Edwards.</h1>
         <h2 class="highlight">I do web things.</h2>

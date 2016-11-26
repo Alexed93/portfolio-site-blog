@@ -162,7 +162,7 @@ $('.slick_carousel').slick({
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-  }
+}
 
   function callbackFunc() {
     for (var i = 0; i < items.length; i++) {
@@ -177,51 +177,51 @@ $('.slick_carousel').slick({
   window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
 
-})();
+  })();
 
-/* $. Circle stats
-\*----------------------------------------------------------------*/
+  /* $. Circle stats
+  \*----------------------------------------------------------------*/
 
-var el = $('.statcircle'),
-    inited = false;
+  var el = $('.statcircle'),
+      inited = false;
 
-el.appear({ force_process: true });
+  el.appear({ force_process: true });
 
-el.on('appear', function() {
-  if (!inited) {
-    el.circleProgress({});
-    inited = true;
-  }
-});
+  el.on('appear', function() {
+    if (!inited) {
+      el.circleProgress({});
+      inited = true;
+    }
+  });
 
-$('.statcircle-1').circleProgress({
+  $('.statcircle-1').circleProgress({
     value: 0.90,
     size: 150,
     fill: {
        color: "#331749"
     },
     thickness: 5,
-});
+  });
 
-$('.statcircle-2').circleProgress({
-        value: 0.70,
-        size: 150,
-        fill: {
-           color: "#331749"
-        },
-        thickness: 5,
-    });
+  $('.statcircle-2').circleProgress({
+    value: 0.70,
+    size: 150,
+    fill: {
+       color: "#331749"
+    },
+    thickness: 5,
+  });
 
-$('.statcircle-3').circleProgress({
-        value: 0.80,
-        size: 150,
-        fill: {
-           color: "#331749"
-        },
-        thickness: 5,
-    });
+  $('.statcircle-3').circleProgress({
+    value: 0.80,
+    size: 150,
+    fill: {
+       color: "#331749"
+    },
+    thickness: 5,
+  });
 
-(function() {
+  (function() {
 
   'use strict';
 
@@ -256,41 +256,43 @@ $('.statcircle-3').circleProgress({
   window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
 
-})();
+  })();
 
-/* $. Testimonial slider
-\*----------------------------------------------------------------*/
+  /* $. Testimonial slider
+  \*----------------------------------------------------------------*/
 
-$('.testimonial-slider').unslider({
-  autoplay: true,
-  delay: 8000,
-});
+  $('.testimonial-slider').unslider({
+    autoplay: true,
+    delay: 8000,
+  });
 
-/* $. Dropdown list
-\*----------------------------------------------------------------*/
+  /* $. Dropdown list
+  \*----------------------------------------------------------------*/
 
-$(".dropdown_list").on("click",function(){
-    $(".dropdown").toggleClass("is-hidden");
-    $(".dropdown_list").toggleClass("dropdown_list--active");
-});
+  $(".dropdown_list").on("click",function(){
+      $(".dropdown").toggleClass("is-hidden");
+      $(".dropdown_list").toggleClass("dropdown_list--active");
+  });
 
 /* $. Smooth scrolling
 \*----------------------------------------------------------------*/
 
-$('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+          || location.hostname == this.hostname) {
 
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
-});
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+             if (target.length) {
+               $('html,body').animate({
+                   scrollTop: target.offset().top
+              }, 1000);
+              return false;
+          }
+      }
+  });
+
+/*----------- END */
 
 })(jQuery);
 
