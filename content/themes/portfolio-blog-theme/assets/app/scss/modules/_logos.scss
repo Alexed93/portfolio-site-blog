@@ -24,8 +24,9 @@
     transform: translateY(-40%);
 
     @include respond-min($bp3) {
-        max-width: 30%;
-        position: static;
-        transform: none;
+        max-width: 25%;
+        position: relative;
+        transform: translateY(10%);
+        top: 10%;
     }
 }

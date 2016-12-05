@@ -27,7 +27,7 @@
 .container_hero {
     @include respond-min($bp3) {
         position: relative;
-        margin-top: 5%;
+        margin-top: 4%;
         margin-bottom: 22%;
     }
 
@@ -65,9 +65,8 @@
     }
 
     @include respond-min($bp3) {
-        margin: 3em 0 0 0;
-        padding: 0 3em 0 0 ;
-        width: 62%;
+        padding: 2em 2em 0 0;
+        width: 66%;
         position: absolute;
         right: 0;
         top: 0;
@@ -87,6 +86,7 @@
 
     @include respond-min($bp4) {
         margin: 4em 0 0 0;
+        padding: 0em 2em 0 0;
 
         h1 {
             font-size: 1.8rem;
