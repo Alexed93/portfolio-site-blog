@@ -25,15 +25,27 @@
 }
 
 .container_hero {
-    @include respond-min($bp3) {
-        position: relative;
-        margin-top: 4%;
-        margin-bottom: 22%;
-    }
+    // @include respond-min($bp3) {
+    //     position: relative;
+    //     margin-top: 4%;
+    //     margin-bottom: 22%;
+    // }
 
-    @include respond-min($bp6) {
-        margin-top: 11%;
-        margin-bottom: 23%;
+    // @include respond-min($bp6) {
+    //     margin-top: 11%;
+    //     margin-bottom: 23%;
+    // }
+
+    @include respond-min($bp3) {
+        height: calc(100vh - 4.5em);
+    }
+}
+
+.hero {
+    @include respond-min($bp3) {
+        transform: translateY(7%);
+        bottom: -7%;
+        position: relative;
     }
 }
 
