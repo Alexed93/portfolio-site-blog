@@ -37,24 +37,25 @@
     // }
 
     @include respond-min($bp3) {
-        height: calc(100vh - 4.5em);
+        height: calc(100vh - 7em);
     }
 }
 
 .hero {
     @include respond-min($bp3) {
-        transform: translateY(7%);
-        bottom: -7%;
+        transform: translateY(6%);
+        bottom: -6%;
         position: relative;
     }
+
+    // @include respond-min($bp4) {
+    //     transform: translateY(6%);
+    //     bottom: -6%;
+    // }
 }
 
 .secondary-introduction {
     padding: 1em 0;
-
-    @include respond-min($bp3) {
-        padding: 2em 0;
-    }
 }
 
 .splash_logo {
