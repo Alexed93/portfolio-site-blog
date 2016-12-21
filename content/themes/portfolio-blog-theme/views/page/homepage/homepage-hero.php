@@ -1,3 +1,9 @@
+<?php 
+
+    $splash_text = get_field( '' );
+
+?>
+
 <div class="container_hero | container">
     <div class="hero">
         <div class="splash_logo">
@@ -9,7 +15,7 @@
         <div class="splash-text">
             <h1>I'm Alex Edwards.</h1>
             <h2 class="highlight">I do web things.</h2>
-            <h3 class="u-push-top/2">I study Creative Media Technology at Leeds Beckett University and i'm currently on placement as a Junior Front-end developer.</h3>
+            <h3>I study Creative Media Technology at Leeds Beckett University and i'm currently on placement as a Junior Front-end developer.</h3>
         </div>
     </div>
 </div>
