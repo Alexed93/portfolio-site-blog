@@ -1,6 +1,6 @@
 <?php 
 
-    $splash_text = get_field( '' );
+    $fields = get_fields(222);
 
 ?>
 
@@ -13,9 +13,9 @@
         </div>
         <div id="enter"></div>
         <div class="splash-text">
-            <h1>I'm Alex Edwards.</h1>
-            <h2 class="highlight">I do web things.</h2>
-            <h3>I study Creative Media Technology at Leeds Beckett University and i'm currently on placement as a Junior Front-end developer.</h3>
+            <h1><?php echo $fields['splash_title'] ?></h1>
+            <h2 class="highlight"><?php echo $fields['splash_subtitle'] ?></h2>
+            <h3><?php echo $fields['splash_blurb'] ?></h3>
         </div>
     </div>
 </div>
