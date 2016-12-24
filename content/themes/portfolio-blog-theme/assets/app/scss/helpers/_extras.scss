@@ -133,10 +133,22 @@
     right: 0;
 
     @include respond-min($bp3) {
-        top: 12em;
+        top: 10em;
+    }
+
+    @include respond-min($bp4) {
+        top: 13.5em;
+    }
+
+    @include respond-min($bp5) {
+        top: 14em;
+    }
+
+    @include respond-min($bp5-5) {
+        top: 18em;
     }
 
     @include respond-min($bp6) {
-        top: 33em;
+        top: 34em;
     }
 }

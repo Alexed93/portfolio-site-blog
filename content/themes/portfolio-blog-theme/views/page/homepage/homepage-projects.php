@@ -12,7 +12,7 @@
                         <div class="project-overlay"></div> 
                         <a class="project-link" href="<?php the_permalink(); ?>">   
                             <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2> 
-                            <p class="delta"><?php the_excerpt(); ?></p>
+                            <?php the_excerpt(); ?>
                         </a>
                     </div>
                 </div>
