@@ -17,11 +17,11 @@
     <article class="sidebar__section">
         <div class="sidebar--text">
             <?php if (is_category('web')) : ?>
-            <?php get_template_part('views/sidebar/sidebar-web'); ?>
+                <?php get_template_part('views/sidebar/sidebar-web'); ?>
             <?php elseif (is_category('graphics')) : ?>
-            <?php get_template_part('views/sidebar/sidebar-graphics'); ?>
+                <?php get_template_part('views/sidebar/sidebar-graphics'); ?>
             <?php elseif (is_category('blogs')) : ?>
-            <?php get_template_part('views/sidebar/sidebar-blogs'); ?>
+                <?php get_template_part('views/sidebar/sidebar-blogs'); ?>
             <?php endif; ?>
         </div>
             <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/logo.svg" class="logo | logo--sidebar"></a>

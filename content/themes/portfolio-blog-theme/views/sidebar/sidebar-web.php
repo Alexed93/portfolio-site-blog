@@ -11,11 +11,13 @@
  *
  */
 
-
+$web_title = get_field('Sidebar_web_title', 'options');
+$web_subtitle = get_field('Sidebar_web_subtitle', 'options');
+$web_blurb = get_field('Sidebar_web_blurb', 'options');
 
 ?>
 
 <h1><?php single_cat_title(); ?>.</h1>
-<h2 class="highlight">Projects with a web theme.</h2>
-<h3 class="u-push-top/2">As a front-end developer, many of my side projects involve trying out the latest trend, new plugin and generally increasing my coding knowledge. Some of these projects can also be found on <a href="#">my CodePen.</a></h3>
+<h2 class="highlight"><?php echo $web_subtitle ?></h2>
+<h3 class="u-push-top/2"><?php echo $web_blurb ?></h3>
         

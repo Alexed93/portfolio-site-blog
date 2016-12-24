@@ -11,11 +11,13 @@
  *
  */
 
-
+$blogs_title = get_field('Sidebar_blogs_title', 'options');
+$blogs_subtitle = get_field('Sidebar_blogs_subtitle', 'options');
+$blogs_blurb = get_field('Sidebar_blogs_blurb', 'options');
 
 ?>
 
 <h1><?php single_cat_title(); ?>.</h1>
-<h2 class="highlight">My mumblings.</h2>
-<h3 class="u-push-top/2">Want to know what i'm currently up to? My blog posts can be found here, where I talk about my latest project, scribble or really anything related to the Creative Industries.</h3>
+<h2 class="highlight"><?php echo $blogs_subtitle ?></h2>
+<h3 class="u-push-top/2"><?php echo $blogs_blurb ?></h3>
 
