@@ -48,10 +48,10 @@
         position: relative;
     }
 
-    // @include respond-min($bp4) {
-    //     transform: translateY(6%);
-    //     bottom: -6%;
-    // }
+    @include respond-min($bp6) {
+        transform: translateY(18%);
+        bottom: -18%;
+    }
 }
 
 .secondary-introduction {

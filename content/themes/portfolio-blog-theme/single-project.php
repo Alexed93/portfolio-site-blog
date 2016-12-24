@@ -18,7 +18,7 @@ get_header();
                 <?php $projectyear = get_field( "project_year" ); echo $projectyear ?>
             </h1>
             <a href="<?php $projecturl = get_field( "project_url" ); echo $projecturl ?>" target="_blank" class="button_work | u-align-center">
-                <button>View</button>
+                <button>More details</button>
             </a>
             <a href="<?php echo home_url(); ?>" class="button_work | u-align-center">
                 <button>Back</button>

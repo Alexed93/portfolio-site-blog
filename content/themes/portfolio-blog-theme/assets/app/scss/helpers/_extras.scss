@@ -135,4 +135,8 @@
     @include respond-min($bp3) {
         top: 12em;
     }
+
+    @include respond-min($bp6) {
+        top: 33em;
+    }
 }
