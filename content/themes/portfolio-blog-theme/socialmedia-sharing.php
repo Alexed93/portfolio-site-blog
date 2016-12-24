@@ -2,9 +2,6 @@
     // Get access to $post object
     global $post;
 
-    // Get twitter handle
-    $twitter = get_field('twitter', 'options');
-
     // define links
     $links = array(
         'facebook' => 'https://www.facebook.com/sharer/sharer.php?u=' . get_permalink(),

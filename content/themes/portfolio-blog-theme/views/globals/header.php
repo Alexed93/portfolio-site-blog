@@ -10,7 +10,8 @@
  *
  */
 
-
+$twitter = get_field('twitter', 'options');
+$linkedin = get_field('linkedin', 'options');
 
 ?>
 
@@ -29,12 +30,12 @@
                 </a>
             </li>
             <li class="socialmedia-icon">
-                 <a href="https://twitter.com/AlexEd93" target=_blank>
+                 <a href="<?php echo $twitter ?>" target=_blank>
                      <i class="socialmedia-icon__font | fa | fa-twitter"></i>
                 </a>
             </li>
             <li class="socialmedia-icon">
-                 <a href="https://www.linkedin.com/in/alex-edwards-bb261610b?trk=hp-identity-photo" target=_blank>
+                 <a href="<?php echo $linkedin ?>" target=_blank>
                      <i class="socialmedia-icon__font | fa | fa-linkedin"></i>
                 </a>
             </li>
