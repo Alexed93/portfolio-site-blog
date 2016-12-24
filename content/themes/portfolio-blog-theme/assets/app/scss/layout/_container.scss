@@ -48,6 +48,12 @@
         position: relative;
     }
 
+    @include respond-min($bp4) {
+        transform: translateY(8%);
+        bottom: -8%;
+        position: relative;
+    }
+
     @include respond-min($bp5) {
         transform: translateY(13%);
         bottom: -13%;
