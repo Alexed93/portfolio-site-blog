@@ -1,12 +1,5 @@
 <?php /**
- ***************************************************************************
- * Example Custom Template
- ***************************************************************************
- *
- * Template part that forms the loop that grabs each side project and displays it
- *
- * Template Name: side-project_loop
- *
+
  */ ?>
 
 

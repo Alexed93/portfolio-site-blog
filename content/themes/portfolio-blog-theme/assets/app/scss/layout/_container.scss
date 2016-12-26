@@ -71,7 +71,8 @@
 }
 
 .secondary-introduction {
-    padding: 1em 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .splash_logo {
@@ -147,36 +148,20 @@
 }
 
 .secondary_heading {
-    @include respond-min($bp2) {
-        float: left;
-        width: 30%;
-    }
+    margin-bottom: 2em;
+}
+
+.secondary_excerpt--bordertop {
+    border-top: solid 1px $green-brand;
+    padding-top: 1em;
 
     @include respond-min($bp3) {
-        width: 30.25%;
+        padding-top: 2em;
     }
 }
 
-.secondary_excerpt {
-    h3 {
-        margin-top: $base/2;
-    }
-
-    @include respond-min($bp2) {
-        float: right;
-        width: 70%;
-        border-left: solid 1px $green-brand;
-        padding-left: 2em;
-
-        h3 {
-            margin-top: 0;
-        }
-    }
-
-    @include respond-min($bp3) {
-        width: 69.75%;
-        padding-left: 2.5em;
-    }
+.secondary_excerpt--borderright {
+    border-right: solid 1px $green-brand;
 }
 
 /* $. Modifications

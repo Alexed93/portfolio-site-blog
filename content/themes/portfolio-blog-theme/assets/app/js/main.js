@@ -261,7 +261,7 @@ $('.slick_carousel').slick({
   /* $. Testimonial slider
   \*----------------------------------------------------------------*/
 
-  $('.testimonial-slider').unslider({
+  $('.testimonial_slider').unslider({
     autoplay: true,
     delay: 8000,
   });

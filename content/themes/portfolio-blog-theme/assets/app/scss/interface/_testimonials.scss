@@ -1,9 +1,23 @@
-.testimonial-slider {
-    text-align: left;
-    margin-top: $base*1.25;
+.testimonials {
+    background: $color-brand;
+    color: $white;
+    padding: 1em 0;
 
     @include respond-min($bp2) {
-        margin: 0;
+        padding: 2em 0;
+    }
+}
+
+.testimonial_excerpt {
+    @include respond-min ($bp2) {
+        float: left;
+        padding-right: 2em;
+    }
+}
+
+.testimonial_slider {
+    @include respond-min ($bp2) {
+        margin-left: 2em;
     }
 }
 

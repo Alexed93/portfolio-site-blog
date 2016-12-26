@@ -94,7 +94,7 @@
     }
 }
 
-.section_stats, .section_testimonials {
+.section_stats {
     margin-top: $base;
 }
 
@@ -111,16 +111,6 @@
 
     @include respond-min($bp6) {
         margin: 8% 0 7% 0;
-    }
-}
-
-.section_testimonials {
-    background: $color-brand;
-    color: $white;
-    padding: 1em 0;
-
-    @include respond-min($bp2) {
-        padding: 0;
     }
 }
 

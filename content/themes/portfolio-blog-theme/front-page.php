@@ -47,9 +47,6 @@ get_header();
 <main>
     <?php get_template_part( 'views/page/homepage/homepage-hero' ); ?>
     <?php get_template_part( 'views/page/homepage/homepage-projects' ); ?>
-    <?php get_template_part( 'views/page/homepage/homepage-about' ); ?>
-    <?php get_template_part( 'views/page/homepage/homepage-stats' ); ?>
-    <?php get_template_part( 'views/page/homepage/homepage-testimonials' ); ?>
 </main>
 
 <?php endwhile; endif; ?>

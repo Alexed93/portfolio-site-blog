@@ -34,7 +34,15 @@
 .u-vertical-top    { vertical-align: top; }
 .u-vertical-middle { vertical-align: middle; }
 
+.u-push-right       { margin-right: $base; }
+.u-push-right\@2    { margin-right: $base*2; }
+.u-push-left       { margin-left: $base; }
+.u-push-left\@2    { margin-left: $base*2; }
 
+.u-pad-right       { padding-right: $base; }
+.u-pad-right\@2    { padding-right: $base*2; }
+.u-pad-left       { padding-left: $base; }
+.u-pad-left\@2    { padding-left: $base*2; }
 
 /* $. Positioning
 \*----------------------------------------------------------------*/
