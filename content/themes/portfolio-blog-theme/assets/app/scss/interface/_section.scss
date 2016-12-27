@@ -99,18 +99,15 @@
 }
 
 .projects {
-    margin-bottom: 1em;
+    padding-bottom: 1em;
 
     @include respond-min($bp3) {
-        margin: 10% 0 9% 0;
-    }
-
-    @include respond-min($bp5) {
-        margin: 7.5% 0 6.5% 0;
+        padding-top: 5%;
+        padding-bottom: 10%;
     }
 
     @include respond-min($bp6) {
-        margin: 8% 0 7% 0;
+        padding-bottom: 17%;
     }
 }
 

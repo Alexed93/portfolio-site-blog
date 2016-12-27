@@ -32,7 +32,7 @@
     }
 }
 
-.button_work button, .button_home button {
+.button_work, .button_home {
     display: block;
     width: 75%;
     background: $white;
@@ -60,7 +60,7 @@
     }
 }
 
-.button_home button {
+.button_home {
     display: none;
 
     @include respond-min($bp3) {
@@ -74,7 +74,7 @@
     }
 }
 
-.button_work:hover button, .button_home:hover button {
+.button_work:hover, .button_home:hover{
     background: $green-brand;
     transition: all .3s ease;
     color: $white;

@@ -2,19 +2,17 @@
     $args = array( 'post_type' => 'project', 'posts_per_page' => 6 );
     $the_query = new WP_Query( $args ); 
 ?>
-    <div class="section | projects">
-        <div class="grid grid--compact" onclick="">
+
+        <div class="grid | grid--spaced | container | projects" onclick="">
             <?php if ( $the_query->have_posts() ) : ?>
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $featured_image = get_field('featured_image');?>
-                <div class="grid__item grid__item--6-12-bp1 grid__item--4-12-bp3 ">
-                    <div class="project-item | u-align-center">
+                <div class="grid__item | grid__item--6-12-bp1 | grid__item--4-12-bp3 | project-item">
                     <img class="project-image" src="<?php echo $featured_image; ?>">
-                        <div class="project-overlay"></div> 
-                        <a class="project-link" href="<?php the_permalink(); ?>">   
-                            <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2> 
-                            <?php the_excerpt(); ?>
-                        </a>
-                    </div>
+                    <div class="project-overlay"></div> 
+                    <a class="project-link" href="<?php the_permalink(); ?>">   
+                        <h2 class="u-style-uppercase | beta"><?php the_title(); ?></h2> 
+                        <?php the_excerpt(); ?>
+                    </a>
                 </div>
             <?php endwhile; ?>
             <?php else:  ?>

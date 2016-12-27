@@ -17,10 +17,9 @@
             <h2 class="highlight"><?php echo $fields['splash_subtitle'] ?></h2>
             <h3><?php echo $fields['splash_blurb'] ?></h3>
             <a href="#enter" class="button | button_home | u-align-center">
-                <button>See my work</button>
+                See my work
             </a>
         </div>
     </div>
 </div>
-
 

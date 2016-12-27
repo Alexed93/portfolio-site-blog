@@ -58,11 +58,17 @@
 MAIN PROJECTS
 ------------------------------------------ */
 
+.projects {
+  .grid__item {
+    margin: 5px -5px -1px 0px;
+  }
+}
+
 .project-item {
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
 .project-item .project-overlay {
@@ -70,18 +76,19 @@ MAIN PROJECTS
   top: 0;
   left: 0;
   transition: all 0.3s ease;
+  margin: 0px -5px 0px 4px;
 }
 
 .project-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding: 0.5em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0.5em;
 }
 
 .project-item:hover .project-overlay {
-    background-color: $green-brand;
-    opacity: 0.96;
+  background-color: $green-brand;
+  opacity: 0.96;
 }
 
 .project-item img {
@@ -105,41 +112,36 @@ MAIN PROJECTS
 .project-link {
   display: inline-block;
   color: $white;
-  // border: 1px solid $green-brand;
   background-color: transparent;
   opacity: 0;
   filter: alpha(opacity=0);
   transform: scale(0);
   transition: all 0.3s ease;
-  padding: 3em 2em 2em 2em;
   position: absolute;
+  padding: 2.25em 1em 0em 1em;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
 
-  @include respond-min($bp1) {
-    padding: 1em;
-  }
-
   @include respond-min($bp2) {
-    padding: 2.75em;
+    padding: 3em 2em 0em 2em;
   }
 
   @include respond-min($bp3) {
-    padding: 1.5em;
+    padding: 1em 2em 0em 2em;
   }
 
   @include respond-min($bp4) {
-    padding: 2.5em;
+    padding: 1.5em 2.5em 0em 2.5em;
   }
 
   @include respond-min($bp5) {
-    padding: 3em 4.5em 4.5em 4.5em;
+
   }
 
   @include respond-min($bp6) {
-    padding: 7em;
+
   }
 }
 
