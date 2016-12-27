@@ -26,30 +26,15 @@
 
 .container_hero {
     @include respond-min($bp3) {
-        height: calc(100vh - 11em);
+        height: 100vh;
     }
 }
 
 .hero {
     @include respond-min($bp3) {
-        transform: translateY(10%);
-        bottom: -10%;
+        transform: translateY(25%);
+        bottom: -25%;
         position: relative;
-    }
-
-    @include respond-min($bp5) {
-        transform: translateY(13%);
-        bottom: -13%;
-    }
-
-    // @include respond-min($bp5-5) {
-    //     transform: translateY(15%);
-    //     bottom: -15%;
-    // }
-
-    @include respond-min($bp6) {
-        transform: translateY(24%);
-        bottom: -24%;
     }
 }
 
@@ -70,7 +55,7 @@
 }
 
 .splash_logo {
-    height: calc(100vh - 6em);
+    height: 100vh;
     text-align: center;
  
     @include respond-min($bp3) {

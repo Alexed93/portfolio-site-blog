@@ -9,7 +9,6 @@ get_header();
     $attachments = get_posts( $args );
 ?>
     
-<div class="section | single-project">
     <div class="container | cf">
         <div class="single-project-bio">
             <h1>
@@ -18,10 +17,10 @@ get_header();
                 <?php $projectyear = get_field( "project_year" ); echo $projectyear ?>
             </h1>
             <a href="<?php $projecturl = get_field( "project_url" ); echo $projecturl ?>" target="_blank" class="button_work | u-align-center">
-                <button>More details</button>
+                More details
             </a>
             <a href="<?php echo home_url(); ?>" class="button_work | u-align-center">
-                <button>Back</button>
+                Back
             </a>
         </div>
 
@@ -71,7 +70,6 @@ get_header();
             <p><?php $projectapproachcontent = get_field( "project_approach_content" ); echo $projectapproachcontent ?></p>
         </div>
     </div>
-</div>
 
 
 <?php get_footer(); ?>

@@ -101,13 +101,8 @@
 .projects {
     padding-bottom: 1em;
 
-    @include respond-min($bp3) {
-        padding-top: 5%;
-        padding-bottom: 10%;
-    }
-
-    @include respond-min($bp6) {
-        padding-bottom: 17%;
+    @include respond-min($bp2) {
+        padding-bottom: 20%;
     }
 }
 
