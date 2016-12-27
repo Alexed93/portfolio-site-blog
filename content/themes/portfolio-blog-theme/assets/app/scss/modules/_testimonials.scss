@@ -12,6 +12,7 @@
     @include respond-min ($bp2) {
         float: left;
         padding-right: 2em;
+        border-right: 1px solid $green-brand;
     }
 }
 

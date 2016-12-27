@@ -10,7 +10,7 @@
             <h1><?php echo $fields['about_title'] ?></h1>
             <h2 class="highlight"><?php echo $fields['about_subtitle'] ?></h2>
         </div>
-        <div class="secondary_excerpt | secondary_excerpt--bordertop">
+        <div class="secondary_excerpt | bordertop">
             <h3><?php echo $fields['about_blurb'] ?></h3>
         </div>
     </div>

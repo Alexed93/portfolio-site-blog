@@ -5,7 +5,7 @@
 ?>
 <div class="testimonials | cf">
     <div class="container">
-        <div class="secondary_excerpt | secondary_excerpt--borderright | testimonial_excerpt">
+        <div class="secondary_excerpt | testimonial_excerpt">
             <h1><?php echo $fields['testimonials_title'] ?></h1>
             <h2 class="highlight"><?php echo $fields['testimonials_subtitle'] ?></h2>
         </div>

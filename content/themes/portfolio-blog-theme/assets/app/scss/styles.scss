@@ -50,7 +50,8 @@
 @import "modules/statscircles";
 @import "modules/logos";
 @import "modules/404";
-
+@import "modules/testimonials";
+@import "modules/timeline";
 
 /* $. Interface - Project specific objects i.e. .work, .product, etc
 \*----------------------------------------------------------------*/
@@ -64,8 +65,6 @@
 @import "interface/work";
 @import "interface/posts";
 @import "interface/lity";
-@import "interface/testimonials";
-@import "interface/timeline";
 
 /* $. Layout - Page based layouts i.e. .header, .page-86, etc
 \*----------------------------------------------------------------*/
