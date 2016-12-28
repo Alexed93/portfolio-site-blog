@@ -52,7 +52,8 @@
 @import "modules/404";
 @import "modules/testimonials";
 @import "modules/timeline";
-@import "modules/work";
+@import "modules/projects";
+@import "modules/sideprojects";
 
 /* $. Interface - Project specific objects i.e. .work, .product, etc
 \*----------------------------------------------------------------*/
@@ -74,6 +75,7 @@
 @import "layout/cms";
 @import "layout/header";
 @import "layout/sidebar";
+@import "layout/hero";
 @import "layout/grid";
 
 /* $. Fontawesome - Social media icons

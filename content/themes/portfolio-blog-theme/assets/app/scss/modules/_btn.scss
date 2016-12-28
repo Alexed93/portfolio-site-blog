@@ -32,52 +32,6 @@
     }
 }
 
-.button_work, .button_home {
-    display: block;
-    width: 75%;
-    background: $white;
-    border: solid 1px $green-brand;
-    margin: 0 auto;
-    margin-top: $base;
-    margin-bottom: $base;
-    padding: .5em;
-    
-    a {
-        width: 100%;
-        padding: .5em 3em;
-
-        @include respond-min($bp2) {
-            padding: .5em 0em;
-        }
-    }
-
-    @include respond-min($bp2) {
-        margin-left: 0;
-    }
-
-    @include respond-min($bp3) {
-        padding: .5em 0;
-    }
-}
-
-.button_home {
-    display: none;
-
-    @include respond-min($bp3) {
-        display: block;
-        width: 25%;
-        font-size: 1.1rem;
-    }
-
-    @include respond-min($bp4) {
-        font-size: 1.2rem;
-    }
-}
-
-.button_work:hover, .button_home:hover{
-    background: $green-brand;
-    color: $white;
-}
 
 /* $. Component
 \*----------------------------------------------------------------*/
@@ -99,12 +53,31 @@ input[type="submit"],
  */
 
 .btn--primary {
-    @include btn($white, $grey);
+    background: $white;
+    border: solid 1px $green-brand;
+    color: $color-brand;
+    text-align: center;
 }
 
 .btn--secondary {}
 .btn--tertiary {}
 .btn--invert {}
+
+
+.btn--primary:hover{
+    background: $green-brand;
+    color: $white;
+}
+
+.btn_back {
+    @include respond-min($bp2) {
+        margin-top: $base;
+    }
+
+    @include respond-min($bp4) {
+        margin: 0;
+    }
+}
 
 /**
  * Position and size

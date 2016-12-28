@@ -4,7 +4,7 @@
 
 ?>
 
-<div class="container">
+<div class="container | u-top-bottom-space">
     <div class="secondary-introduction | container--small">
         <div class="secondary_heading">
             <h1><?php echo $fields['about_title'] ?></h1>

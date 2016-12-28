@@ -2,10 +2,6 @@
     background: $color-brand;
     color: $white;
     padding: 1em 0;
-
-    @include respond-min($bp2) {
-        padding: 2em 0;
-    }
 }
 
 .testimonial_excerpt {

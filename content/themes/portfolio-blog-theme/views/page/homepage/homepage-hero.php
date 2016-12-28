@@ -6,9 +6,9 @@
 
 <div class="container_hero | container">
     <div class="hero">
-        <div class="splash_logo">
+        <div class="logo_portfolio">
             <a href="#enter">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/purpsmall-01.svg" class="logo--portfolio">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/purpsmall-01.svg">
             </a>
         </div>
         <div id="enter"></div>
@@ -16,7 +16,7 @@
             <h1><?php echo $fields['splash_title'] ?></h1>
             <h2 class="highlight"><?php echo $fields['splash_subtitle'] ?></h2>
             <h3><?php echo $fields['splash_blurb'] ?></h3>
-            <a href="#enter" class="button | button_home | u-align-center">
+            <a href="#enter" class="btn | btn--primary btn--large | u-push-top">
                 See my work
             </a>
         </div>

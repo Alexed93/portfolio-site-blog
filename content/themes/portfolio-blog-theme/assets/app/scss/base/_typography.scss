@@ -48,7 +48,7 @@ h2, .excerpt p {
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 h4 {
@@ -84,7 +84,7 @@ p {
     // ---------------------------- PORTFOLIO
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     h2, .excerpt p {
@@ -96,7 +96,7 @@ p {
     }
 
     h4 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     h5 {
@@ -104,7 +104,7 @@ p {
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .gamma, .excerpt p {
@@ -118,45 +118,15 @@ p {
     // ---------------------------- BLOG
 
     .beta {
-        font-size: 1.3rem; // Side-project overlay heading
+        font-size: 1.2rem; // Side-project overlay heading
     }
 
     .delta p {
-        font-size: 1.2rem; // Side-project overlay text
+        font-size: 1.1rem; // Side-project overlay text
     }
 }
 
 @include respond-min($bp6) {
-
-    // ---------------------------- PORTFOLIO
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2, .excerpt p {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.6rem;
-    }
-
-    h4 {
-        font-size: 1.6rem;
-    }
-
-    h5 {
-        font-size: 2.6rem; // Stat circles
-    }
-
-    p {
-        font-size: 1.4rem;
-    }
-
-    .excerpt p {
-        font-size: 1.7rem; //excerpt of side-project post
-    }
 
     time {
         font-size: 1.4rem;

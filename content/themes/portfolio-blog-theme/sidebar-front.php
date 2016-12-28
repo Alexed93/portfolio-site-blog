@@ -24,6 +24,6 @@ $front_blurb = get_field('Sidebar_blog_blurb', 'options');
             <h2 class="highlight"><?php echo $front_subtitle ?></h2>
             <h3 class="u-push-top/2"><?php echo $front_blurb ?></h3>
         </div>
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/logo.svg" class="logo | logo--sidebar"></a>
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/logo.svg" class="logo | logo_sideproject"></a>
     </article> <!-- .sidebar__section -->
 </aside>

@@ -22,3 +22,19 @@
     a:not(.btn) {
     }
 }
+
+.secondary-introduction {
+    margin: 0 auto;
+    
+    @include respond-min($bp2) {
+        text-align: center;
+    }
+}
+
+.secondary_heading {
+    margin-bottom: $base/2; 
+
+    @include respond-min($bp2) {
+        margin-bottom: $base*2;
+    }
+}

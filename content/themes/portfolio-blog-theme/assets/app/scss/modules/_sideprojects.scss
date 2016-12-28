@@ -1,0 +1,59 @@
+/* ------------------------------------------
+    SIDEPROJECTS
+------------------------------------------ */
+
+.sideproject_item {
+    position: relative;
+    overflow: hidden;
+}
+
+.sideproject_item .sideproject_overlay {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sideproject_image {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: (1/1) * 100%; // h / w
+  }
+
+  @include respond-min($bp2) {
+    position: relative;
+  }
+}
+
+.sideproject_overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  text-align: center;
+}
+
+.sideproject_item:hover .sideproject_overlay {
+  background-color: $green-brand;
+  opacity: 0.96;
+  color: $white;
+}
+
+.sideproject_overlay_text {
+  padding: 1em;
+
+  p {
+    margin-top: $base/4;
+  }
+    
+  @include respond-min($bp1) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

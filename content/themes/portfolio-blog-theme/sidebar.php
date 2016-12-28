@@ -24,6 +24,6 @@
                 <?php get_template_part('views/sidebar/sidebar-blogs'); ?>
             <?php endif; ?>
         </div>
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/logo.svg" class="logo | logo--sidebar"></a>
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/logo.svg" class="logo | logo_sideproject"></a>
     </article> <!-- .sidebar__section -->
 </aside>
