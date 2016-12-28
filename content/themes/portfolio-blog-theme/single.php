@@ -19,13 +19,14 @@ $args =  array(
     'exclude' => get_post_thumbnail_id()
 );
 
-$attachments = get_posts( $args );
+$sideprojectscreens = get_field('sideproject_screenshots');
+
 $size = 'sideprojectimage';
 // sideProject base url
 $sideproject_url = get_field('project_url');
 ?>
 
-<div class="container | container--small | u-top-space">
+<div class="container | container--small | u-top-bottom-space">
     <div class="post-controls | cf">
         <?php 
             $prev_post = get_previous_post( true );
@@ -60,30 +61,44 @@ $sideproject_url = get_field('project_url');
             <?php get_template_part('socialmedia-sharing'); ?>
         </div>
 
-        <?php if ( $attachments ) : ?>
-            <div class="images | u-push-top">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <div class="slick-carousel-wrap">
-                        <div class="slick_carousel">
-                            <?php foreach ($attachments as $attachment) : ?>
-                                <?php $attachment_id = $attachment->ID; ?>
-                                    <div class="attatchment">
-                                    <a href="<?php echo wp_get_attachment_image_url( $attachment_id, 'large' ); ?>" data-lity>
-                                        <?php echo wp_get_attachment_image( $attachment_id, 'sideprojectimage' ); ?>
-                                    </a>
-                                    </div>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="carousel-arrows | cf">
-                            <div class="carousel_arrow | carousel_arrow--left" id="carouselPrevArrow"><</div>
-                            <div class="slick-dots-container"></div>
-                            <div class="carousel_arrow | carousel_arrow--right" id="carouselNextArrow">></div>
-                        </div>
+        <?php if ( $sideprojectscreens ): ?>
+            <div class="grid | grid--spaced | project_images | is-visible--bp2" onclick="">
+                <?php foreach ($sideprojectscreens as $sideprojectscreen) : ?>
+                    <?php
+                        $screenshot = $sideprojectscreen['sideproject_screens'];
+                    ?>
+                <div class="grid__item | grid__item--3-12-bp2 | project_screen">
+                    <a href="<?php echo $screenshot['sizes']['large'];; ?>" data-caption="<?php echo $screenshot['alt']; ?>" >
+                        <img src="<?php echo $screenshot['url']; ?>" data-caption="<?php echo $screenshot['alt']; ?>"> 
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if ( $sideprojectscreens ): ?>
+            <div class="images | u-push-top | is-hidden--bp2">
+                <div class="slick-carousel-wrap">
+                    <div class="slick_carousel">
+                        <?php foreach ($sideprojectscreens as $sideprojectscreen) : ?>
+                            <?php
+                                $screenshot = $sideprojectscreen['sideproject_screens'];
+                            ?>
+                            <div class="attatchment">
+                                <a href="<?php echo $screenshot['sizes']['large'];; ?>" data-caption="<?php echo $screenshot['alt']; ?>" >
+                                    <img src="<?php echo $screenshot['url']; ?>" data-caption="<?php echo $screenshot['alt']; ?>"> 
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                <?php endwhile; ?>
-                <?php else: ?>
-                    <?php get_template_part('views/errors/404-posts'); ?>
-                <?php endif; ?>
+                    <div class="carousel-arrows | cf">
+                        <div class="carousel_arrow | carousel_arrow--left" id="carouselPrevArrow"><</div>
+                        <div class="slick-dots-container"></div>
+                        <div class="carousel_arrow | carousel_arrow--right" id="carouselNextArrow">></div>
+                    </div>
+                </div>
+            <?php else: ?>
+                <?php get_template_part('views/errors/404-posts'); ?>
             </div>
         <?php endif; ?>
     </article>

@@ -28,7 +28,7 @@
             $projectscreenshot = get_sub_field('project_screenshot'); 
         ?>
         <div class="grid__item | grid__item--3-12-bp2 | project_screen">
-            <a href="<?php echo $projectscreenshot['sizes']['large']; ?>" rel="lightbox-work" data-caption="<?php echo $projectscreenshot['alt']; ?>">
+            <a href="<?php echo $projectscreenshot['sizes']['large']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>">
                 <img src="<?php echo $projectscreenshot['url']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>"> 
             </a>
         </div>
@@ -42,7 +42,7 @@
                     $projectscreenshot = get_sub_field('project_screenshot'); 
                 ?>
                     <div class="attatchment">
-                        <a href="<?php echo $projectscreenshot['url']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>" ><!-- data-lity -->
+                        <a href="<?php echo $projectscreenshot['sizes']['large']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>" >
                            <img src="<?php echo $projectscreenshot['url']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>"> 
                         </a>
                     </div>
