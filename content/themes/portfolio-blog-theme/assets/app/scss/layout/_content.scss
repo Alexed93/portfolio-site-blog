@@ -35,6 +35,14 @@
     margin-bottom: $base/2; 
 
     @include respond-min($bp2) {
-        margin-bottom: $base*2;
+        margin-bottom: $base;
+    }
+}
+
+.secondary_excerpt {
+    padding-top: $base/2; 
+
+    @include respond-min($bp2) {
+        padding-top: $base;
     }
 }

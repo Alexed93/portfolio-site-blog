@@ -161,10 +161,5 @@
 .bordertop {
     @include respond-min($bp2) {
         border-top: solid 1px $green-brand;
-        padding-top: 1em;
-    }
-
-    @include respond-min($bp3) {
-        padding-top: 2em;
     }
 }
