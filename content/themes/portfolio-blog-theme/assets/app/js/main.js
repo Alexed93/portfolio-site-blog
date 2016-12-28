@@ -20,11 +20,11 @@
     /**
      * Setup 'CustomSelect' plugin on all Select elements
      */
-    if(!$('html').hasClass('ie')) {
-        $("select").each(function() {
-            new CustomSelect($(this));
-        });
-    }
+    // if(!$('html').hasClass('ie')) {
+    //     $("select").each(function() {
+    //         new CustomSelect($(this));
+    //     });
+    // }
 
 /* $. Burger menu and nav
 \*----------------------------------------------------------------*/
@@ -140,6 +140,19 @@ $('.slick_carousel').slick({
     // settings: "unslick"
     // instead of a settings object
   ]
+});
+
+/* $. Slick-lightbox
+\*----------------------------------------------------------------*/
+
+$('.slick_carousel').slickLightbox({
+  itemSelector: '> div > div > div > a',
+  caption: 'caption'
+});
+
+$('.project_screen').slickLightbox({
+  itemSelector: '> a',
+  caption: 'caption'
 });
 
 /* $. Timeline
@@ -264,14 +277,6 @@ $('.slick_carousel').slick({
   $('.testimonial_slider').unslider({
     autoplay: true,
     delay: 8000,
-  });
-
-  /* $. Dropdown list
-  \*----------------------------------------------------------------*/
-
-  $(".dropdown_list").on("click",function(){
-      $(".dropdown").toggleClass("is-hidden");
-      $(".dropdown_list").toggleClass("dropdown_list--active");
   });
 
 /* $. Smooth scrolling

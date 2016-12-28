@@ -1,0 +1,33 @@
+/* ------------------------------------------
+    SLICK LIGHTBOX
+------------------------------------------ */
+
+/* $. Caption
+\*----------------------------------------------------------------*/
+
+.slick-lightbox-slick-caption {
+    font-size: 1.1rem;
+}
+
+/* $. Navigation
+\*----------------------------------------------------------------*/
+
+.slick-lightbox .slick-prev, .slick-lightbox .slick-next {
+    position: absolute;
+    bottom: 50%;
+}
+
+.slick-lightbox .slick-prev {
+    left: 10%;
+}
+
+.slick-lightbox .slick-next {
+    right: 10%;
+}
+
+/* $. Misc
+\*----------------------------------------------------------------*/
+
+.slick-lightbox-slick-img {
+    margin-bottom: $base;
+}

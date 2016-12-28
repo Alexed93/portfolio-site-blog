@@ -33,6 +33,7 @@
 
     <!-- Styles -->
     <!--[if IE 9]><!-->
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/node_modules/slick-lightbox/dist/slick-lightbox.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/css/styles.css">
     <!--<![endif]-->
 

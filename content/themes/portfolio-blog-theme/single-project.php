@@ -28,8 +28,8 @@
             $projectscreenshot = get_sub_field('project_screenshot'); 
         ?>
         <div class="grid__item | grid__item--3-12-bp2 | project_screen">
-            <a href="<?php echo $projectscreenshot['sizes']['large']; ?>" rel="lightbox-work" title="<?php echo $projectscreenshot['alt']; ?>">
-                <img src="<?php echo $projectscreenshot['url']; ?>" alt="<?php echo $projectscreenshot['alt']; ?>"> 
+            <a href="<?php echo $projectscreenshot['sizes']['large']; ?>" rel="lightbox-work" data-caption="<?php echo $projectscreenshot['alt']; ?>">
+                <img src="<?php echo $projectscreenshot['url']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>"> 
             </a>
         </div>
         <?php endwhile; ?>
@@ -42,8 +42,8 @@
                     $projectscreenshot = get_sub_field('project_screenshot'); 
                 ?>
                     <div class="attatchment">
-                        <a href="<?php echo $projectscreenshot['url']; ?>" title="<?php echo $projectscreenshot['alt']; ?>" data-lity>
-                           <img src="<?php echo $projectscreenshot['url']; ?>" alt="<?php echo $projectscreenshot['alt']; ?>"> 
+                        <a href="<?php echo $projectscreenshot['url']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>" ><!-- data-lity -->
+                           <img src="<?php echo $projectscreenshot['url']; ?>" data-caption="<?php echo $projectscreenshot['alt']; ?>"> 
                         </a>
                     </div>
                 <?php endwhile; ?>
