@@ -159,6 +159,13 @@ $('.project_screen').slickLightbox({
   nextArrow: nextArrow
 });
 
+$('.screenshot').slickLightbox({
+  itemSelector: '> a',
+  caption: 'caption',
+  prevArrow: prevArrow,
+  nextArrow: nextArrow
+});
+
 /* $. Timeline
 \*----------------------------------------------------------------*/
 

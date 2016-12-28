@@ -20,10 +20,8 @@ $args =  array(
 );
 
 $sideprojectscreens = get_field('sideproject_screenshots');
-
-$size = 'sideprojectimage';
-// sideProject base url
 $sideproject_url = get_field('project_url');
+
 ?>
 
 <div class="container | container--small | u-top-bottom-space">
@@ -62,21 +60,19 @@ $sideproject_url = get_field('project_url');
         </div>
 
         <?php if ( $sideprojectscreens ): ?>
-            <div class="grid | grid--spaced | project_images | is-visible--bp2" onclick="">
+            <div class="grid | grid--spaced | screenshots | is-visible--bp2" onclick="">
                 <?php foreach ($sideprojectscreens as $sideprojectscreen) : ?>
                     <?php
                         $screenshot = $sideprojectscreen['sideproject_screens'];
                     ?>
-                <div class="grid__item | grid__item--3-12-bp2 | project_screen">
-                    <a href="<?php echo $screenshot['sizes']['large'];; ?>" data-caption="<?php echo $screenshot['alt']; ?>" >
-                        <img src="<?php echo $screenshot['url']; ?>" data-caption="<?php echo $screenshot['alt']; ?>"> 
+                <div class="grid__item | grid__item--3-12-bp2 | screenshot">
+                    <a href="<?php echo $screenshot['sizes']['large']; ?>" data-caption="<?php echo $screenshot['alt']; ?>">
+                        <img src="<?php echo $screenshot['sizes']['large']; ?>" data-caption="<?php echo $screenshot['alt']; ?>"> 
                     </a>
                 </div>
                 <?php endforeach; ?>
             </div>
-        <?php endif; ?>
 
-        <?php if ( $sideprojectscreens ): ?>
             <div class="images | u-push-top | is-hidden--bp2">
                 <div class="slick-carousel-wrap">
                     <div class="slick_carousel">
@@ -84,11 +80,11 @@ $sideproject_url = get_field('project_url');
                             <?php
                                 $screenshot = $sideprojectscreen['sideproject_screens'];
                             ?>
-                            <div class="attatchment">
-                                <a href="<?php echo $screenshot['sizes']['large'];; ?>" data-caption="<?php echo $screenshot['alt']; ?>" >
-                                    <img src="<?php echo $screenshot['url']; ?>" data-caption="<?php echo $screenshot['alt']; ?>"> 
-                                </a>
-                            </div>
+                        <div class="attatchment">
+                            <a href="<?php echo $screenshot['sizes']['large']; ?>" data-caption="<?php echo $screenshot['alt']; ?>" >
+                                <img src="<?php echo $screenshot['sizes']['large']; ?>" data-caption="<?php echo $screenshot['alt']; ?>"> 
+                            </a>
+                        </div>
                         <?php endforeach; ?>
                     </div>
                     <div class="carousel-arrows | cf">
@@ -97,18 +93,17 @@ $sideproject_url = get_field('project_url');
                         <div class="carousel_arrow | carousel_arrow--right" id="carouselNextArrow">></div>
                     </div>
                 </div>
-            <?php else: ?>
-                <?php get_template_part('views/errors/404-posts'); ?>
             </div>
+        <?php else: ?>
         <?php endif; ?>
     </article>
 
-    <div class="user | u-push-top@2 | u-push-bottom@2">
+    <div class="u-push-top@2 | u-push-bottom@2">
         <div class="commentform | cf">
             <?php comment_form(); ?>
         </div>
 
-        <div class=" u-push-top@2 ">
+        <div class="u-push-top@2">
             <?php if (comments_open() || get_comments_number() ):
                 comments_template(); 
             endif ?>
