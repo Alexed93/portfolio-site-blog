@@ -14,7 +14,11 @@
 
 .slick-lightbox .slick-prev, .slick-lightbox .slick-next {
     position: absolute;
-    bottom: 50%;
+    top: 7em;
+
+    @include respond-min($bp2) {
+        top: 10em;
+    }
 }
 
 .slick-lightbox .slick-prev {
@@ -25,9 +29,25 @@
     right: 10%;
 }
 
+.slick-lightbox .slick-arrow {
+    border: solid 1px $green-brand;
+    color: $white;
+    background: none;
+    z-index: 100;
+
+    &:hover,
+    &:focus {
+        background: $color-brand;
+    }
+}
+
 /* $. Misc
 \*----------------------------------------------------------------*/
 
 .slick-lightbox-slick-img {
     margin-bottom: $base;
+
+    @include respond-min($bp2) {
+        margin-bottom: $base;
+    }
 }

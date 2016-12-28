@@ -147,12 +147,16 @@ $('.slick_carousel').slick({
 
 $('.slick_carousel').slickLightbox({
   itemSelector: '> div > div > div > a',
-  caption: 'caption'
+  caption: 'caption',
+  prevArrow: prevArrow,
+  nextArrow: nextArrow
 });
 
 $('.project_screen').slickLightbox({
   itemSelector: '> a',
-  caption: 'caption'
+  caption: 'caption',
+  prevArrow: prevArrow,
+  nextArrow: nextArrow
 });
 
 /* $. Timeline
