@@ -71,8 +71,8 @@
         <br>
         <h3>Feedback</h3>
         <h4 class="highlight">The clients final thoughts.</h4>
-        <p><?php $projectfeedbackcontent = get_field( "project_feedback_content" ); echo $projectfeedbackcontent ?></p>
-        <span class="author u-float-right">- <?php $projectfeedbackauthorcontent = get_field( "project_feedbackauthor_content" ); echo $projectfeedbackauthorcontent ?></span">
+        <p class="u-style-italic"><?php $projectfeedbackcontent = get_field( "project_feedback_content" ); echo $projectfeedbackcontent ?></p>
+        <span class="author u-float-right u-push-top ">- <?php $projectfeedbackauthorcontent = get_field( "project_feedbackauthor_content" ); echo $projectfeedbackauthorcontent ?></span">
     </div>
 </div>
 
