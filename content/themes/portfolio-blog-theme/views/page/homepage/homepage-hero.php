@@ -16,7 +16,7 @@
             <h1><?php echo $fields['splash_title'] ?></h1>
             <h2 class="highlight"><?php echo $fields['splash_subtitle'] ?></h2>
             <h3><?php echo $fields['splash_blurb'] ?></h3>
-            <a href="#enter" class="btn | btn--primary btn--large | u-push-top">
+            <a href="#enter" class="btn | btn--primary btn--large | u-push-top | is-visible--bp3">
                 See my work
             </a>
         </div>

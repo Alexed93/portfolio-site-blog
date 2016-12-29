@@ -15,12 +15,12 @@
         <h4 class="u-push-top/2"><?php $excerpt = get_the_excerpt(); echo $excerpt; ?></h4>
         <div class="u-push-top">
             <?php $projectfile = get_field( "download_project" ); if($projectfile) : ?>
-                <a href="<?php echo $projectfile ?>" target="_blank" class="btn | btn--primary btn--large">
+                <a href="<?php echo $projectfile ?>" target="_blank" class="btn | btn--primary">
                     Download Project
                 </a>
             <?php else: ?>
             <?php endif; ?>
-            <a href="<?php echo home_url(); ?>" class="btn | btn--primary btn--large btn_back">
+            <a href="<?php echo home_url(); ?>" class="btn | btn--primary">
                 Back
             </a>
         </div>
@@ -66,8 +66,13 @@
         <p><?php $projectyear = get_field( "project_brief_content" ); echo $projectyear ?></p>
         <br>
         <h3>Approach</h3>
-        <h4 class="highlight">How it was tackled</h4>
+        <h4 class="highlight">How it was tackled.</h4>
         <p><?php $projectapproachcontent = get_field( "project_approach_content" ); echo $projectapproachcontent ?></p>
+        <br>
+        <h3>Feedback</h3>
+        <h4 class="highlight">The clients final thoughts.</h4>
+        <p><?php $projectfeedbackcontent = get_field( "project_feedback_content" ); echo $projectfeedbackcontent ?></p>
+        <span class="author u-float-right">- <?php $projectfeedbackauthorcontent = get_field( "project_feedbackauthor_content" ); echo $projectfeedbackauthorcontent ?></span">
     </div>
 </div>
 

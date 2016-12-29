@@ -69,16 +69,6 @@ input[type="submit"],
     color: $white;
 }
 
-.btn_back {
-    @include respond-min($bp2) {
-        margin-top: $base;
-    }
-
-    @include respond-min($bp5) {
-        margin: 0;
-    }
-}
-
 /**
  * Position and size
  */

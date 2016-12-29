@@ -94,7 +94,7 @@
     display: none;
 
     @include respond-min($bp3) {
-        display: block;
+        display: inline-block;
     }
 }
 
@@ -162,4 +162,8 @@
     @include respond-min($bp2) {
         border-top: solid 1px $green-brand;
     }
+}
+
+.author {
+    font-weight: 600;
 }
