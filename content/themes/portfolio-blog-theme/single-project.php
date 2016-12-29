@@ -14,9 +14,12 @@
         <h3><?php $projectyear = get_field( "project_year" ); echo $projectyear ?></h3>
         <h4 class="u-push-top/2"><?php $excerpt = get_the_excerpt(); echo $excerpt; ?></h4>
         <div class="u-push-top">
-            <!-- <a href="<?php $projecturl = get_field( "project_url" ); echo $projecturl ?>" target="_blank" class="btn | btn--primary btn--large">
-                More details
-            </a> -->
+            <?php $projectfile = get_field( "download_project" ); if($projectfile) : ?>
+                <a href="<?php echo $projectfile ?>" target="_blank" class="btn | btn--primary btn--large">
+                    Download Project
+                </a>
+            <?php else: ?>
+            <?php endif; ?>
             <a href="<?php echo home_url(); ?>" class="btn | btn--primary btn--large btn_back">
                 Back
             </a>

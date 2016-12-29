@@ -74,7 +74,7 @@ input[type="submit"],
         margin-top: $base;
     }
 
-    @include respond-min($bp4) {
+    @include respond-min($bp5) {
         margin: 0;
     }
 }
