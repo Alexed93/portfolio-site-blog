@@ -149,21 +149,24 @@ $('.slick_carousel').slickLightbox({
   itemSelector: '> div > div > div > a',
   caption: 'caption',
   prevArrow: prevArrow,
-  nextArrow: nextArrow
+  nextArrow: nextArrow,
+  captionPosition: 'bottom'
 });
 
 $('.project_screen').slickLightbox({
   itemSelector: '> a',
   caption: 'caption',
   prevArrow: prevArrow,
-  nextArrow: nextArrow
+  nextArrow: nextArrow,
+  captionPosition: 'bottom'
 });
 
 $('.screenshot').slickLightbox({
   itemSelector: '> a',
   caption: 'caption',
   prevArrow: prevArrow,
-  nextArrow: nextArrow
+  nextArrow: nextArrow,
+  captionPosition: 'bottom'
 });
 
 /* $. Timeline

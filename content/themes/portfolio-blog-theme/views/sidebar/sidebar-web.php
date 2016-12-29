@@ -19,5 +19,5 @@ $web_blurb = get_field('Sidebar_web_blurb', 'options');
 
 <h1><?php single_cat_title(); ?>.</h1>
 <h2 class="highlight"><?php echo $web_subtitle ?></h2>
-<h3 class="u-push-top/2"><?php echo $web_blurb ?></h3>
+<h3 class="u-push-top/2 charlie"><?php echo $web_blurb ?></h3>
         

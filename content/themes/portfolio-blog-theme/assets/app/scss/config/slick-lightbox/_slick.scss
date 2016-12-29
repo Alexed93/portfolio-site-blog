@@ -2,6 +2,10 @@
     SLICK LIGHTBOX
 ------------------------------------------ */
 
+.slick-lightbox {
+    background: rgba(0,0,0,.9) !important;
+}
+
 /* $. Caption
 \*----------------------------------------------------------------*/
 
@@ -14,10 +18,10 @@
 
 .slick-lightbox .slick-prev, .slick-lightbox .slick-next {
     position: absolute;
-    top: 7em;
+    bottom: 10%;
 
     @include respond-min($bp2) {
-        top: 10em;
+        bottom: 50%;
     }
 }
 
@@ -34,11 +38,21 @@
     color: $white;
     background: none;
     z-index: 100;
+    width: 6em;
 
     &:hover,
     &:focus {
         background: $color-brand;
     }
+}
+
+.slick-lightbox-close {
+    right: 10%;
+}
+
+.slick-lightbox-close:before {
+    font-size: 4rem;
+    color: $green-brand;
 }
 
 /* $. Misc
