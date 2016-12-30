@@ -19,15 +19,30 @@
 
 /* $. Base
 \*----------------------------------------------------------------*/
+.breadcrumbcont {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: $base;
+
+    @include respond-min($bp1) {
+        left: $base*3;
+    }
+
+    @include respond-min($bp2) {
+        left: 7.5%;
+    }
+}
 
 .breadcrumbs {
+    padding-bottom: $base/2;
     position: relative;
     margin: 0;
     font-size: .8rem;
     width: auto;
     z-index: 10;
     background: $white;
-    margin-top: 6em;
+    margin-top: 5.6em;
 
     @include respond-min($bp2) {
         background: $white;

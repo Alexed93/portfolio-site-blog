@@ -54,5 +54,5 @@ $linkedin = get_field('linkedin', 'options');
 </header>
 
 <?php if( !is_page(337) && !is_page(358) && !is_page(222) ): ?>
-    <div class="container"><?php get_template_part('views/vendors/breadcrumb'); ?></div>
+    <div class="breadcrumbcont"><?php get_template_part('views/vendors/breadcrumb'); ?></div>
 <?php endif; ?>
