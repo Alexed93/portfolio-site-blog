@@ -57,11 +57,17 @@ fieldset {
 
 .send-clear input {
     color: $color-brand;
-    width: 49%;
+    width: 48%;
     border: 1px solid $green-brand;
 
     :hover {
         color: $white;
+    }
+
+    &[type="submit"] {
+        @include respond-min($bp2) {
+            margin-right: $base;
+        }
     }
 }
 

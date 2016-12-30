@@ -16,7 +16,7 @@ get_header();
             <h2 class="highlight">I'd love to work with you.</h2>
         </div>
         <div class="secondary_excerpt | bordertop">
-            <h3><?php the_content(); ?></h3>
+            <h3><?php $content = get_the_content(); echo $content; ?></h3>
         </div>
     </div>
     <div class="contact | container--extrasmall | u-centered">
