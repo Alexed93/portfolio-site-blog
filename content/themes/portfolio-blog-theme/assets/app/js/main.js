@@ -29,167 +29,167 @@
 /* $. Burger menu and nav
 \*----------------------------------------------------------------*/
 
-function header_active() {
-  $(".header_fill").toggleClass("header_fill--active");
-  $(".nav").toggleClass("nav--active");
-  $(".hamburger_styling, .socialmedia-icon").toggleClass("white_background");
-  $(".socialmedia-icon__font").toggleClass("purple_text");
+  function header_active() {
+    $(".header_fill").toggleClass("header_fill--active");
+    $(".nav").toggleClass("nav--active");
+    $(".hamburger_styling, .socialmedia-icon").toggleClass("white_background");
+    $(".socialmedia-icon__font").toggleClass("purple_text");
 
-  // Fix  for IE
+    // Fix  for IE
 
-  var el1 = $(".hamburger_styling, .socialmedia-icon");
+    var el1 = $(".hamburger_styling, .socialmedia-icon");
 
-  el1.on("click", function() {
-    el1.addClass("white_background");
-    setTimeout(function() {
-      el1.toggleClass("white_background");
+    el1.on("click", function() {
+      el1.addClass("white_background");
+      setTimeout(function() {
+        el1.toggleClass("white_background");
+      });
     });
-  });
 
-  var el2 = $(".socialmedia-icon__font");
+    var el2 = $(".socialmedia-icon__font");
 
-  el2.on("click", function() {
-    el2.addClass("green_text");
-    setTimeout(function() {
-      el2.toggleClass("green_text");
+    el2.on("click", function() {
+      el2.addClass("green_text");
+      setTimeout(function() {
+        el2.toggleClass("green_text");
+      });
     });
-  });
 
-  var el3 = $(".header_fill");
+    var el3 = $(".header_fill");
 
-  el3.on("click", function() {
-    el3.addClass("header_fill--active");
-    setTimeout(function() {
-      el3.toggleClass("header_fill--active");
+    el3.on("click", function() {
+      el3.addClass("header_fill--active");
+      setTimeout(function() {
+        el3.toggleClass("header_fill--active");
+      });
     });
-  });
 
-  var el4 = $(".socialmedia-icon");
+    var el4 = $(".socialmedia-icon");
 
-  el4.on("hover", function() {
-    el4.addClass("green_background");
-    setTimeout(function() {
-      el4.toggleClass("green_background");
+    el4.on("hover", function() {
+      el4.addClass("green_background");
+      setTimeout(function() {
+        el4.toggleClass("green_background");
+      });
     });
-  });
 
-}
-
-(function() {
-
-  "use strict";
-
-  var toggles = document.querySelectorAll(".c-hamburger");
-
-  for (var i = toggles.length - 1; i >= 0; i--) {
-    var toggle = toggles[i];
-    toggleHandler(toggle);
-  };
-
-  function toggleHandler(toggle) {
-    toggle.addEventListener( "click", function(e) {
-      header_active();
-      (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
-    });
   }
-  
-})();
 
-/* $. Slick-slider 
-\*----------------------------------------------------------------*/
+  (function() {
 
-var nextArrow = jQuery("#carouselNextArrow");
-var prevArrow = jQuery("#carouselPrevArrow"); // $(".carousel--prev-arrow");
+    "use strict";
 
-// When the slick slider initialises take the element with the class
-// .slick-dots and move it to our specific container
-jQuery(".slick_carousel").on('init', function(event, slick){
-  jQuery(this).find(".slick-dots").appendTo(".slick-dots-container");
-});
+    var toggles = document.querySelectorAll(".c-hamburger");
 
-$('.slick_carousel').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  mobileFirst: true,
-  autoplay: true,
-  prevArrow: prevArrow,
-  nextArrow: nextArrow,
-  dots: true,
-  
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-      }
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        settings: 'unslick'
-      }
+    for (var i = toggles.length - 1; i >= 0; i--) {
+      var toggle = toggles[i];
+      toggleHandler(toggle);
+    };
+
+    function toggleHandler(toggle) {
+      toggle.addEventListener( "click", function(e) {
+        header_active();
+        (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+      });
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
+    
+  })();
 
-/* $. Slick-lightbox
-\*----------------------------------------------------------------*/
+  /* $. Slick-slider 
+  \*----------------------------------------------------------------*/
 
-$('.slick_carousel').slickLightbox({
-  itemSelector: '> div > div > div > a',
-  caption: 'caption',
-  prevArrow: prevArrow,
-  nextArrow: nextArrow,
-  captionPosition: 'bottom'
-});
+  var nextArrow = jQuery("#carouselNextArrow");
+  var prevArrow = jQuery("#carouselPrevArrow"); // $(".carousel--prev-arrow");
 
-$('.project_screen').slickLightbox({
-  itemSelector: '> a',
-  caption: 'caption',
-  prevArrow: prevArrow,
-  nextArrow: nextArrow,
-  captionPosition: 'bottom'
-});
+  // When the slick slider initialises take the element with the class
+  // .slick-dots and move it to our specific container
+  jQuery(".slick_carousel").on('init', function(event, slick){
+    jQuery(this).find(".slick-dots").appendTo(".slick-dots-container");
+  });
 
-$('.screenshot').slickLightbox({
-  itemSelector: '> a',
-  caption: 'caption',
-  prevArrow: prevArrow,
-  nextArrow: nextArrow,
-  captionPosition: 'bottom'
-});
+  $('.slick_carousel').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    autoplay: true,
+    prevArrow: prevArrow,
+    nextArrow: nextArrow,
+    dots: true,
+    
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          settings: 'unslick'
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
 
-/* $. Timeline
-\*----------------------------------------------------------------*/
+  /* $. Slick-lightbox
+  \*----------------------------------------------------------------*/
 
-(function() {
+  $('.slick_carousel').slickLightbox({
+    itemSelector: '> div > div > div > a',
+    caption: 'caption',
+    prevArrow: prevArrow,
+    nextArrow: nextArrow,
+    captionPosition: 'bottom'
+  });
 
-  'use strict';
+  $('.project_screen').slickLightbox({
+    itemSelector: '> a',
+    caption: 'caption',
+    prevArrow: prevArrow,
+    nextArrow: nextArrow,
+    captionPosition: 'bottom'
+  });
 
-  // define variables
-  var items = document.querySelectorAll(".timeline li");
+  $('.screenshot').slickLightbox({
+    itemSelector: '> a',
+    caption: 'caption',
+    prevArrow: prevArrow,
+    nextArrow: nextArrow,
+    captionPosition: 'bottom'
+  });
 
-  // check if an element is in viewport
-  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-  function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+  /* $. Timeline
+  \*----------------------------------------------------------------*/
+
+  (function() {
+
+    'use strict';
+
+    // define variables
+    var items = document.querySelectorAll(".timeline li");
+
+    // check if an element is in viewport
+    // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  }
 
   function callbackFunc() {
     for (var i = 0; i < items.length; i++) {
@@ -293,8 +293,8 @@ $('.screenshot').slickLightbox({
     delay: 8000,
   });
 
-/* $. Smooth scrolling
-\*----------------------------------------------------------------*/
+  /* $. Smooth scrolling
+  \*----------------------------------------------------------------*/
 
   $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
@@ -309,6 +309,17 @@ $('.screenshot').slickLightbox({
               return false;
           }
       }
+  });
+
+  /* $. Contact form file toggle
+  \*----------------------------------------------------------------*/
+
+  $('.attach-file-yes').click(function() {
+    $('.attach-file-box').removeClass('is-hidden');
+  });
+
+  $('.attach-file-no').click(function() {
+    $('.attach-file-box').addClass('is-hidden');
   });
 
 /*----------- END */

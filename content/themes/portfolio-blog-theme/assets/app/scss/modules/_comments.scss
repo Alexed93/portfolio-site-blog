@@ -48,8 +48,11 @@
 }
 
 .comment-form input:active, .comment-form input:focus, .comment-form textarea:active, .comment-form textarea:focus  {
-    border: 1px solid $green-brand;
     color: $brand-red;
+}
+
+.comment-form input:hover, .comment-form textarea:hover {
+    border: 1px solid $green-brand;
 }
 
 .comment-form textarea {

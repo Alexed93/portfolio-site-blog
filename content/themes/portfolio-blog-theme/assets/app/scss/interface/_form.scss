@@ -1,0 +1,100 @@
+/* ------------------------------------------
+    CONTACT FORM
+------------------------------------------ */
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+.contact {
+    margin-top: $base !important;
+    margin-bottom: $base !important;
+    padding-top: $base;
+    border-top: 1px solid $green-brand;
+
+    @include respond-min($bp2) {
+        margin-top: $base*2 !important;
+        padding: 0;
+        border: none;
+    }
+}
+
+.contact_form {
+    border: none;
+}
+
+.contact_form input, .contact_form textarea, .contact_form select {
+    border: 1px solid $grey;
+    padding: .5rem;
+    border-radius: 0;
+    box-shadow: none;
+    background: $white;
+    margin-top: $base;
+    width: 100%;
+    resize: none;
+}
+
+.contact_form select{
+    height: $base*2;
+}
+
+.contact_form textarea {
+    height: 10em;
+}
+
+.contact_form input[type="radio"] {
+    width: auto;
+    -webkit-appearance: radio;
+}
+
+.contact_form input:hover, .contact_form textarea:hover, .contact_form select:hover, .contact_form input:focus, .contact_form textarea:focus, .contact_form select:focus  {
+    border: 1px solid $green-brand;
+}
+
+.contact_form input:active, .contact_form input:focus, .contact_form textarea:active, .contact_form textarea:focus, .contact_form select:focus, .contact_form input, .contact_form textarea  {
+    color: $brand-red;
+}
+
+.send-clear input {
+    color: $color-brand;
+    width: 49%;
+    border: 1px solid $green-brand;
+
+    :hover {
+        color: $white;
+    }
+}
+
+.attach-file-box {
+    display: block;
+    
+    @include respond-min($bp2) {
+        margin-left: $base;
+        display: inline-block;
+    }
+}
+
+.attach-file-box-input {
+    border: none !important;
+    color: $grey !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* $. Change Autocomplete styles in Chrome
+\*----------------------------------------------------------------*/
+.contact_form input:-webkit-autofill,
+.contact_form input:-webkit-autofill:hover, 
+.contact_form input:-webkit-autofill:focus
+.contact_form input:-webkit-autofill, 
+.contact_form textarea:-webkit-autofill,
+.contact_form textarea:-webkit-autofill:hover
+.contact_form textarea:-webkit-autofill:focus,
+.contact_form select:-webkit-autofill,
+.contact_form select:-webkit-autofill:hover,
+.contact_form select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $brand-red;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
