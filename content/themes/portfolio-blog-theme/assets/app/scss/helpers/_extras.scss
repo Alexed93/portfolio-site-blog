@@ -171,3 +171,31 @@
 .grey {
     color: $grey;
 }
+
+.white_text {
+    color: $white;
+
+    @include respond-min($bp2) {
+        color: $color-brand;
+    }
+}
+
+.green_background {
+    background: $green-brand;
+}
+
+.white_background {
+    background: $white;
+}
+
+.green_text {
+    color: $green-brand;
+}
+
+.purple_text {
+    color: $color-brand;
+}
+
+.purple_background {
+    color: $color-brand;
+}

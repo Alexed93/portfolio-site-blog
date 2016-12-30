@@ -20,25 +20,30 @@
 /* $. Base
 \*----------------------------------------------------------------*/
 
-// .breadcrumbs {
-//     position: relative;
-//     margin: 0;
-//     font-size: .8rem;
+.breadcrumbs {
+    position: relative;
+    margin: 0;
+    font-size: .8rem;
+    width: auto;
+    z-index: 10;
+    background: $white;
+    margin-top: 6em;
 
-//     @include respond-min($bp3) {
-//         padding-top: $base;
-//         border-top: ($base/4) solid $grey-lighter;
-//     }
+    @include respond-min($bp2) {
+        background: $white;
+    }
 
-//     a {
-//         color: $color-link;
-//         border-bottom: 1px solid $color-link;
-//         border-bottom-color: rgba($color-link, .15);
-//         transition: all .15s ease-out;
+    .itemListElement span {
+        opacity: .7;
+    }
 
-//         &:hover,
-//         &:focus {
-//             border-bottom-color: rgba($color-link, .5);
-//         }
-//     }
-// }
+    a {
+        color: $brand-red;
+        opacity: .8;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+    }
+}

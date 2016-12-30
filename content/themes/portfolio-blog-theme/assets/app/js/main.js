@@ -32,8 +32,9 @@
   function header_active() {
     $(".header_fill").toggleClass("header_fill--active");
     $(".nav").toggleClass("nav--active");
-    $(".hamburger_styling, .socialmedia-icon").toggleClass("white_background");
+    $(".hamburger_styling, .socialmedia-icon, .breadcrumbtrail").toggleClass("white_background");
     $(".socialmedia-icon__font").toggleClass("purple_text");
+    $(".breadcrumbtrail").toggleClass("white_text");
 
     // Fix  for IE
 
