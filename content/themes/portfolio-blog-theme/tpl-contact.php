@@ -20,14 +20,60 @@ get_header();
         </div>
     </div>
     <div class="contact | container--extrasmall | u-centered">
-        <form action="http://alexed.co.uk/contact.php" method="post">
+
+        <?php
+            global $reg_errors;
+            $reg_errors = new WP_Error;
+        ?>
+        
+        <?php if( $_POST[''] ) : ?>
+            <?php if ( empty( $_POST['name'] ) || empty( $_POST['email'] ) || empty( $_POST['comments'] ) ) : ?>
+               <?php $reg_errors->add('field', 'Required form field is missing'); ?>
+            <?php endif; ?>
+
+            <?php if ( !is_email( $_POST['email'] ) ) : ?>
+               <?php $reg_errors->add( 'email_invalid', 'Email is not valid' ); ?>
+            <?php endif; ?>
+
+            <?php if ( !is_numeric( $_POST['number'] ) ) : // try ctype_digit() if this doesn't work ?>
+                <?php $reg_errors->add( 'number_invalid', 'Number is not valid' ); ?>
+            <?php endif; ?>
+
+            <?php if ( is_wp_error( $reg_errors ) ) : ?>
+                <?php foreach ( $reg_errors->get_error_messages() as $error ) : ?>
+                    <?php   
+                        echo '<div>';
+                        echo '<strong>ERROR</strong>:';
+                        echo $error . '<br/>';
+                        echo '</div>';
+                    ?>
+                <?php endforeach; ?>
+                <?php else: ?>
+                    <?php if ( isset($_POST['submit'] ) ) : ?>
+                        <?php
+                            echo "winning";
+                            $from = 'alexeddesign@gmail.com';
+                            $to = $_POST['email'];
+                            $subject = $_POST['enquiry-options'];
+                            $message = $_POST['comments'];
+                            $headers  = 'MIME-Version: 1.0' . "\r\n";
+                            $headers .= "Content-type: text/html; charset=utf-8 \r\n";
+                            $headers .= 'To: Author <' .$to . ' >' . "\r\n";
+                            $headers .= 'From: '.$author.' <'.$from.'>' . "\r\n";
+                            mail($to, $subject, $message, $headers);
+                        ?>
+                    <?php endif; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+
+        <form action="" method="post"">
             <fieldset class="contact_form">
                 <label>Introduce yourself<span class="grey"> (required)</span><br>
-                    <input type="text" name="name" placeholder="Your name" required="required" class="u-push-bottom">
+                    <input type="text" name="name" placeholder="Your name" class="u-push-bottom">
                 </label><br>
                 
                 <label>Where can I find you?<span class="grey"> (required)</span><br>
-                    <input type="email" name="email" placeholder="Your email address" required="required" class="u-push-bottom">
+                    <input type="email" name="email" placeholder="Your email address" class="u-push-bottom">
                 </label><br>
                 
                 <label>Would you prefer me to call?<br>
@@ -44,7 +90,7 @@ get_header();
                 </select></label><br>
 
                 <label>How can I help?<span class="grey"> (required)</span><br>
-                <textarea name="comments" required="required" class="u-push-bottom" placeholder="Your message"></textarea></label><br>
+                <textarea name="comments" class="u-push-bottom" placeholder="Your message"></textarea></label><br>
                 
                 <label>Do you need to send me any files?<br>
                     <input type="radio" name="files" value="no" checked="checked" class="u-push-bottom | attach-file-no"> No
@@ -60,6 +106,7 @@ get_header();
                 </div>
             </fieldset>
         </form>
+
     </div>
 </div>
 
