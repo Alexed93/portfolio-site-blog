@@ -21,59 +21,61 @@ get_header();
     </div>
     <div class="contact | container--extrasmall | u-centered">
 
-        <?php
-            global $reg_errors;
-            $reg_errors = new WP_Error;
+        <?php 
+
+        // Initialize variables to null.
+        $nameError ="";
+        $emailError ="";
+
+        function test_input($data) {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
+
         ?>
         
-        <?php if( $_POST[''] ) : ?>
-            <?php if ( empty( $_POST['name'] ) || empty( $_POST['email'] ) || empty( $_POST['comments'] ) ) : ?>
-               <?php $reg_errors->add('field', 'Required form field is missing'); ?>
+        <?php if ( isset($_POST['submit'] ) ) : ?>
+
+            <?php if (empty($_POST["name"])) : ?>
+                <?php $nameError = "* Name is required"; ?>
+            <?php else: ?>
+                    <?php $name = test_input($_POST["name"]); ?>
+            <?php endif; ?>
+            <!-- check name only contains letters and whitespace -->
+            <?php if ( !preg_match("/^[a-zA-Z ]*$/",$name) ) : ?>
+                <?php $nameError = "* Only letters and white space allowed"; ?>
             <?php endif; ?>
 
-            <?php if ( !is_email( $_POST['email'] ) ) : ?>
-               <?php $reg_errors->add( 'email_invalid', 'Email is not valid' ); ?>
+            <?php if ( empty($_POST["email"])) : ?>
+                <?php $emailError = "* Email is required"; ?>
+            <?php else: ?>
+                    <?php $email = test_input( $_POST["email"] ); ?>
+            <?php endif; ?>
+            <!-- check if e-mail address syntax is valid or not -->
+            <?php if ( !preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email) ) : ?>
+                <?php $emailError = "* Invalid email format"; ?>
             <?php endif; ?>
 
-            <?php if ( !is_numeric( $_POST['number'] ) ) : // try ctype_digit() if this doesn't work ?>
-                <?php $reg_errors->add( 'number_invalid', 'Number is not valid' ); ?>
+            <?php if (empty($_POST["comment"])) : ?>
+                <?php $commentError = "* Don't forget your message!"; ?>
+            <?php else: ?>
+                    <?php $comment = test_input( $_POST["comment"] ); ?>
             <?php endif; ?>
 
-            <?php if ( is_wp_error( $reg_errors ) ) : ?>
-                <?php foreach ( $reg_errors->get_error_messages() as $error ) : ?>
-                    <?php   
-                        echo '<div>';
-                        echo '<strong>ERROR</strong>:';
-                        echo $error . '<br/>';
-                        echo '</div>';
-                    ?>
-                <?php endforeach; ?>
-                <?php else: ?>
-                    <?php if ( isset($_POST['submit'] ) ) : ?>
-                        <?php
-                            echo "winning";
-                            $from = 'alexeddesign@gmail.com';
-                            $to = $_POST['email'];
-                            $subject = $_POST['enquiry-options'];
-                            $message = $_POST['comments'];
-                            $headers  = 'MIME-Version: 1.0' . "\r\n";
-                            $headers .= "Content-type: text/html; charset=utf-8 \r\n";
-                            $headers .= 'To: Author <' .$to . ' >' . "\r\n";
-                            $headers .= 'From: '.$author.' <'.$from.'>' . "\r\n";
-                            mail($to, $subject, $message, $headers);
-                        ?>
-                    <?php endif; ?>
-            <?php endif; ?>
         <?php endif; ?>
 
         <form action="" method="post"">
             <fieldset class="contact_form">
                 <label>Introduce yourself<span class="grey"> (required)</span><br>
                     <input type="text" name="name" placeholder="Your name" class="u-push-bottom">
+                    <span class="error"><?php echo $nameError; ?></span>
                 </label><br>
                 
                 <label>Where can I find you?<span class="grey"> (required)</span><br>
                     <input type="email" name="email" placeholder="Your email address" class="u-push-bottom">
+                    <span class="error"><?php echo $emailError; ?></span>
                 </label><br>
                 
                 <label>Would you prefer me to call?<br>
@@ -81,15 +83,16 @@ get_header();
                 </label><br>
                 
                 <label>The nature of your message:<br>
-                <select name="enquiry-options" class="u-push-bottom">
+                <select name="enquiry-options" class="u-push-bottom"><span class="error">
                     <option value="Large project">Large project</option>
                     <option value="Small project">Small project</option>
                     <option value="Web only">Web only</option>
                     <option value="Branding only">Branding only</option>
                     <option value="Other">Other</option>
-                </select></label><br>
+                </select>
+                </label><br>
 
-                <label>How can I help?<span class="grey"> (required)</span><br>
+                <label>How can I help?<span class="grey"> (required)</span><?php echo $commentError; ?></span><br>
                 <textarea name="comments" class="u-push-bottom" placeholder="Your message"></textarea></label><br>
                 
                 <label>Do you need to send me any files?<br>
