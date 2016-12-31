@@ -35,7 +35,6 @@
 .nav {
     @extend %cf;
     @extend %list--unset;
-    // background: url("../img/headerBackground.svg") #8b1558;
     width: 100%;
     padding: 1em 0 1em 0;
     clear: both;
@@ -90,10 +89,6 @@
         padding: 1.5em 0 0 0;
     }
 
-    //  @include respond-min($bp2) { 
-    //     font-size: 2rem;
-    // }
-
     @include respond-min($bp2) { 
         display: inline;
         font-size: 1.2rem;
@@ -137,8 +132,9 @@
 /* $. Secondary
 \*----------------------------------------------------------------*/
 
-// .nav--secondary {
-// }
+.nav--secondary {
+
+}
 
 
 

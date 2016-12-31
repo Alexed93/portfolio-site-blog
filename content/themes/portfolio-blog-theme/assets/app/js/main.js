@@ -34,7 +34,8 @@
     $(".nav").toggleClass("nav--active");
     $(".hamburger_styling, .socialmedia-icon, .breadcrumbtrail").toggleClass("white_background");
     $(".socialmedia-icon__font").toggleClass("purple_text");
-    $(".breadcrumbtrail").toggleClass("white_text");
+    $(".breadcrumbs").toggleClass("white_text");
+    $(".breadcrumbs").toggleClass("white_background");
 
     // Fix  for IE
 
