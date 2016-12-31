@@ -42,7 +42,7 @@
     width: auto;
     z-index: 10;
     background: $white;
-    margin-top: 5.6em;
+    top: 5.6em;
 
     @include respond-min($bp2) {
         background: $white;
