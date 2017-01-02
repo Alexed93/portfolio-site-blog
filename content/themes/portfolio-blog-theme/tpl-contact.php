@@ -21,69 +21,22 @@ get_header();
     </div>
     <div class="contact | container--extrasmall | u-centered">
 
-        <?php 
-
-        // Initialize variables to null.
-        $nameError ="";
-        $emailError ="";
-
-        function test_input($data) {
-                $data = trim($data);
-                $data = stripslashes($data);
-                $data = htmlspecialchars($data);
-                return $data;
-            }
-
-        ?>
-        
-        <?php if ( isset($_POST['submit'] ) ) : ?>
-
-            <?php if (empty($_POST["name"])) : ?>
-                <?php $nameError = "* Name is required"; ?>
-            <?php else: ?>
-                    <?php $name = test_input($_POST["name"]); ?>
-            <?php endif; ?>
-            <!-- check name only contains letters and whitespace -->
-            <?php if ( !preg_match("/^[a-zA-Z ]*$/",$name) ) : ?>
-                <?php $nameError = "* Only letters and white space allowed"; ?>
-            <?php endif; ?>
-
-            <?php if ( empty($_POST["email"])) : ?>
-                <?php $emailError = "* Email is required"; ?>
-            <?php else: ?>
-                    <?php $email = test_input( $_POST["email"] ); ?>
-            <?php endif; ?>
-            <!-- check if e-mail address syntax is valid or not -->
-            <?php if ( !preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email) ) : ?>
-                <?php $emailError = "* Invalid email format"; ?>
-            <?php endif; ?>
-
-            <?php if (empty($_POST["comment"])) : ?>
-                <?php $commentError = "* Don't forget your message!"; ?>
-            <?php else: ?>
-                    <?php $comment = test_input( $_POST["comment"] ); ?>
-            <?php endif; ?>
-
-        <?php endif; ?>
-
-        <form action="" method="post"">
+        <form action="<?php echo get_template_directory_uri(); ?>/contact.php" method="post" enctype="multipart/form-data">
             <fieldset class="contact_form">
                 <label>Introduce yourself<span class="grey"> (required)</span><br>
-                    <input type="text" name="name" placeholder="Your name" class="u-push-bottom">
-                    <span class="error"><?php echo $nameError; ?></span>
+                    <input type="text" name="name" placeholder="Your name" required class="u-push-bottom" id="name">
                 </label><br>
                 
                 <label>Where can I find you?<span class="grey"> (required)</span><br>
-                    <input type="email" name="email" placeholder="Your email address" class="u-push-bottom">
-                    <span class="error"><?php echo $emailError; ?></span>
+                    <input type="email" name="email" placeholder="Your email address" required class="u-push-bottom" id="email">
                 </label><br>
                 
                 <label>Would you prefer me to call?<br>
-                    <input type="text" name="number" placeholder="Your contact number" class="u-push-bottom">
+                    <input type="text" name="number" placeholder="Your contact number" class="u-push-bottom" id="number">
                 </label><br>
                 
-                <label>The nature of your message:<br>
-                <select name="enquiry-options" class="u-push-bottom"><span class="error">
+                <label>The nature of your message: <span class="grey"> (required)</span><br>
+                <select name="enquiry-options" required class="u-push-bottom" id="enquiry-options">
                     <option value="Large project">Large project</option>
                     <option value="Small project">Small project</option>
                     <option value="Web only">Web only</option>
@@ -92,19 +45,19 @@ get_header();
                 </select>
                 </label><br>
 
-                <label>How can I help?<span class="grey"> (required)</span><?php echo $commentError; ?></span><br>
-                <textarea name="comments" class="u-push-bottom" placeholder="Your message"></textarea></label><br>
+                <label>How can I help?<br>
+                <textarea name="comments" class="u-push-bottom" placeholder="Your message" id="comments"></textarea></label><br>
                 
                 <label>Do you need to send me any files?<br>
                     <input type="radio" name="files" value="no" checked="checked" class="u-push-bottom | attach-file-no"> No
                     <input type="radio" name="files" value="yes" class="u-push-bottom u-push-left | attach-file-yes"> Yes
                 </label>
                 <label class="attach-file-box | is-hidden">
-                    <input type="file" name="file" class="attach-file-box-input">
+                    <input type="file" name="file" class="attach-file-box-input" id="file">
                 </label><br>
                 
                 <div class="send-clear">
-                    <input type="submit" name="submit" value="Send" class="btn btn--primary">
+                    <input type="submit" name="submit" value="Send" class="btn btn--primary" id="submit-button">
                     <input type="reset" name="clear" value="Clear" class="btn btn--primary">
                 </div>
             </fieldset>

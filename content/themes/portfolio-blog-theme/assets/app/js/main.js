@@ -324,6 +324,32 @@
     $('.attach-file-box').addClass('is-hidden');
   });
 
+  /* $. Contact form send
+  \*----------------------------------------------------------------*/
+  $(function(){
+    $('#form').submit(function(e){
+      // Stop the form actually posting
+      e.preventDefault();
+
+      // Send the request
+      $.post('pathToThemes.path + "contact.php"',  {
+          name: $('#name').val(),
+          email: $('#email').val(),
+          number: $('#number').val(),
+          enquirytype: $('#enquiry-options').val(),
+          message: $('#comments').val(),
+          attachment: $('#file').val()
+          
+      }, function(d){
+          // Here we handle the response from the script
+          // We are just going to alert the result for now
+          alert(d);
+          // $('#result').html(d);
+          $('#submit-button').attr('disabled', 'disabled')
+      });
+    });
+  });
+
 /*----------- END */
 
 })(jQuery);
