@@ -316,13 +316,13 @@
   /* $. Contact form file toggle
   \*----------------------------------------------------------------*/
 
-  $('.attach-file-yes').click(function() {
-    $('.attach-file-box').removeClass('is-hidden');
-  });
+  // $('.attach-file-yes').click(function() {
+  //   $('.attach-file-box').removeClass('is-hidden');
+  // });
 
-  $('.attach-file-no').click(function() {
-    $('.attach-file-box').addClass('is-hidden');
-  });
+  // $('.attach-file-no').click(function() {
+  //   $('.attach-file-box').addClass('is-hidden');
+  // });
 
   /* $. Contact form send
   \*----------------------------------------------------------------*/

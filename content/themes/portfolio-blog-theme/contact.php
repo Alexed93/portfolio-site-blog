@@ -2,10 +2,15 @@
 
     // Blank message to start with so we can append to it.
     $message = '';
+    $errorMsg = '<script type="text/javascript"> alert("Please ensure a name, email and your message are provided."); </script>';
+    $errorSending = '<script type="text/javascript"> alert("Error sending."); </script>';
+    $sent = '<script type="text/javascript"> alert("Your message has been successfully sent!"); </script>';
 
     // Check that name & email aren't empty
     if( empty($_POST['name']) || empty($_POST['email']) || empty($_POST['comments']) ) {
-        die('Please ensure a name, email and your message are provided.'); 
+        echo $errorMsg;
+        die('');
+
     }
 
     // Construct the message
@@ -14,8 +19,7 @@
         Email: {$_POST['email']}
         Number: {$_POST['number']}
         Enquiry-type: {$_POST['enquiry-options']}
-        Message: {$_POST['comments']}   
-        Attachment: {$_POST['file']}
+        Message: {$_POST['comments']}
 TEXT;
 
     // test@testdomain.com
@@ -28,9 +32,11 @@ TEXT;
     $header = 'From: ' . $from . '<' . $fromEmail . '>';
 
     if(!mail($to, $subject, $message, $header)){
-        die('Error sending.');
+        echo $errorSending;
+        die('');
     }else{
-        die('Your message has been successfully sent!');
+        echo $sent;
+        die('');
     }
 
 ?>

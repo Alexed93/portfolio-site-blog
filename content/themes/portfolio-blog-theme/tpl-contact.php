@@ -48,13 +48,13 @@ get_header();
                 <label>How can I help?<br>
                 <textarea name="comments" class="u-push-bottom" placeholder="Your message" id="comments"></textarea></label><br>
                 
-                <label>Do you need to send me any files?<br>
+                <!-- <label>Do you need to send me any files?<br>
                     <input type="radio" name="files" value="no" checked="checked" class="u-push-bottom | attach-file-no"> No
                     <input type="radio" name="files" value="yes" class="u-push-bottom u-push-left | attach-file-yes"> Yes
                 </label>
                 <label class="attach-file-box | is-hidden">
                     <input type="file" name="file" class="attach-file-box-input" id="file">
-                </label><br>
+                </label><br> -->
                 
                 <div class="send-clear">
                     <input type="submit" name="submit" value="Send" class="btn btn--primary" id="submit-button">
