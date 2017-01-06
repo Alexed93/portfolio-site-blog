@@ -7,6 +7,10 @@
 // Get the header
 get_header();
 
+$name = $_POST['name'];
+
+<?php var_dump(); ?>
+
 ?>
 
 <div class="container | u-top-bottom-space">
@@ -20,6 +24,11 @@ get_header();
         </div>
     </div>
     <div class="contact | container--extrasmall | u-centered">
+
+        <div style="background: red; color: white;">
+            <?php if($_POST['name'] "") ?>
+            
+        </div>
 
         <form action="<?php echo get_template_directory_uri(); ?>/contact.php" method="post" enctype="multipart/form-data">
             <fieldset class="contact_form">

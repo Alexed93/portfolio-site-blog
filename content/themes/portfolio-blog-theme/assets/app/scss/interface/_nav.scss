@@ -35,50 +35,8 @@
 .nav {
     @extend %cf;
     @extend %list--unset;
-    width: 100%;
-    padding: 1em 0 1em 0;
-    clear: both;
-    height: calc(100vh - 74px);
-    position: relative;
+    width: auto;
     display: block;
-    transform: translateY(-200%);
-    transition: transform 300ms linear;
-
-    @include respond-min($bp2) { 
-        height: auto;
-        padding: 0;
-        transform: translateY(-305%);
-        right: 5em;
-        width: 70%;
-        float: right;
-    }
-}
-
-.nav--active {
-    transform: translateY(0);
-
-    @include respond-min($bp2) { 
-        transform: translateY(-170%);
-    }
-
-    @include respond-min($bp3) { 
-        transform: translateY(-160%);
-    }
-
-    @include respond-min($bp4) { 
-        transform: translateY(-150%);
-    }
-}
-
-.nav_list {
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-
-    @include respond-min($bp2) { 
-        text-align: right;
-        padding: 0.5em 0 0 0;
-    }
 }
 
 .nav_item {
@@ -124,8 +82,35 @@
 /* $. Primary
 \*----------------------------------------------------------------*/
 
-// .nav--primary {
-// }
+.nav--primary {
+    width: 100%;
+    padding: 1em 0 1em 0;
+    clear: both;
+    height: calc(100vh - 74px);
+    position: relative;
+    transform: translateY(-200%);
+    transition: transform 300ms linear;
+    text-align: center;
+
+    @include respond-min($bp2) { 
+        height: auto;
+        padding: 0;
+        transform: translateY(-305%);
+        right: 5em;
+        float: right;
+        width: auto;
+        text-align: right;
+    }
+
+    &.nav_list {
+        margin: 0 auto;
+        display: block;
+
+        @include respond-min($bp2) { 
+            padding: 0.5em 0 0 0;
+        }
+    }
+}
 
 
 
@@ -138,8 +123,21 @@
 
 
 
-/* $. Tertiary
+/* $. Bits
 \*----------------------------------------------------------------*/
 
-// .nav--tertiary {
-// }
+.nav--active {
+    transform: translateY(0);
+
+    @include respond-min($bp2) { 
+        transform: translateY(-170%);
+    }
+
+    @include respond-min($bp3) { 
+        transform: translateY(-160%);
+    }
+
+    @include respond-min($bp4) { 
+        transform: translateY(-150%);
+    }
+}

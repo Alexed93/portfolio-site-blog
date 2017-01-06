@@ -8,19 +8,18 @@
 
     // Check that name & email aren't empty
     if( empty($_POST['name']) || empty($_POST['email']) || empty($_POST['comments']) ) {
-        echo $errorMsg;
-        die('');
 
+        header("Location: /contact");
     }
 
     // Construct the message
-    $message .= <<<TEXT
+    $message .= "
         Name: {$_POST['name']}
         Email: {$_POST['email']}
         Number: {$_POST['number']}
         Enquiry-type: {$_POST['enquiry-options']}
         Message: {$_POST['comments']}
-TEXT;
+";
 
     // test@testdomain.com
     $to = 'dippyalex@hotmail.co.uk'; 
@@ -35,7 +34,6 @@ TEXT;
         echo $errorSending;
         die('');
     }else{
-        echo $sent;
         die('');
     }
 

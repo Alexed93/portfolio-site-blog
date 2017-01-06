@@ -45,7 +45,7 @@ $linkedin = get_field('linkedin', 'options');
                 </a>
             </li> -->
         </ul>
-        <nav class="nav | " id="navigation" role="navigation">
+        <nav class="nav nav--primary" id="navigation" role="navigation">
             <ul class="nav_list">
                 <?php wp_nav_menu( array('theme_location' => 'primary', 'items_wrap' => '%3$s') ); ?>
             </ul>
@@ -53,14 +53,14 @@ $linkedin = get_field('linkedin', 'options');
     </div>
 </header>
 
-<?php if( !is_page(337) && !is_page(358) && !is_page(222) ): ?>
-    <div class="breadcrumbcont container"><?php get_template_part('views/vendors/breadcrumb'); ?></div>
+<?php if( !is_page( array(337, 358, 222) ) ): ?>
+    <div class="breadcrumbcont"><?php get_template_part('views/vendors/breadcrumb'); ?></div>
 <?php endif; ?>
 
-
-<nav class="nav nav--secondary | " id="secondary_navigation" role="navigation">
-    <ul class="nav_list">
-        <?php wp_nav_menu( array('theme_location' => 'secondary', 'items_wrap' => '%3$s') ); ?>
-    </ul>
-</nav>
-
+<?php if( !is_page( array(337, 358, 222) ) && !is_singular( 'project' ) ): ?>
+    <nav class="nav nav--secondary" id="secondary_navigation" role="navigation">
+        <ul class="nav_list">
+            <?php wp_nav_menu( array('theme_location' => 'secondary', 'items_wrap' => '%3$s') ); ?>
+        </ul>
+    </nav>
+<?php endif; ?>

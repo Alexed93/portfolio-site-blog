@@ -21,16 +21,16 @@
 \*----------------------------------------------------------------*/
 .breadcrumbcont {
     z-index: 100;
+    position: fixed;
+    top: 4.75em; 
+    width: 100%;
 }
 
 .breadcrumbs {
     padding-bottom: $base/2;
-    position: fixed;
     margin: 0;
     font-size: .8rem;
-    width: 100%;
     z-index: 10;
-    top: 5.6em; 
 
     .itemListElement span {
         opacity: .7;

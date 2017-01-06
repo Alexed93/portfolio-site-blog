@@ -31,7 +31,7 @@
 
   function header_active() {
     $(".header_fill").toggleClass("header_fill--active");
-    $(".nav").toggleClass("nav--active");
+    $(".nav--primary").toggleClass("nav--active");
     $(".hamburger_styling, .socialmedia-icon, .breadcrumbtrail").toggleClass("white_background");
     $(".socialmedia-icon__font").toggleClass("purple_text");
     $(".breadcrumbs").toggleClass("white_text");
