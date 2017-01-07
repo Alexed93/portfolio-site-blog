@@ -57,6 +57,9 @@
 }
 
 .u-top-bottom-space--more {
+    padding-top: 6em;
+    padding-bottom: 1em;
+    
     @include respond-min($bp2) {
         padding-top: 7em;
         padding-bottom: 2em;

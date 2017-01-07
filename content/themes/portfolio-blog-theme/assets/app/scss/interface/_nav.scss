@@ -39,45 +39,6 @@
     display: block;
 }
 
-.nav--primary .nav_item {
-    font-size: 2rem;
-    padding: 1em 0 0 0;
-
-    @include respond-min($bp1) { 
-        padding: 1.5em 0 0 0;
-    }
-
-    @include respond-min($bp2) { 
-        display: inline;
-        font-size: 1.2rem;
-        margin-left: 0.5em;
-        position: relative;
-
-        :after {
-            content: '';
-            height: 3px;
-            width: 0;
-            background: transparent;
-            transition: width .7s ease;
-            position: absolute;
-            bottom: 1px;
-            left: 0;
-        }
-
-        :hover:after {
-            background: $green-brand;
-            width: 100%;
-        }
-    }
-
-}
-
-.nav_link {
-    padding: $base/2 0.25em;
-    font-weight: 600;
-    position: relative;
-}
-
 /* $. Primary
 \*----------------------------------------------------------------*/
 
@@ -88,14 +49,14 @@
     height: calc(100vh - 74px);
     position: relative;
     transform: translateY(-200%);
-    transition: transform 300ms linear;
+    transition: all 300ms ease;
     text-align: center;
     color: $white;
 
     @include respond-min($bp2) { 
         height: auto;
         padding: 0;
-        transform: translateY(-305%);
+        transform: translateY(-375%);
         right: 5em;
         float: right;
         width: auto;
@@ -112,7 +73,46 @@
     }
 }
 
+.nav--primary .nav_item {
+    font-size: 2rem;
+    padding: 1em 0 0 0;
 
+    @include respond-min($bp1) { 
+        padding: 1.5em 0 0 0;
+    }
+
+    @include respond-min($bp2) { 
+        display: inline;
+        font-size: 1.2rem;
+        margin-left: 0.5em;
+        position: relative;
+
+        :before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: $green-brand;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: transform 300ms ease;
+        }
+
+        :hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+    }
+}
+
+.nav_link {
+    padding: $base/2 0.25em;
+    font-weight: 600;
+    position: relative;
+}
 
 /* $. Secondary
 \*----------------------------------------------------------------*/
@@ -146,11 +146,11 @@
     transform: translateY(0);
 
     @include respond-min($bp2) { 
-        transform: translateY(-170%);
+        transform: translateY(-190%);
     }
 
     @include respond-min($bp3) { 
-        transform: translateY(-160%);
+        transform: translateY(-180%);
     }
 
     @include respond-min($bp4) { 
