@@ -1,12 +1,16 @@
 <?php
+    // Start the session
+    session_start();
+
     $errors = '';
     $success = '';
 
     $email = $_POST['email']; 
 
     if(!($_POST['name']) || !($_POST['email']) || !($_POST['comments'])) {
-        $errors .= "\n Error: please input a name, email address and your message.";
-        echo $errors;
+        // $errors .= "\n Error: please input a name, email address and your message.";
+        $_SESSION['errors'] = "\n Error: please input a name, email address and your message.";
+        header("Location: /contact");
     }
 
     if (!preg_match(

@@ -4,6 +4,9 @@
  * Template name: Contact
  */
 
+// Start the session
+session_start();
+
 // Get the header
 get_header();
 
@@ -21,10 +24,10 @@ get_header();
     </div>
     <div class="contact | container--extrasmall | u-centered">
 
-        <div style="background: red; color: white;">
-            <?php echo $success; ?>
+        <div class="errorbox">
+            <?php echo $_SESSION['errors']; ?>
         </div>
-        
+
         <form action="<?php echo get_template_directory_uri(); ?>/contact.php" method="post">
             <fieldset class="contact_form">
                 <label>Introduce yourself<span class="grey"> (required)</span><br>
