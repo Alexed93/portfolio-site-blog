@@ -1,6 +1,6 @@
 <?php
     // Start the session
-    session_start();
+    // session_start();
 
     $errors = '';
     $success = '';
@@ -9,15 +9,16 @@
 
     if(!($_POST['name']) || !($_POST['email']) || !($_POST['comments'])) {
         // $errors .= "\n Error: please input a name, email address and your message.";
-        $_SESSION['errors'] = "\n Error: please input a name, email address and your message.";
+        $_SESSION['errors'] = "\n Error: Please input a name, email address and your message.";
         header("Location: /contact");
     }
 
     if (!preg_match(
         "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email)) 
-    {
-        $errors .= "\n Error: Invalid email address";
-        echo $errors;
+    {   
+        // $errors .= "\n Error: Invalid email address";
+        $_SESSION['errors'] = "\n Error: Invalid email address.";
+        header("Location: /contact");
     }
 
     // Blank message to start with so we can append to it.
@@ -40,8 +41,8 @@ if( empty($errors)) {
     $fromEmail = 'dippyalex@hotmail.co.uk';
     $header = 'From: ' . $from . '<' . $fromEmail . '>';
 
-    $success .= "\n Success! Your message has been sent. You should receive a reply within 48 hours.";
-    echo $success;
+    // $success .= "\n Success! Your message has been sent. You should receive a reply within 48 hours.";
+    $_SESSION['success'] = "\n Success! Your message has been sent. You should receive a reply within 48 hours.";
     header("Location: /contact");
 }
 ?>

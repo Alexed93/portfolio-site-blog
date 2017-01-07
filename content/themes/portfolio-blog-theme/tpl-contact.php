@@ -23,10 +23,18 @@ get_header();
         </div>
     </div>
     <div class="contact | container--extrasmall | u-centered">
+        
+        <?php if(isset($_SESSION['errors'])): ?>
+            <div class="validationbox | errorsbox">
+                <?php echo $_SESSION['errors']; ?>
+            </div>
+        <?php endif; ?>
 
-        <div class="errorbox">
-            <?php echo $_SESSION['errors']; ?>
-        </div>
+        <?php if(isset($_SESSION['success'])): ?>
+            <div class="validationbox | successbox">
+                <?php echo $_SESSION['success']; ?>
+            </div>
+        <?php endif; ?>
 
         <form action="<?php echo get_template_directory_uri(); ?>/contact.php" method="post">
             <fieldset class="contact_form">

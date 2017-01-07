@@ -107,9 +107,16 @@ fieldset {
 
 /* $. Errors
 \*----------------------------------------------------------------*/
-.errorbox {
-    background: $red;
-    color: $white;
+.validationbox {
     padding: 1em;
     margin-bottom: $base;
+    color: $white;
+}
+
+.errorsbox {
+    background: $red;
+}
+
+.successbox {
+    background: $green;
 }
