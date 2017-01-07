@@ -47,9 +47,16 @@
 .u-centered { margin: 0 auto; }
 
 .u-top-bottom-space {
-    padding-top: 5em;
+    padding-top: 6em;
     padding-bottom: 1em;
 
+    @include respond-min($bp2) {
+        padding-top: 5em;
+        padding-bottom: 2em;
+    }
+}
+
+.u-top-bottom-space--more {
     @include respond-min($bp2) {
         padding-top: 7em;
         padding-bottom: 2em;

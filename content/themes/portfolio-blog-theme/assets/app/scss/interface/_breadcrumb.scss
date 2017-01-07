@@ -21,16 +21,15 @@
 \*----------------------------------------------------------------*/
 .breadcrumbcont {
     z-index: 100;
-    position: fixed;
-    top: 4.75em; 
-    width: 100%;
+    width: auto;
+    float: left;
 }
 
 .breadcrumbs {
     padding-bottom: $base/2;
     margin: 0;
     font-size: .8rem;
-    z-index: 10;
+    font-weight: normal;
 
     .itemListElement span {
         opacity: .7;
@@ -43,6 +42,7 @@
         &:hover,
         &:focus {
             opacity: 1;
+            text-decoration: underline;
         }
     }
 }

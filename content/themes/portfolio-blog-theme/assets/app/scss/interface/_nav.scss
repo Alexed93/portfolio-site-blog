@@ -39,7 +39,7 @@
     display: block;
 }
 
-.nav_item {
+.nav--primary .nav_item {
     font-size: 2rem;
     padding: 1em 0 0 0;
 
@@ -75,7 +75,6 @@
 .nav_link {
     padding: $base/2 0.25em;
     font-weight: 600;
-    color: $white;
     position: relative;
 }
 
@@ -91,6 +90,7 @@
     transform: translateY(-200%);
     transition: transform 300ms linear;
     text-align: center;
+    color: $white;
 
     @include respond-min($bp2) { 
         height: auto;
@@ -118,9 +118,25 @@
 \*----------------------------------------------------------------*/
 
 .nav--secondary {
-
+    color: $brand-red;
+    font-size: .8rem;
+    float: right;
 }
 
+.nav--secondary .nav_item {
+    display: inline;
+}
+
+.nav--secondary .nav_link {
+    font-weight: normal;
+    opacity: .8;
+    
+    &:hover,
+    &:focus {
+        opacity: 1;
+        text-decoration: underline;
+    }
+}
 
 
 /* $. Bits

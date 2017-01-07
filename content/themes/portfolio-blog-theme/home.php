@@ -19,7 +19,7 @@ get_header();
 ?>
 
 
-<div class="container | cf | u-top-bottom-space">
+<div class="container | cf | u-top-bottom-space--more">
     <?php get_sidebar('front'); ?>
     <?php get_template_part('sideproject_loop'); ?>
 </div> <!-- .container -->

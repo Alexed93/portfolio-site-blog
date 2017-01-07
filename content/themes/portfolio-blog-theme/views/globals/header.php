@@ -53,14 +53,16 @@ $linkedin = get_field('linkedin', 'options');
     </div>
 </header>
 
-<?php if( !is_page( array(337, 358, 222) ) ): ?>
-    <div class="breadcrumbcont"><?php get_template_part('views/vendors/breadcrumb'); ?></div>
-<?php endif; ?>
-
-<?php if( !is_page( array(337, 358, 222) ) && !is_singular( 'project' ) ): ?>
-    <nav class="nav nav--secondary" id="secondary_navigation" role="navigation">
-        <ul class="nav_list">
-            <?php wp_nav_menu( array('theme_location' => 'secondary', 'items_wrap' => '%3$s') ); ?>
-        </ul>
-    </nav>
-<?php endif; ?>
+<div class="header--secondary">
+    <div class="container | cf">
+        <?php if( !is_page( array(337, 358, 222) ) && !is_singular( 'project' ) ): ?>
+            <div class="breadcrumbcont"><?php get_template_part('views/vendors/breadcrumb'); ?></div>
+        
+            <nav class="nav nav--secondary" id="secondary_navigation" role="navigation">
+                <ul class="nav_list">
+                    <?php wp_nav_menu( array('theme_location' => 'secondary', 'items_wrap' => '%3$s') ); ?>
+                </ul>
+            </nav>
+        <?php endif; ?>
+    </div>
+</div>

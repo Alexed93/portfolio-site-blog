@@ -24,7 +24,7 @@ $sideproject_url = get_field('project_url');
 
 ?>
 
-<div class="container | container--small | u-top-bottom-space">
+<div class="container | container--small | u-top-bottom-space--more">
     <div class="post-controls | cf">
         <?php 
             $prev_post = get_previous_post( true );
