@@ -7,10 +7,6 @@
 // Get the header
 get_header();
 
-$name = $_POST['name'];
-
-<?php var_dump(); ?>
-
 ?>
 
 <div class="container | u-top-bottom-space">
@@ -26,18 +22,17 @@ $name = $_POST['name'];
     <div class="contact | container--extrasmall | u-centered">
 
         <div style="background: red; color: white;">
-            <?php if($_POST['name'] "") ?>
-            
+            <?php echo $success; ?>
         </div>
-
-        <form action="<?php echo get_template_directory_uri(); ?>/contact.php" method="post" enctype="multipart/form-data">
+        
+        <form action="<?php echo get_template_directory_uri(); ?>/contact.php" method="post">
             <fieldset class="contact_form">
                 <label>Introduce yourself<span class="grey"> (required)</span><br>
                     <input type="text" name="name" placeholder="Your name" required class="u-push-bottom" id="name">
                 </label><br>
                 
                 <label>Where can I find you?<span class="grey"> (required)</span><br>
-                    <input type="email" name="email" placeholder="Your email address" required class="u-push-bottom" id="email">
+                    <input type="email" name="email" placeholder="Your email address"  class="u-push-bottom" id="email">
                 </label><br>
                 
                 <label>Would you prefer me to call?<br>
@@ -71,7 +66,6 @@ $name = $_POST['name'];
                 </div>
             </fieldset>
         </form>
-
     </div>
 </div>
 
