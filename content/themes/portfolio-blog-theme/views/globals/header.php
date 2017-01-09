@@ -53,7 +53,7 @@ $linkedin = get_field('linkedin', 'options');
     </div>
 </header>
 
-<div class="header--secondary">
+<div class="header--secondary | white_background">
     <div class="container | cf">
         <?php if( !is_page( array(337, 358, 222) ) && !is_singular( 'project' ) ): ?>
             <div class="breadcrumbcont"><?php get_template_part('views/vendors/breadcrumb'); ?></div>

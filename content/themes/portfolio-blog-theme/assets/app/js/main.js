@@ -32,10 +32,10 @@
   function header_active() {
     $(".header_fill").toggleClass("header_fill--active");
     $(".nav--primary").toggleClass("nav--active");
-    $(".hamburger_styling, .socialmedia-icon, .breadcrumbtrail").toggleClass("white_background");
+    $(".hamburger_styling, .socialmedia-icon").toggleClass("white_background");
     $(".socialmedia-icon__font").toggleClass("purple_text");
-    $(".breadcrumbs").toggleClass("white_text");
-    $(".breadcrumbs").toggleClass("white_background");
+    $(".header--secondary").toggleClass("white_text");
+    $(".header--secondary").toggleClass("white_background");
 
     // Fix  for IE
 
