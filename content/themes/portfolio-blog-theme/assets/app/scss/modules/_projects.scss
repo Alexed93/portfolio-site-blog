@@ -13,6 +13,10 @@
         padding-bottom: 10%;
     }
 
+    @include respond-min($bp5-5) {
+        padding-bottom: 13%;
+    }
+
     @include respond-min($bp6) {
         padding-bottom: 20%;
     }

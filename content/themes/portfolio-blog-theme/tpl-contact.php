@@ -5,7 +5,7 @@
  */
 
 // Start the session
-session_start();
+// session_start();
 
 // Get the header
 get_header();
@@ -23,20 +23,7 @@ get_header();
         </div>
     </div>
     <div class="contact | container--extrasmall | u-centered">
-        
-        <?php if(isset($_SESSION['errors'])): ?>
-            <div class="validationbox | errorsbox">
-                <?php echo $_SESSION['errors']; ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if(isset($_SESSION['success'])): ?>
-            <div class="validationbox | successbox">
-                <?php echo $_SESSION['success']; ?>
-            </div>
-        <?php endif; ?>
-
-        <form action="<?php echo get_template_directory_uri(); ?>/contact.php" method="post">
+        <form action="" method="post">
             <fieldset class="contact_form">
                 <label>Introduce yourself<span class="grey"> (required)</span><br>
                     <input type="text" name="name" placeholder="Your name" required class="u-push-bottom" id="name">
@@ -76,6 +63,16 @@ get_header();
                     <input type="reset" name="clear" value="Clear" class="btn btn--primary">
                 </div>
             </fieldset>
+            <?php require_once ('contact.php'); ?>
+            <?php if (isset($_POST['errors'])): ?>
+                <div class="validationbox | errorsbox">
+                    <?php echo $_POST['errors']; ?>
+                </div>
+            <?php else: ?>
+                <div class="validationbox | successbox">
+                    <?php echo $_POST['success']; ?>
+                </div>
+            <?php endif; ?>
         </form>
     </div>
 </div>

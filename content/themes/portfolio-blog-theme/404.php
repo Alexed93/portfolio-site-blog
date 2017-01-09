@@ -16,7 +16,7 @@ get_header();
 
 ?>
 
-<main class="section | 404 u-top-bottom-space">
+<main class="section | 404 u-top-bottom-space--more">
     <div class="container">
 
         <?php get_template_part('views/errors/404-page'); ?>
