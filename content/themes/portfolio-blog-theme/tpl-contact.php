@@ -23,12 +23,62 @@ get_header();
         </div>
     </div>
     <div class="contact | container--extrasmall | u-centered">
+    <?php if(isset($_POST['submit'])): ?>
+        <?php 
+            // Validation goes here
+            $errors = '';
+            $success = 'Success! Your message has been sent. You should receive a reply within 48 hours.';
+
+            $email = $_POST['email']; 
+            $name = $_POST['thename']; 
+            $comments = $_POST['comments'];
+            $number = $_POST['number']; 
+
+            if(empty($name) || empty($email) || empty($comments)) {
+                $errors .= "Error: please input a name, email address and your message.";
+            } else {
+                $errors = '';
+            }
+
+        ?>
+        <!-- Display red error box or green success box depending on which is true -->
+        <?php if(!empty($errors)): ?>
+            <div class="validationbox | errorsbox">
+                <?php echo $errors; ?>
+            </div>
+        <?php elseif(empty($errors)): ?>
+            <div class="validationbox | successbox">
+                <?php echo $success; ?>
+            </div>
+            <?php 
+                $message = ''; // Blank message to start with so we can append to it.
+
+                // Construct the message
+                $message .= "
+                    Name: {$name};
+                    Email: {$email};
+                    Number: {$number};
+                    Enquiry-type: {$_POST['enquiry-options']};
+                    Message: {$comments};
+                ";
+                // test@testdomain.com
+                $to = 'dippyalex@hotmail.co.uk'; 
+                $subject = 'Message from Portfolio';
+                $from = 'Alex Edwards';
+                // YourSite@domain.com
+                $fromEmail = 'dippyalex@hotmail.co.uk';
+                $header = 'From: ' . $from . '<' . $fromEmail . '>';
+                mail($to,$subject,$message,$header);
+                var_dump($message);
+            ?>
+        <?php endif; ?>
+    <?php endif; ?>
+
         <form action="" method="post">
             <fieldset class="contact_form">
                 <label>Introduce yourself<span class="grey"> (required)</span><br>
-                    <input type="text" name="name" placeholder="Your name" required class="u-push-bottom" id="name">
+                    <input type="text" name="thename" placeholder="Your name" required class="u-push-bottom" id="name">
                 </label><br>
-                
                 <label>Where can I find you?<span class="grey"> (required)</span><br>
                     <input type="email" name="email" placeholder="Your email address"  class="u-push-bottom" id="email">
                 </label><br>
@@ -63,16 +113,6 @@ get_header();
                     <input type="reset" name="clear" value="Clear" class="btn btn--primary">
                 </div>
             </fieldset>
-            <?php require_once ('contact.php'); ?>
-            <?php if (isset($_POST['errors'])): ?>
-                <div class="validationbox | errorsbox">
-                    <?php echo $_POST['errors']; ?>
-                </div>
-            <?php else: ?>
-                <div class="validationbox | successbox">
-                    <?php echo $_POST['success']; ?>
-                </div>
-            <?php endif; ?>
         </form>
     </div>
 </div>

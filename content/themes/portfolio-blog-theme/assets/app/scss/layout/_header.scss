@@ -70,6 +70,9 @@
     position: fixed;
     top: 4.5em; 
     width: 100%;
-    // background: $white;
     z-index: 50;
+
+    @include respond-min($bp3) {
+        background: $white;
+    }
 }

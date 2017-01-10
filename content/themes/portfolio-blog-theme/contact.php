@@ -5,11 +5,12 @@
 
     $email = $_POST['email']; 
 
-    if(!($_POST['name']) || !($_POST['email']) || !($_POST['comments'])) {
+    if(!($_POST['name']) || !($_POST['email']) || !($_POST['comments'])) 
+    {
         $errors .= "\n Error: please input a name, email address and your message.";
         $_POST['errors'] = "\n Error: Please input a name, email address and your message.";
         // header("Location: /contact");
-        exit();
+        // exit();
     }
 
     if (!preg_match(
@@ -18,7 +19,7 @@
         $errors .= "\n Error: Invalid email address";
         $_POST['errors'] = "\n Error: Invalid email address.";
         // header("Location: /contact");
-        exit();
+        // exit();
     }
 
     // Blank message to start with so we can append to it.
@@ -45,6 +46,8 @@
         // $success .= "\n Success! Your message has been sent. You should receive a reply within 48 hours.";
         $_POST['success'] = "\n Success! Your message has been sent. You should receive a reply within 48 hours.";
         // header("Location: /contact");
-        exit();
+        // exit();
     }
+
+    echo  'BLURT';
 ?>
