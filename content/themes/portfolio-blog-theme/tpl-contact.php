@@ -55,21 +55,20 @@ get_header();
 
                 // Construct the message
                 $message .= "
-                    Name: {$name};
-                    Email: {$email};
-                    Number: {$number};
+                    Name: {$_POST['thename']};
+                    Email: {$_POST['email']};
+                    Number: {$_POST['number']};
                     Enquiry-type: {$_POST['enquiry-options']};
-                    Message: {$comments};
-                ";
+                    Message: {$_POST['comments']};
+";
                 // test@testdomain.com
                 $to = 'dippyalex@hotmail.co.uk'; 
                 $subject = 'Message from Portfolio';
-                $from = 'Alex Edwards';
+                $from = $_POST['thename'];
                 // YourSite@domain.com
                 $fromEmail = 'dippyalex@hotmail.co.uk';
                 $header = 'From: ' . $from . '<' . $fromEmail . '>';
                 mail($to,$subject,$message,$header);
-                var_dump($message);
             ?>
         <?php endif; ?>
     <?php endif; ?>
