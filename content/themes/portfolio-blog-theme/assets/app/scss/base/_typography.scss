@@ -83,52 +83,52 @@ p {
 
 // ------------------------------------------------------------------------- RESPONSIVE
 
-@include respond-min($bp5) {
+// @include respond-min($bp5) {
 
-    // ---------------------------- PORTFOLIO
+//     // ---------------------------- PORTFOLIO
 
-    h1 {
-        font-size: 1.8rem;
-    }
+//     h1 {
+//         font-size: 1.8rem;
+//     }
 
-    h2, .excerpt p {
-        font-size: 1.6rem;
-    }
+//     h2, .excerpt p {
+//         font-size: 1.6rem;
+//     }
 
-    h3 {
-        font-size: 1.4rem;
-    }
+//     h3 {
+//         font-size: 1.4rem;
+//     }
 
-    h4 {
-        font-size: 1.2rem;
-    }
+//     h4 {
+//         font-size: 1.2rem;
+//     }
 
-    h5 {
-        font-size: 2.4rem; // Stat circles
-    }
+//     h5 {
+//         font-size: 2.4rem; // Stat circles
+//     }
 
-    p {
-        font-size: 1.1rem;
-    }
+//     p {
+//         font-size: 1.1rem;
+//     }
 
-    .gamma, .excerpt p {
-        font-size: 1.5rem; //excerpt of side-project post
-    }
+//     .gamma, .excerpt p {
+//         font-size: 1.5rem; //excerpt of side-project post
+//     }
 
-    time {
-        font-size: 1.2rem;
-    }
+//     time {
+//         font-size: 1.2rem;
+//     }
 
-    // ---------------------------- BLOG
+//     // ---------------------------- BLOG
 
-    .beta {
-        font-size: 1.2rem; // Side-project overlay heading
-    }
+//     .beta {
+//         font-size: 1.2rem; // Side-project overlay heading
+//     }
 
-    .delta p {
-        font-size: 1.1rem; // Side-project overlay text
-    }
-}
+//     .delta p {
+//         font-size: 1.1rem; // Side-project overlay text
+//     }
+// }
 
 @include respond-min($bp6) {
 
