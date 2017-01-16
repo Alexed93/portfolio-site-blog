@@ -29,15 +29,21 @@ get_header();
             $errors = '';
             $success = 'Success! Your message has been sent. You should receive a reply within 48 hours.';
 
-            $email = $_POST['email']; 
-            $name = $_POST['thename']; 
-            $comments = $_POST['comments'];
-            $number = $_POST['number']; 
+            $email = strip_tags( trim( $_POST[ "email" ] ) );
+            $name = strip_tags( trim( $_POST[ "thename" ] ) );
+            $comments = trim( $_POST[ "comments" ] );
+            $number = strip_tags( trim( $_POST[ "number" ] ) );
 
             if(empty($name) || empty($email) || empty($comments)) {
-                $errors .= "Error: please input a name, email address and your message.";
-            } else {
-                $errors = '';
+                $errors .= "Error: Input a name, email address and your message.<br>";
+            } 
+
+            if (!empty($email) && !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email)) {
+                $errors .= "Error: Invalid email address<br>";
+            } 
+
+            if (!empty($number) && !preg_match("/^\(?0( *\d\)?){9,10}$/", $number)) {
+                $errors .= "Error: Invalid phone number<br>";
             }
 
         ?>
@@ -79,7 +85,7 @@ get_header();
                     <input type="text" name="thename" placeholder="Your name" required class="u-push-bottom" id="name">
                 </label><br>
                 <label>Where can I find you?<span class="grey"> (required)</span><br>
-                    <input type="email" name="email" placeholder="Your email address"  class="u-push-bottom" id="email">
+                    <input type="email" name="email" placeholder="Your email address" required class="u-push-bottom" id="email">
                 </label><br>
                 
                 <label>Would you prefer me to call?<br>
