@@ -107,7 +107,7 @@
         width: 25%;
         position: fixed;
         text-align: left;
-        border-right: 1px solid #11cba6;
+        border-right: 1px solid $green-brand;
         padding-right: $base*2;
     }
 
@@ -159,6 +159,11 @@
 
 .project_screen img:hover {    
     transform: scale(0.95);
+}
+
+.feedback {
+    padding: $base;
+    border: 1px solid $color-brand;
 }
 
 /* ------------------------------------------ HOME PROJECTS AND INDIVIDUAL ------------------------------------------ */

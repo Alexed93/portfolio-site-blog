@@ -34,7 +34,7 @@
 
     @include respond-min($bp3) {
         margin-left: 3em;
-        height: auto;
+        height: 100%;
         text-align: left;
 
         img {

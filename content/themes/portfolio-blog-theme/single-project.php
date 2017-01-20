@@ -60,19 +60,21 @@
     </div>
 
 
-    <div class="project_body | u-push-top">
+    <div class="project_body | u-push-top@2">
         <h3>Brief</h3>
         <h4 class="highlight"><?php $projectbrieftitle = get_field( "project_brief_title" ); echo $projectbrieftitle ?></h4>
         <p><?php $projectyear = get_field( "project_brief_content" ); echo $projectyear ?></p>
-        <br>
-        <h3>Approach</h3>
-        <h4 class="highlight">How it was tackled.</h4>
-        <p><?php $projectapproachcontent = get_field( "project_approach_content" ); echo $projectapproachcontent ?></p>
-        <br>
-        <h3>Feedback</h3>
-        <h4 class="highlight">The clients final thoughts.</h4>
-        <p class="u-style-italic"><?php $projectfeedbackcontent = get_field( "project_feedback_content" ); echo $projectfeedbackcontent ?></p>
-        <span class="author u-float-right u-push-top ">- <?php $projectfeedbackauthorcontent = get_field( "project_feedbackauthor_content" ); echo $projectfeedbackauthorcontent ?></span">
+        <div class="u-push-top@2">
+            <h3>Approach</h3>
+            <h4 class="highlight">How it was tackled.</h4>
+            <p><?php $projectapproachcontent = get_field( "project_approach_content" ); echo $projectapproachcontent ?></p>
+        </div>
+        <div class="feedback cf u-push-top@2">
+            <h3>Feedback</h3>
+            <h4 class="highlight">The clients final thoughts.</h4>
+            <p class="u-style-italic"><?php $projectfeedbackcontent = get_field( "project_feedback_content" ); echo $projectfeedbackcontent ?></p>
+            <span class="author u-float-right u-push-top ">- <?php $projectfeedbackauthorcontent = get_field( "project_feedbackauthor_content" ); echo $projectfeedbackauthorcontent ?></span>
+        </div>
     </div>
 </div>
 
