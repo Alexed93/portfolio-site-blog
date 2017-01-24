@@ -16,7 +16,13 @@
         <div class="u-push-top">
             <?php $projectfile = get_field( "download_project" ); if($projectfile) : ?>
                 <a href="<?php echo $projectfile ?>" target="_blank" class="btn | btn--primary">
-                    Download Project
+                    Download project
+                </a>
+            <?php else: ?>
+            <?php endif; ?>
+            <?php $projectlink = get_field( "view_project" ); if($projectlink) : ?>
+                <a href="<?php echo $projectlink ?>" target="_blank" class="btn | btn--primary">
+                    View project
                 </a>
             <?php else: ?>
             <?php endif; ?>
