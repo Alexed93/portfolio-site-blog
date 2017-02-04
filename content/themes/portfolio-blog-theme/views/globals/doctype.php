@@ -24,6 +24,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Verify Web Masters -->
+    <meta name="verify-v1" content="a6K5khIVRdNtmmZsc9AT-HyjDrePhup9g4itLOKHfI4=" />
+
     <!-- Titles/Descriptions -->
     <title><?php wp_title() ?></title>
     <link rel="canonical" href="<?php echo get_bloginfo('url'); ?>" />
