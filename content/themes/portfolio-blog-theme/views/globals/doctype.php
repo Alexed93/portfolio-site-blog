@@ -29,11 +29,10 @@
     <link rel="canonical" href="<?php echo get_bloginfo('url'); ?>" />
 
     <!-- Favicons -->
-    <?php get_template_part( './favicons.php' ); ?>
+    <?php get_template_part( 'favicons' ); ?>
 
     <!-- Styles -->
     <!--[if IE 9]><!-->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/node_modules/slick-lightbox/dist/slick-lightbox.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/css/styles.css">
     <!--<![endif]-->
 
