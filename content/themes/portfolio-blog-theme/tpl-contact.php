@@ -112,6 +112,8 @@ get_header();
                 <label class="attach-file-box | is-hidden">
                     <input type="file" name="file" class="attach-file-box-input" id="file">
                 </label><br> -->
+
+                <input class="honeypot" type="text" name="email" size="25" value="">
                 
                 <div class="send-clear">
                     <input type="submit" name="submit" value="Send" class="btn btn--primary" id="submit-button">

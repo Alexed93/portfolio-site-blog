@@ -87,6 +87,11 @@ fieldset {
     padding: 0 !important;
 }
 
+.honeypot {
+    position: absolute;
+    left: -999em;
+}
+
 
 /* $. Change Autocomplete styles in Chrome
 \*----------------------------------------------------------------*/
