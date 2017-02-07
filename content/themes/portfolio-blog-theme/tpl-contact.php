@@ -29,12 +29,12 @@ get_header();
             $errors = '';
             $success = 'Success! Your message has been sent. You should receive a reply within 48 hours.';
 
-            $email = strip_tags( trim( $_POST[ "email" ] ) );
+            $email = strip_tags( trim( $_POST[ "theemail" ] ) );
             $name = strip_tags( trim( $_POST[ "thename" ] ) );
             $comments = trim( $_POST[ "comments" ] );
             $number = strip_tags( trim( $_POST[ "number" ] ) );
 
-            if(empty($name) || empty($email) || empty($comments)) {
+            if(empty($name) || empty($email) || empty($comments) ) {
                 $errors .= "Error: Input a name, email address and your message.<br>";
             } 
 
@@ -62,17 +62,17 @@ get_header();
                 // Construct the message
                 $message .= "
                     Name: {$_POST['thename']};
-                    Email: {$_POST['email']};
+                    Email: {$_POST['theemail']};
                     Number: {$_POST['number']};
                     Enquiry-type: {$_POST['enquiry-options']};
                     Message: {$_POST['comments']};
 ";
                 // test@testdomain.com
-                $to = 'dippyalex@hotmail.co.uk'; 
+                $to = 'alexeddesign@gmail.com'; 
                 $subject = 'Message from Portfolio';
                 $from = $_POST['thename'];
                 // YourSite@domain.com
-                $fromEmail = 'dippyalex@hotmail.co.uk';
+                $fromEmail = 'noreply@alexed.co.uk';
                 $header = 'From: ' . $from . '<' . $fromEmail . '>';
                 mail($to,$subject,$message,$header);
             ?>
@@ -85,7 +85,7 @@ get_header();
                     <input type="text" name="thename" placeholder="Your name" required class="u-push-bottom" id="name">
                 </label><br>
                 <label>Where can I find you?<span class="grey"> (required)</span><br>
-                    <input type="email" name="email" placeholder="Your email address" required class="u-push-bottom" id="email">
+                    <input type="email" name="theemail" placeholder="Your email address" required class="u-push-bottom" id="email">
                 </label><br>
                 
                 <label>Would you prefer me to call?<br>
